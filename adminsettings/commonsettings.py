@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     # Add project apps
     'administrator',
     'userprofile',
+    'shohojit',
     # library apps
     'imagekit',
 ]   
@@ -43,7 +44,7 @@ AUTHENTICATION_BACKENDS = [
     'administrator.authentication.EmailAuthBackend',
 ]
 
-DATABASE_NAME = 'admin_db'
+DATABASE_NAME = 'shohojitweb'
 DATABASE_ENGINE = 'mysql'
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

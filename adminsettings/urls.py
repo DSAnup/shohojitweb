@@ -5,8 +5,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('administrator.urls')),
-    path('', include('userprofile.urls')),
+    path('admin_panel/', include('administrator.urls')),
+    path('admin_panel/', include('userprofile.urls')),
+    path('', include('shohojit.urls')),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
 
