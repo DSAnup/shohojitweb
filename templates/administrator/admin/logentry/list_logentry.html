@@ -1,0 +1,157 @@
+
+{% extends 'base.html' %}
+
+{% block title %} {{ model_name|capfirst }} List {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+  <div class="page">
+    
+    {% include 'include/layout.html' %}
+
+    <div class="page-wrapper">
+      <!-- Page body -->
+      
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="card">
+            {% include 'include/flash_message.html' %} <!--  flash message -->
+            <div class="card-body">
+
+              <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-end margin_bottom_33">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{ model_name|capfirst }}</li>
+                </ol>
+              </nav>
+
+              <div class="row">
+                <div class="col-md-12" style="padding-bottom: 10px;">
+
+                    {% if company_settings.company_import_option %}
+                        <a href="{% url 'import_csv' app_name model_name %}" class="btn btn-secondary margin_bottom_33">Import Data</a>
+                    {% endif %}
+
+                    
+                    {% if company_settings.company_datatable_pdf or company_settings.company_datatable_csv or company_settings.company_delete_all %}
+                      <button type="button" class="btn dropdown-toggle btn-info margin_bottom_33" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Extra Action
+                      </button>
+                    {% endif %}
+
+                    <div class="dropdown-menu">
+
+                      {% if company_settings.company_datatable_pdf %}
+                        <a class="dropdown-item" href="{% url 'export_pdf' app_name model_name  %}" target="_blank">
+                          <img src="{% static 'icon/svg/pdf.svg' %}" alt="#" width="24" height="24" style="padding-right: 5px;"/> Export PDF
+                        </a>
+                      {% endif %}
+                      {% if company_settings.company_datatable_csv %}
+                        <a class="dropdown-item" href="{% url 'export_csv' app_name model_name  %}">
+                          <img src="{% static 'icon/svg/csv.svg' %}" alt="#" width="24" height="24" style="padding-right: 5px;"/> Export CSV
+                        </a>
+                      {% endif %}
+                      {% if company_settings.company_delete_all %}
+                        <a class="dropdown-item">
+                          <img src="{% static 'icon/svg/checkbox.svg' %}" alt="#" width="24" height="24" style="padding-right: 5px;"/>
+                          <input type="checkbox" id="check-all"> <span style="padding-left: 5px;">Check All</span>
+                        </a>
+                        <a class="dropdown-item">
+                          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModalMulti" >Delete Selected Record</button>
+                        </a>
+                      {% endif %}
+
+                  </div>
+              </div>
+
+              <div id="table-default" class="table-responsive">
+                <table id="dataTable1" class="table">
+
+                  
+                  {% if company_settings.company_datatable_column_visiable %}
+                    <input type="hidden" id="colvis" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_csv %}
+                    <input type="hidden" id="csv" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_copy %}
+                    <input type="hidden" id="copy" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_excel %}
+                    <input type="hidden" id="excel" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_pdf %}
+                    <input type="hidden" id="pdf" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_print %}
+                    <input type="hidden" id="printall" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_print_selected %}
+                    <input type="hidden" id="printselected" value="1">
+                  {% endif %}
+
+                  <thead>
+                    <tr>
+                      <th class="sl_no">SL</th>
+                      <th>Time</th>
+                      <th>User</th>
+                      <th>Action</th>
+                      <th>Content Type</th>
+                      <th>Object</th>
+                      <th>Message</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-tbody">
+                    {% for entry in log_entries  %}
+                      <tr>
+                          <td class="sl_no">{{ forloop.counter }}</td>
+                          <td>
+                            {% if company_settings.company_delete_all %}
+                              <input type="checkbox" name="selected_rows" value="{{ entry.pk }}" class="checkbox">
+                            {% endif %} 
+                            {{ entry.action_time|date:"Y-m-d H:i:s" }}
+                          </td>
+                          <td>{{ entry.user }}</td>
+                          <td>
+                            {% if entry.is_addition %}
+                                Addition
+                            {% elif entry.is_change %}
+                                Change
+                            {% elif entry.is_deletion %}
+                                Deletion
+                            {% endif %}
+                          </td>
+                          <td>{{ entry.content_type }}</td>
+                          <td>{{ entry.object_repr }}</td>
+                          <td>{{ entry.change_message }}</td>
+                      </tr>
+                    {% empty %}
+                      <tr>
+                          <td colspan="6">No log entries found.</td>
+                      </tr>
+                    {% endfor %}
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal start -->
+      {% include 'include/delete_modal_multi.html' %}
+      {% include 'include/delete_modal.html' %}
+      <!-- modal end -->
+      <!--  footer start  -->
+      {% include 'include/footer.html' %}
+      <!--  footer end -->
+    </div>
+  </div>
+  <script src="{% static 'dist/js/custom_datatable.js' %}" defer></script>
+  <script src="{% static 'dist/js/modal_delete_action.js' %}" defer></script>
+  <script src="{% static 'dist/js/modal_delete_multi_action.js' %}" defer></script>
+  <script src="{% static 'dist/js/checked_all.js' %}" defer></script>
+
+{% endblock %}

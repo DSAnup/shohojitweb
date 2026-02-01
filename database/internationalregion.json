@@ -1,0 +1,134 @@
+[
+{
+  "model": "administrator.internationalregion",
+  "pk": 1,
+  "fields": {
+    "international_region_name": "Asia",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.094",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.094"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 2,
+  "fields": {
+    "international_region_name": "European Union",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.201",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.201"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 3,
+  "fields": {
+    "international_region_name": "Europe",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.299",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.299"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 4,
+  "fields": {
+    "international_region_name": "Africa",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.389",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.390"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 5,
+  "fields": {
+    "international_region_name": "Oceania",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.466",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.466"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 6,
+  "fields": {
+    "international_region_name": "The Caribbean",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.546",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.546"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 7,
+  "fields": {
+    "international_region_name": "Antarctia",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.634",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.634"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 8,
+  "fields": {
+    "international_region_name": "South America",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.713",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.713"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 9,
+  "fields": {
+    "international_region_name": "Middle East",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.788",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.788"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 10,
+  "fields": {
+    "international_region_name": "North America",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.868",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.868"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 11,
+  "fields": {
+    "international_region_name": "Central America",
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:27.943",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:27.943"
+  }
+},
+{
+  "model": "administrator.internationalregion",
+  "pk": 12,
+  "fields": {
+    "international_region_name": "dd",
+    "created_by": 2,
+    "created_at": "2024-08-25T10:40:24.947",
+    "updated_by": null,
+    "updated_at": "2024-08-25T10:40:24.947"
+  }
+}
+]

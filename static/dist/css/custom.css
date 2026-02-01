@@ -1,0 +1,32 @@
+.padding_class{
+    padding-bottom: 10px;
+}
+.g-3 > .errorlist {
+    display: none;
+}
+.sl_no {
+    text-align: left !important;
+}
+[data-bs-theme=dark] .navbar-brand-autodark .navbar-brand-image {
+    filter: brightness(1) !important;
+  }
+
+.bottom_15 {
+    padding-bottom: 10px;
+}
+.beige {
+    border: 1px solid beige;
+}
+svg {
+    margin: 0 !important;
+}
+.fc-event {
+    cursor: pointer;
+}
+.form-check-input{
+    border: 1px solid black;
+}
+.navbar-brand-image{
+    height: 60px !important;
+    width: 180px !important;
+}

@@ -1,0 +1,28 @@
+
+<div class="sticky-top">
+    <header class="navbar navbar-expand-md sticky-top d-print-none" >
+      <div class="container-xl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+          {% include 'include/common/navbar_brand.html' %}
+        </h1>
+        <div class="navbar-nav flex-row order-md-last">
+          {% include 'include/common/navbar_mode.html' %}
+          {% include 'include/common/navbar_profile.html' %}
+        </div>
+      </div>
+    </header>
+    <header class="navbar-expand-md">
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <div class="navbar">
+          <div class="container-xl">
+            {% include 'include/common/navbar_nav.html' %}
+            <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>

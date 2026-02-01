@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Sign Up Complete {% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="page page-center">
+    <div class="container container-tight py-4">
+      <div class="text-center mb-4">
+        <a href="." class="navbar-brand navbar-brand-autodark">
+          {% if company_settings.company_logo %}
+            <img src="{{ company_settings.company_logo.url }}" height="36" alt="">
+          {% else %}
+            <img src="{% static 'logo.png' %}" height="36" alt="">
+          {% endif %}
+        </a>
+      </div>
+      <div class="card card-md">
+        <div class="card-body">
+          <h2 class="h2 text-center mb-4">Welcome {{ new_user.username }}</h2>
+          <div class="text-center text-muted mt-3">
+            Your account has been successfully created.
+            Now you can <a href="{% url 'login' %}" tabindex="-1">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

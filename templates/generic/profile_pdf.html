@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Of {{ user_details.username|capfirst }}</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 4px;
+    }
+
+    .user-details-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .user-details-table {
+        width: 100%;
+        border-collapse: collapse;
+        /* margin-top: 20px; */
+    }
+
+    .user-details-table thead {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+    .user-details-table th, .user-details-table td {
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .user-details-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .user-details-table tr:hover {
+        background-color: #f1f1f1;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 20px auto;
+        display: block;
+    }
+    .profile-pic img {
+        object-fit: cover;
+    }
+    </style>
+</head>
+<body>
+    <div class="user-details-container">
+        <h1>Profile Information</h1>
+        <div class="profile-pic">
+            {% if profile_picture_url %}
+                <img src="{{ profile_picture_url }}" alt="Profile Picture">
+            {% else %}
+                <p>No profile picture available.</p>
+            {% endif %}
+        </div>
+        <h3>Basic Information</h3>
+        <table class="user-details-table">
+            <tbody>
+                <tr>
+                    <td>Full Name</td>
+                    <td>{{ user_details.first_name }} {{ user_details.last_name }}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{ user_details.email }}</td>
+                </tr>
+                <tr>
+                    <td>Dated Joined</td>
+                    <td>{{ user_details.date_joined|date }}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <h3>Advanced Information</h3>
+        <table class="user-details-table">
+            <tbody>
+                <tr>
+                    <td>Phone</td>
+                    <td>
+                        {% if user_details.profile.personal_phone %}
+                            {{ user_details.profile.personal_phone }}
+                        {% else %}
+                            No phone number available
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Work Phone</td>
+                    <td>
+                        {% if user_details.profile.work_phone %}
+                            {{ user_details.profile.work_phone }}
+                        {% else %}
+                            No work phone number available
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        {% if user_details.profile.sex == 'M' %}
+                          Male
+                        {% elif user_details.profile.sex == 'F' %}
+                          Female
+                        {% else %}
+                          Others
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td>
+                        {% if user_details.profile.dob %}
+                            {{ user_details.profile.dob|date }}
+                        {% else %}
+                            No dob available
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        {% if user_details.profile.address %}
+                            {{ user_details.profile.address }}
+                        {% else %}
+                            No address available
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        {% if user_details.profile.city %}
+                            {{ user_details.profile.city }}
+                        {% else %}
+                            No city available
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        {% if user_details.profile.state %}
+                            {{ user_details.profile.state }}
+                        {% else %}
+                            No state available
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        {% if user_details.profile.country %}
+                            {{ user_details.profile.country }}
+                        {% else %}
+                            No country available
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

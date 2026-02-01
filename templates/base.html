@@ -1,0 +1,82 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>{% block title%} {% endblock %}</title>
+    <!-- CSS files -->
+    <link href="{% static 'dist/libs/dropzone/dist/dropzone.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-flags.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-payments.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-vendors.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/demo.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/custom.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/responsive.css' %}" rel="stylesheet"/>
+    <!-- dataTable start -->
+    <link href="{% static 'dist/libs/datatables/css/dataTables.dataTables.css' %}" rel="stylesheet"/>
+    <link href="{% static 'dist/libs/datatables/css/buttons.dataTables.css' %}" rel="stylesheet"/>
+    <!-- dataTable end -->
+     <link href="{% static 'dist/libs/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet"/>
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+  </head>
+  <body  
+    {% if request.resolver_match.url_name == 'login' or  request.resolver_match.url_name == 'password_reset' or  request.resolver_match.url_name == 'signup' %}
+      class="d-flex flex-column" 
+    {% else %} 
+      class="layout-fluid" 
+    {% endif %}
+    >
+    <script src="{% static 'dist/js/demo-theme.min.js' %}"></script>
+
+    {% block content %}
+
+    {% endblock %}
+        
+    <!-- Libs JS -->
+    <script src="{% static 'dist/libs/jsvectormap/dist/js/jsvectormap.min.js' %}" defer></script>
+    <script src="{% static 'dist/libs/jsvectormap/dist/maps/world.js' %}" defer></script>
+    <script src="{% static 'dist/libs/jsvectormap/dist/maps/world-merc.js' %}" defer></script>
+    <script src="{% static 'dist/libs/nouislider/dist/nouislider.min.js' %}" defer></script>
+    <script src="{% static 'dist/libs/litepicker/dist/litepicker.js' %}" defer></script>
+    <script src="{% static 'dist/libs/tom-select/dist/js/tom-select.base.min.js' %}" defer></script>
+    <script src="{% static 'dist/libs/dropzone/dist/dropzone-min.js' %}" defer></script>
+    <script src="{% static 'dist/libs/list.js/dist/list.min.js' %}" defer></script>
+    
+    <!-- Tabler Core -->
+    <script src="{% static 'dist/js/tabler.min.js' %}" defer></script>
+    <script src="{% static 'dist/js/demo.min.js' %}" defer></script>
+     
+    <!-- jQuery & DataTables start -->
+     <script src="{% static 'dist/js/jquery-3.7.1.min.js' %}" type="text/javascript"></script>
+     <script src="{% static 'dist/libs/bootstrap/dist/js//popper.min.js' %}"></script>
+     <script src="{% static 'dist/libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+     
+     <script src="{% static 'dist/libs/datatables/js/dataTables.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/dataTables.buttons.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/buttons.dataTables.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/jszip.min.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/pdfmake.min.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/vfs_fonts.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/buttons.html5.min.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/buttons.colVis.min.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/buttons.print.min.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/dataTables.select.js' %}"></script>
+     <script src="{% static 'dist/libs/datatables/js/select.dataTables.js' %}"></script>
+     <!-- jQuery & DataTables end -->
+
+    <!-- custom js -->
+    <script src="{% static 'dist/js/show_password.js' %}" defer></script>
+
+  </body>
+</html>

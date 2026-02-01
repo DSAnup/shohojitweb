@@ -1,0 +1,164 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Profile Information{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+  <div class="page">
+    
+    {% include 'include/layout.html' %}
+
+    <div class="page-wrapper">
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="card">
+            {% include 'include/flash_message.html' %} <!--  flash message -->
+            <div class="row g-0">
+              <div class="col d-flex flex-column">
+                <div class="card-body">
+                  <h2 class="mb-4">My Account</h2>
+                  <h3 class="card-title">Profile Information of {{ user.username|title }}</h3>
+                  <a href="{% url 'profile_pdf' request.user.pk %}" style="float: right;">
+                    <img src="{% static 'icon/svg/printer.svg' %}" alt="#" class="icon ms-1 d-none" width="24" height="24" data-toggle="tooltip" title="Download/Print" />
+                  </a>
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      {% if user.profile.profile_picture %}
+                        <img src="{{ user.profile.profile_picture.url }}" alt="" class="avatar avatar-xl">
+                      {% else %}
+                        <img src="{% static 'avatars/users.jpg'%}" alt="" class="avatar avatar-xl">
+                      {% endif %}
+                    </div>
+                  </div>
+                  <h3 class="card-title mt-4">Basic Information</h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-label">Username</div>
+                      {{ user.username }}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">First Name</div>
+                      {{ user.first_name }}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Last Name</div>
+                      {{ user.last_name }}
+                    </div>
+                    {% if user.is_superuser %}
+                      <div class="col-md-4">
+                        <div class="form-label">Super User Status</div>
+                          Yes
+                      </div>
+                    {% endif %}
+                    <div class="col-md-4">
+                      <div class="form-label">Admin Status</div>
+                      {% if user.is_staff %}
+                        Yes
+                      {% else %}
+                        No
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Active Status</div>
+                      {% if user.is_active %}
+                        Yes
+                      {% else %}
+                        No
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Email</div>
+                      {{ user.email }}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Date Joined</div>
+                      {{ user.date_joined|date }}
+                    </div>
+                  </div>
+                  <h3 class="card-title mt-4">Advanced Information</h3>
+                  <div class="row">
+
+                    <div class="col-md-4">
+                      <div class="form-label">Personal Phone</div>
+                      {% if user.profile.personal_phone %}
+                          {{ user.profile.personal_phone }}
+                      {% else %}
+                          No phone number available
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Work Phone</div>
+                      {% if user.profile.work_phone %}
+                          {{ user.profile.work_phone }}
+                      {% else %}
+                          No work phone number available
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Sex</div>
+                        {% if user.profile.sex == 'M' %}
+                          Male
+                        {% elif user.profile.sex == 'F' %}
+                          Female
+                        {% else %}
+                          Others
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Date Of Birth</div>
+                      {% if user.profile.dob %}
+                        {{ user.profile.dob|date }}
+                      {% else %}
+                         No dob available
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Address</div>
+                      {% if user.profile.address %}
+                        {{ user.profile.address }}
+                      {% else %}
+                         No address available
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">City</div>
+                      {% if user.profile.city %}
+                        {{ user.profile.city }}
+                      {% else %}
+                         No city available
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">State</div>
+                      {% if user.profile.state %}
+                        {{ user.profile.state }}
+                      {% else %}
+                         No state available
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-label">Country</div>
+                      {% if user.profile.country %}
+                        {{ user.profile.country }}
+                      {% else %}
+                         No country available
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  footer start  -->
+      {% include 'include/footer.html' %}
+      <!--  footer end -->
+    </div>
+  </div>
+
+{% endblock %}

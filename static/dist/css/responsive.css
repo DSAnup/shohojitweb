@@ -1,0 +1,20 @@
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .margin_bottom_33{
+        margin-bottom: 0.333em;
+    }
+    .justify-content-end{
+        justify-content: flex-start !important;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .margin_bottom_33{
+        margin-bottom: 0.333em;
+    }
+    .justify-content-end{
+        justify-content: flex-start !important;
+    }
+}

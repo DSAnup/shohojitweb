@@ -1,0 +1,67 @@
+
+/* Position dropdown menus within dropdown items */
+.nav-item .dropdown-menu {
+  display: none; /* Hide all dropdown menus by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+}
+
+/* Show main dropdown menu on hover */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Position the nested dropdown menu (dropend) */
+.dropend .dropdown-menu {
+  display: none; /* Hide nested dropdown menus by default */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position it to the right of the parent item */
+  z-index: 1000;
+}
+
+/* Show the nested dropdown menu on hover */
+.dropend:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Optional styling for dropdown items */
+.dropdown-item {
+  padding: 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+/* Ensure dropdown opens on hover and aligns to the left */
+.nav-item.dropdown .dropdown-menu2 {
+    display: none; /* Show dropdown on hover */
+}
+
+.nav-item.dropdown:hover .dropdown-menu2 {
+    display: block; /* Show dropdown on hover */
+    background-color: #f8f9fa;
+    color: #000;
+    text-align: end;
+    border: 1px solid gainsboro;
+}
+
+.dropdown-menu2 {
+    top: 0;
+    right:-0.20rem; /* Position dropdown to the left of the parent */
+    margin-top: 48px; /* Adjust margin as needed */
+    transform: none; /* Remove transform if positioning is incorrect */
+    z-index: 1050; /* Ensure it is above other elements */
+    position: absolute;
+    overflow: hidden;
+}
+.dropdown-menu2 .dropdown-item {
+    justify-content: right;
+}

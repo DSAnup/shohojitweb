@@ -1,0 +1,32 @@
+[
+{
+    "model": "administrator.companysettings",
+    "pk": 1,
+    "fields": {
+        "company_name": "xy",
+        "company_phone": null,
+        "company_email": null,
+        "company_logo": "company/logo_waps.png",
+        "company_address": null,
+        "company_layout": "D",
+        "company_menu_hover": true,
+        "company_import_option": false,
+        "company_export_pdf": false,
+        "company_export_csv": false,
+        "company_delete_all": false,
+        "company_datatable_column_visiable": false,
+        "company_datatable_csv": false,
+        "company_datatable_copy": false,
+        "company_datatable_excel": false,
+        "company_datatable_pdf": false,
+        "company_datatable_print": false,
+        "company_datatable_print_selected": false,
+        "company_currency": "$",
+        "company_currency_name": "USD",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-09-16T06:19:33.370",
+        "updated_at": "2025-10-26T14:26:47.448"
+    }
+}
+]

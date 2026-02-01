@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Super User Restriction {% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="page page-center">
+    <div class="container container-tight py-4">
+      <div class="text-center mb-4">
+        <a href="." class="navbar-brand navbar-brand-autodark">
+          {% if company_settings.company_logo %}
+            <img src="{{ company_settings.company_logo.url }}" height="36" alt="">
+          {% else %}
+            <img src="{% static 'logo.png' %}" height="36" alt="">
+          {% endif %}
+        </a>
+      </div>
+      <div class="card card-md">
+        <div class="card-body">
+          <h2 class="h2 text-center mb-4">Super User Restriction</h2>
+          <div class="text-center text-muted mt-3">
+            You have no access to create an new super user.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="transparent">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 class="navbar-brand navbar-brand-autodark">
+      {% include 'include/common/navbar_brand.html' %}
+    </h1>
+    <div class="navbar-nav flex-row d-lg-none">
+      {% include 'include/common/navbar_mode.html' %}
+      {% include 'include/common/navbar_profile.html' %}
+    </div>
+    <div class="collapse navbar-collapse" id="sidebar-menu">
+      {% include 'include/common/navbar_nav.html' %}
+    </div>
+  </div>
+</aside>

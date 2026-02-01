@@ -1,0 +1,42 @@
+[
+{
+  "model": "administrator.accessmodelname_content_type",
+  "pk": 1,
+  "fields": {
+    "accessmodelname": 1,
+    "contenttype": 2
+  }
+},
+{
+  "model": "administrator.accessmodelname_content_type",
+  "pk": 2,
+  "fields": {
+    "accessmodelname": 1,
+    "contenttype": 3
+  }
+},
+{
+  "model": "administrator.accessmodelname_content_type",
+  "pk": 3,
+  "fields": {
+    "accessmodelname": 1,
+    "contenttype": 4
+  }
+},
+{
+  "model": "administrator.accessmodelname_content_type",
+  "pk": 4,
+  "fields": {
+    "accessmodelname": 1,
+    "contenttype": 7
+  }
+},
+{
+  "model": "administrator.accessmodelname_content_type",
+  "pk": 5,
+  "fields": {
+    "accessmodelname": 1,
+    "contenttype": 11
+  }
+}
+]

@@ -1,0 +1,148 @@
+{% load static %}
+{% load active_tags %}
+{% administrator_active_list as administrator_active %}
+{% admin_active_list as admin_active %}
+
+{% if company_settings.company_menu_hover %}
+    <link href="{% static 'dist/css/menu_hover.css' %}" rel="stylesheet">
+{% endif %}
+
+<ul class="navbar-nav {% if company_settings.company_layout == 'A' %} pt-lg-3 {% endif%}">
+    <li class="nav-item">
+        <a class="nav-link" href="/" >
+        <span class="nav-link-icon d-md-none d-lg-inline-block">
+            <i class="bi bi-house"></i>
+        </span>
+        <span class="nav-link-title">
+            Home
+        </span>
+        </a>
+    </li>
+  
+    {% if 'auth.view_user' in perms or 'auth.view_group' in perms or 'administrator.view_internationalregion' in perms or 'administrator.view_country' in perms or request.user.is_staff %}
+    <li class="nav-item dropdown 
+    {% if model_name in administrator_active %}active{% endif %}
+    ">
+    <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+        <span class="nav-link-icon d-md-none d-lg-inline-block">
+            <i class="bi bi-house-gear-fill"></i>
+        </span>
+        <span class="nav-link-title">
+        Administrator 
+        </span>
+    </a>
+    <div class="dropdown-menu {% if model_name in administrator_active and company_settings.company_layout == 'A' %}show {% elif model_name in admin_active and company_settings.company_layout == 'A' %}show{% endif %}">
+        <div class="dropdown-menu-columns">
+        <div class="dropdown-menu-column">
+            <div class="dropend">
+            {% if 'auth.view_user' in perms or 'auth.view_group' in perms or request.user.is_staff%}
+                <a class="dropdown-item dropdown-toggle 
+                {% if model_name in admin_active %}active{% endif %}" 
+                href="#sidebar-error" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-people"></i>
+                </span>
+                Admin
+                </a>
+            {% endif %}
+            <div class="dropdown-menu {% if model_name in admin_active and company_settings.company_layout == 'A' %}show{% endif %}">
+                {% if 'auth.view_user' in perms or request.user.userrole.role|is_allowed_admin %}
+                <a href="{% url 'list_user' %}" class="dropdown-item {% if model_name == 'user' %}active{% endif %}">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                        <i class="bi bi-person-add"></i>
+                    </span>
+                    Users
+                </a>
+                {% endif %}
+                {% if 'auth.view_group' in perms or request.user.is_superuser %}
+                <a href="{% url 'list_group' %}" class="dropdown-item {% if model_name == 'group' %}active{% endif %}">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                        <i class="bi bi-person-fill-up"></i>
+                    </span>
+                    Groups
+                </a>
+                {% endif %}
+                {% if 'auth.view_subscriptionplan' in perms or request.user.is_superuser %}
+                    <a href="{% url 'list_subscriptionplan' %}" class="dropdown-item {% if model_name == 'subscriptionplan' %}active{% endif %}">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                            <i class="bi bi-bag-check"></i>
+                        </span>
+                        Subscription Plan
+                    </a>
+                    {% endif %}
+                {% if 'auth.view_sitesettings' in perms or request.user.is_superuser or request.user.userrole.role|is_allowed_admin %}
+                <a href="{% url 'list_sitesettings' %}" class="dropdown-item {% if model_name == 'sitesettings' %}active{% endif %}">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                        <i class="bi bi-diagram-2"></i>
+                    </span>
+                    Site List
+                </a>
+                {% endif %}
+                {% if 'auth.view_siteuser' in perms or request.user.is_superuser %}
+                <a href="{% url 'list_siteuser' %}" class="dropdown-item {% if model_name == 'siteuser' %}active{% endif %}">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                        <i class="bi bi-diagram-3"></i>
+                    </span>
+                    Site User
+                </a>
+                {% endif %}
+                {% if 'admin.view_logentry' in perms or request.user.is_superuser %}
+                <a href="{% url 'list_logentry' %}" class="dropdown-item {% if model_name == 'logentry' %}active{% endif %}">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                        <i class="bi bi-clock-history"></i>
+                    </span>
+                    Log History
+                </a>
+                {% endif %}
+            </div>
+            </div>
+            {% if 'administrator.view_companysettings' in perms or request.user.is_staff %}
+            <a class="dropdown-item {% if model_name == 'companysettings' %}active{% endif %}" href="{% url 'company_settings' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-gear"></i>
+                </span>
+                Settings
+            </a>
+            {% endif%}
+            {% if 'administrator.view_companysettings' in perms or request.user.is_superuser %}
+            <a class="dropdown-item" href="{% url 'backup_database' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-database-fill"></i>
+                </span>
+                Backup Database
+            </a>
+            {% endif%}
+            {% if 'administrator.view_accessmodelname' in perms or request.user.is_superuser %}
+            <a class="dropdown-item {% if model_name == 'accessmodelname' %}active{% endif %}" href="{% url 'access_model_settings' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-floppy"></i>
+                </span>
+                Access Model Settings
+            </a>
+            {% endif%}
+
+            {% if 'administrator.view_internationalregion' in perms or request.user.is_superuser %}
+            <a class="dropdown-item {% if model_name == 'internationalregion' %}active{% endif %}" href="{% url 'list_internationalregion' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-globe-americas"></i>
+                </span>
+                International Region
+            </a>
+            {% endif%}
+            {% if 'administrator.view_country' in perms or request.user.is_superuser %}
+            <a class="dropdown-item {% if model_name == 'country' %}active{% endif %}" href="{% url 'list_country' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-globe-central-south-asia"></i>
+                </span>
+                Country
+            </a>
+            {% endif%}
+        </div>
+        </div>
+    </div>
+    </li>
+    {% endif %}
+
+
+
+</ul>

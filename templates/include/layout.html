@@ -1,0 +1,17 @@
+
+{% if company_settings.company_layout == 'D' %}
+    {% include 'include/header.html' %}
+    {% include 'include/navbar.html' %}
+{% elif company_settings.company_layout == 'A' %}
+    {% include 'include/aside.html' %}
+    {% include 'include/aside_navbar.html' %}
+{% elif company_settings.company_layout == 'S' %}
+    {% include 'include/sticky_top.html' %}
+{% elif company_settings.company_layout == 'SO' %}
+    {% include 'include/sticky_overlap.html' %}
+{% elif company_settings.company_layout == 'O' %}
+    {% include 'include/navbar_overlap.html' %}
+{% else %}
+    {% include 'include/header.html' %}
+    {% include 'include/navbar.html' %}
+{% endif %}

@@ -1,0 +1,8 @@
+{% load static %}
+<a href="/">
+    {% if company_settings.company_logo %}
+        <img src="{{ company_settings.company_logo.url }}" width="110" height="32" alt="Waps Solution" class="navbar-brand-image">
+    {% else %}
+        <img src="{% static 'logo_waps.png' %}" width="110" height="32" alt="Waps Solution" class="navbar-brand-image">
+    {% endif %}
+</a>

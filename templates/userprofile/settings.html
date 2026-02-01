@@ -1,0 +1,130 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Profile Settings {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+  <div class="page">
+    
+    {% include 'include/layout.html' %}
+
+    <div class="page-wrapper">
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col d-flex flex-column">
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="card-body">
+                    <h2 class="mb-4">My Account</h2>
+                    {% if messages %}
+                  <div>
+                      {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }}" role="alert">
+                          {{ message }}
+                      </div>
+                      {% endfor %}
+                  </div>
+                  {% endif %}
+                    <h3 class="card-title">Profile update for {{ profile_form.instance.user.username|title}}</h3>
+                    {% if profile_form.instance.profile_picture %}
+                      <div class="row align-items-center">
+                        <div class="col-auto"><span class="avatar avatar-xl" style="background-image: url('{{ profile_form.instance.profile_picture.url }}')"></span>
+                        </div>
+                        <div class="col-auto">
+                          {{ profile_form.profile_picture }} 
+                          <button type="submit" class="btn btn-primary" id="profile_picture_update" disabled>Update Profile Picture</button>
+                        </div>
+                        <div class="col-auto">
+                          <input type="checkbox" name="profile_picture_clear" id="profile_picture-clear_id">
+                          <button type="submit" class="btn btn-danger" id="profile_picture_delete_submit" disabled>Delete Profile Picture</button>
+                        </div>
+                      </div>
+                      {% endif %}
+                    <h3 class="card-title mt-4">Basic Information</h3>
+                    <div class="row">
+                      {% for field in user_form %}
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-md-4">
+                              <div class="form-label">{{ field.label }}</div>
+                              {{ field }}
+                            </div>
+                        {% else %}
+                            <div class="col-md-4">
+                              <div class="form-label">{{ field.label }}</div>
+                              {{ field }}
+                            </div>
+                        {% endif %}
+                      {% endfor %}
+                      <div class="col-md-4">
+                        <div class="form-label">Email</div>
+                        <p>
+                          {{ profile_form.instance.user.email }} 
+                          <span class="text-danger">(You can't update the primary email.)</span>
+                        </p>
+                        
+                      </div>
+                    </div>
+                    <h3 class="card-title mt-4">Advanced Information</h3>
+                    <div class="row">
+                      {% for field in profile_form %}
+                        {% if profile_form.instance.profile_picture %}
+                          {% if field.name != 'profile_picture' %}
+                            {% if forloop.counter|divisibleby:2 %}
+                              <div class="col-md-4">
+                                <div class="form-label">{{ field.label }}</div>
+                                {{ field }}
+                              </div>
+                            {% else %}
+                              <div class="col-md-4">
+                                <div class="form-label">{{ field.label }}</div>
+                                {{ field }}
+                              </div>
+                            {% endif %}
+                          {% endif %}
+                        {% else %}
+                          {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-md-4">
+                              <div class="form-label">{{ field.label }}</div>
+                              {{ field }}
+                            </div>
+                          {% else %}
+                            <div class="col-md-4">
+                              <div class="form-label">{{ field.label }}</div>
+                              {{ field }}
+                            </div>
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="card-footer bg-transparent mt-auto">
+                    <div class="btn-list justify-content-end">
+                      <a href="#" class="btn">
+                        Cancel
+                      </a>
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  footer start  -->
+      {% include 'include/footer.html' %}
+      <!--  footer end -->
+    </div>
+  </div>
+
+  <script src="{% static 'dist/js/custom_select.js' %}"></script>
+  <script src="{% static 'dist/js/button_disabled.js' %}"></script>
+
+{% endblock %}

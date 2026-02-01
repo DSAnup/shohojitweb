@@ -1,0 +1,63 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Access Model Settings {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+  <div class="page">
+   
+  {% include 'include/layout.html' %}
+
+    <div class="page-wrapper">
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="card">
+            {% include 'include/flash_message.html' %} <!--  flash message -->
+            <div class="row g-0">
+              <div class="col d-flex flex-column">
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="card-body">
+                    <h3 class="card-title">Update Access Model </h3>
+                    <div class="row">
+                      {% for field in form %}
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-md-6">
+                              <div class="form-label">{{ field.label }}</div>
+                                {{ field }}
+                            </div>
+                        {% else %}
+                            <div class="col-md-6">
+                              <div class="form-label">{{ field.label }}</div>
+                                {{ field }}
+                            </div>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="card-footer bg-transparent mt-auto">
+                    <div class="btn-list justify-content-end">
+                      <a href="#" class="btn">
+                        Cancel
+                      </a>
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  footer start  -->
+      {% include 'include/footer.html' %}
+      <!--  footer end -->
+    </div>
+  </div>
+
+{% endblock %}

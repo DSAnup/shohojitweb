@@ -1,0 +1,94 @@
+
+{% extends 'base.html' %}
+
+{% block title %} View {{ model_name|capfirst }} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+{% load active_tags %} 
+{% load form_filters %}
+   
+  <div class="page">
+    
+    {% include 'include/layout.html' %}
+
+    <div class="page-wrapper">
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="card">
+            {% include 'include/flash_message.html' %} <!--  flash message -->
+            <div class="row g-0">
+              <div class="col d-flex flex-column">
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="card-body">
+                    
+                    <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-end">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'list_'|add:model_name fk_id %}">{{ model_name|capfirst }}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">View</li>
+                      </ol>
+                    </nav>
+                    <h2 class="mb-4">{{ model_name|capfirst }}</h2>
+                    <h3 class="card-title mt-4">View {{ model_name|capfirst }}</h3>
+                    <div class="row">
+                      {% for field in form %}
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-md-6">
+                              <div class="form-label">{{ field.label }}</div>
+                              {% if field.field.choices %}
+                                {% for value, label in field.field.choices %}
+                                  {% if value == field.value %}
+                                    <p>{{ label }}</p>
+                                  {% endif %}
+                                {% endfor %}
+                              {% else %}
+                                {{ field.value|safe }}
+                              {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="col-md-6">
+                              <div class="form-label">{{ field.label }}</div>
+                              {% if field.field.choices %}
+                                {% for value, label in field.field.choices %}
+                                  {% if value == field.value %}
+                                    <p>{{ label }}</p>
+                                  {% endif %}
+                                {% endfor %}
+                              {% else %}
+                                {{ field.value|safe }}
+                              {% endif %}
+                            </div>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="card-footer bg-transparent mt-auto">
+                    <div class="btn-list justify-content-end">
+                      <a href="{% url 'list_'|add:model_name fk_id %}" class="btn btn-primary">
+                        Back
+                      </a>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--  footer start  -->
+      {% include 'include/footer.html' %}
+      <!--  footer end -->
+    </div>
+  </div>
+  
+  {% if form|has_select_field %}
+    <script src="{% static 'dist/js/custom_select.js' %}"></script>
+  {% endif %}
+
+{% endblock %}

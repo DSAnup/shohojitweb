@@ -1,0 +1,4252 @@
+[
+{
+  "model": "administrator.country",
+  "pk": 1,
+  "fields": {
+    "iso2": "AF",
+    "country_name": "Afghanistan",
+    "long_country_name": "Islamic Republic of Afghanistan",
+    "iso3": "AFG",
+    "num_code": "4",
+    "calling_code": "93",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:38.905",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:38.905"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 2,
+  "fields": {
+    "iso2": "AX",
+    "country_name": "Aland Islands",
+    "long_country_name": "&Aring;land Islands",
+    "iso3": "ALA",
+    "num_code": "248",
+    "calling_code": "358",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.004",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.004"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 3,
+  "fields": {
+    "iso2": "AL",
+    "country_name": "Albania",
+    "long_country_name": "Republic of Albania",
+    "iso3": "ALB",
+    "num_code": "8",
+    "calling_code": "355",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.085",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.086"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 4,
+  "fields": {
+    "iso2": "D",
+    "country_name": "Algeria",
+    "long_country_name": "People's Democratic Republic of Algeria",
+    "iso3": "DA",
+    "num_code": "12",
+    "calling_code": "213",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.158",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.158"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 5,
+  "fields": {
+    "iso2": "AS",
+    "country_name": "American Samoa",
+    "long_country_name": "American Samoa",
+    "iso3": "ASM",
+    "num_code": "16",
+    "calling_code": "1+684",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.243",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.243"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 6,
+  "fields": {
+    "iso2": "AD",
+    "country_name": "Andorra",
+    "long_country_name": "Principality of Andorra",
+    "iso3": "AND",
+    "num_code": "20",
+    "calling_code": "376",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.324",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.324"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 7,
+  "fields": {
+    "iso2": "AO",
+    "country_name": "Angola",
+    "long_country_name": "Republic of Angola",
+    "iso3": "AGO",
+    "num_code": "24",
+    "calling_code": "244",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.403",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.403"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 8,
+  "fields": {
+    "iso2": "AI",
+    "country_name": "Anguilla",
+    "long_country_name": "Anguilla",
+    "iso3": "AIA",
+    "num_code": "660",
+    "calling_code": "1+264",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.509",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.509"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 9,
+  "fields": {
+    "iso2": "AQ",
+    "country_name": "Antarctia",
+    "long_country_name": "Antarctia",
+    "iso3": "ATA",
+    "num_code": "10",
+    "calling_code": "672",
+    "international_region": 7,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.605",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.605"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 10,
+  "fields": {
+    "iso2": "AG",
+    "country_name": "Antigua and Barbuda",
+    "long_country_name": "Antigua and Barbuda",
+    "iso3": "ATG",
+    "num_code": "28",
+    "calling_code": "1+268",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.705",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.706"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 11,
+  "fields": {
+    "iso2": "AR",
+    "country_name": "Argentina",
+    "long_country_name": "Argentine Republic",
+    "iso3": "ARG",
+    "num_code": "32",
+    "calling_code": "54",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.806",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.806"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 12,
+  "fields": {
+    "iso2": "AM",
+    "country_name": "Armenia",
+    "long_country_name": "Republic of Armenia",
+    "iso3": "ARM",
+    "num_code": "51",
+    "calling_code": "374",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.900",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.900"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 13,
+  "fields": {
+    "iso2": "AW",
+    "country_name": "Aruba",
+    "long_country_name": "Aruba",
+    "iso3": "ABW",
+    "num_code": "533",
+    "calling_code": "297",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:39.982",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:39.982"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 14,
+  "fields": {
+    "iso2": "AU",
+    "country_name": "Australia",
+    "long_country_name": "Commonwealth of Australia",
+    "iso3": "AUS",
+    "num_code": "36",
+    "calling_code": "61",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.064",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.064"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 15,
+  "fields": {
+    "iso2": "AT",
+    "country_name": "Austria",
+    "long_country_name": "Republic of Austria",
+    "iso3": "AUT",
+    "num_code": "40",
+    "calling_code": "43",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.136",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.136"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 16,
+  "fields": {
+    "iso2": "A",
+    "country_name": "Aerbaijan",
+    "long_country_name": "Republic of Aerbaijan",
+    "iso3": "AE",
+    "num_code": "31",
+    "calling_code": "994",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.214",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.214"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 17,
+  "fields": {
+    "iso2": "BS",
+    "country_name": "Bahamas",
+    "long_country_name": "Commonwealth of The Bahamas",
+    "iso3": "BHS",
+    "num_code": "44",
+    "calling_code": "1+242",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.292",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.292"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 18,
+  "fields": {
+    "iso2": "BH",
+    "country_name": "Bahrain",
+    "long_country_name": "Kingdom of Bahrain",
+    "iso3": "BHR",
+    "num_code": "48",
+    "calling_code": "973",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.383",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.383"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 19,
+  "fields": {
+    "iso2": "BD",
+    "country_name": "Bangladesh",
+    "long_country_name": "People's Republic of Bangladesh",
+    "iso3": "BGD",
+    "num_code": "50",
+    "calling_code": "880",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.459",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.459"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 20,
+  "fields": {
+    "iso2": "BB",
+    "country_name": "Barbados",
+    "long_country_name": "Barbados",
+    "iso3": "BRB",
+    "num_code": "52",
+    "calling_code": "1+246",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.538",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.538"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 21,
+  "fields": {
+    "iso2": "BY",
+    "country_name": "Belarus",
+    "long_country_name": "Republic of Belarus",
+    "iso3": "BLR",
+    "num_code": "112",
+    "calling_code": "375",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.626",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.626"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 22,
+  "fields": {
+    "iso2": "BE",
+    "country_name": "Belgium",
+    "long_country_name": "Kingdom of Belgium",
+    "iso3": "BEL",
+    "num_code": "56",
+    "calling_code": "32",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.723",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.723"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 23,
+  "fields": {
+    "iso2": "B",
+    "country_name": "Belie",
+    "long_country_name": "Belie",
+    "iso3": "BL",
+    "num_code": "84",
+    "calling_code": "501",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.826",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.826"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 24,
+  "fields": {
+    "iso2": "BJ",
+    "country_name": "Benin",
+    "long_country_name": "Republic of Benin",
+    "iso3": "BEN",
+    "num_code": "204",
+    "calling_code": "229",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:40.936",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:40.936"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 25,
+  "fields": {
+    "iso2": "BM",
+    "country_name": "Bermuda",
+    "long_country_name": "Bermuda Islands",
+    "iso3": "BMU",
+    "num_code": "60",
+    "calling_code": "1+441",
+    "international_region": 10,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.022",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.022"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 26,
+  "fields": {
+    "iso2": "BT",
+    "country_name": "Bhutan",
+    "long_country_name": "Kingdom of Bhutan",
+    "iso3": "BTN",
+    "num_code": "64",
+    "calling_code": "975",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.112",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.112"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 27,
+  "fields": {
+    "iso2": "BO",
+    "country_name": "Bolivia",
+    "long_country_name": "Plurinational State of Bolivia",
+    "iso3": "BOL",
+    "num_code": "68",
+    "calling_code": "591",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.193",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.193"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 28,
+  "fields": {
+    "iso2": "BQ",
+    "country_name": "Bonaire, Sint Eustatius and Saba",
+    "long_country_name": "Bonaire, Sint Eustatius and Saba",
+    "iso3": "BES",
+    "num_code": "535",
+    "calling_code": "599",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.380",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.380"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 29,
+  "fields": {
+    "iso2": "BA",
+    "country_name": "Bosnia and Heregovina",
+    "long_country_name": "Bosnia and Heregovina",
+    "iso3": "BIH",
+    "num_code": "70",
+    "calling_code": "387",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.460",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.460"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 30,
+  "fields": {
+    "iso2": "BW",
+    "country_name": "Botswana",
+    "long_country_name": "Republic of Botswana",
+    "iso3": "BWA",
+    "num_code": "72",
+    "calling_code": "267",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.537",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.537"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 31,
+  "fields": {
+    "iso2": "BV",
+    "country_name": "Bouvet Island",
+    "long_country_name": "Bouvet Island",
+    "iso3": "BVT",
+    "num_code": "74",
+    "calling_code": "NONE",
+    "international_region": 7,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.614",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.614"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 32,
+  "fields": {
+    "iso2": "BR",
+    "country_name": "Brail",
+    "long_country_name": "Federative Republic of Brail",
+    "iso3": "BRA",
+    "num_code": "76",
+    "calling_code": "55",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.690",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.692"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 33,
+  "fields": {
+    "iso2": "IO",
+    "country_name": "British Indian Ocean Territory",
+    "long_country_name": "British Indian Ocean Territory",
+    "iso3": "IOT",
+    "num_code": "86",
+    "calling_code": "246",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.804",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.804"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 34,
+  "fields": {
+    "iso2": "BN",
+    "country_name": "Brunei",
+    "long_country_name": "Brunei Darussalam",
+    "iso3": "BRN",
+    "num_code": "96",
+    "calling_code": "673",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.897",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.897"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 35,
+  "fields": {
+    "iso2": "BG",
+    "country_name": "Bulgaria",
+    "long_country_name": "Republic of Bulgaria",
+    "iso3": "BGR",
+    "num_code": "100",
+    "calling_code": "359",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:41.990",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:41.990"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 36,
+  "fields": {
+    "iso2": "BF",
+    "country_name": "Burkina Faso",
+    "long_country_name": "Burkina Faso",
+    "iso3": "BFA",
+    "num_code": "854",
+    "calling_code": "226",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.090",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.090"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 37,
+  "fields": {
+    "iso2": "BI",
+    "country_name": "Burundi",
+    "long_country_name": "Republic of Burundi",
+    "iso3": "BDI",
+    "num_code": "108",
+    "calling_code": "257",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.179",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.179"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 38,
+  "fields": {
+    "iso2": "KH",
+    "country_name": "Cambodia",
+    "long_country_name": "Kingdom of Cambodia",
+    "iso3": "KHM",
+    "num_code": "116",
+    "calling_code": "855",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.284",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.284"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 39,
+  "fields": {
+    "iso2": "CM",
+    "country_name": "Cameroon",
+    "long_country_name": "Republic of Cameroon",
+    "iso3": "CMR",
+    "num_code": "120",
+    "calling_code": "237",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.369",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.369"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 40,
+  "fields": {
+    "iso2": "CA",
+    "country_name": "Canada",
+    "long_country_name": "Canada",
+    "iso3": "CAN",
+    "num_code": "124",
+    "calling_code": "1",
+    "international_region": 10,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.451",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.451"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 41,
+  "fields": {
+    "iso2": "CV",
+    "country_name": "Cape Verde",
+    "long_country_name": "Republic of Cape Verde",
+    "iso3": "CPV",
+    "num_code": "132",
+    "calling_code": "238",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.536",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.536"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 42,
+  "fields": {
+    "iso2": "KY",
+    "country_name": "Cayman Islands",
+    "long_country_name": "The Cayman Islands",
+    "iso3": "CYM",
+    "num_code": "136",
+    "calling_code": "1+345",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.617",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.617"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 43,
+  "fields": {
+    "iso2": "CF",
+    "country_name": "Central 4n Republic",
+    "long_country_name": "Central 4n Republic",
+    "iso3": "CAF",
+    "num_code": "140",
+    "calling_code": "236",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.691",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.691"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 44,
+  "fields": {
+    "iso2": "TD",
+    "country_name": "Chad",
+    "long_country_name": "Republic of Chad",
+    "iso3": "TCD",
+    "num_code": "148",
+    "calling_code": "235",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.769",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.769"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 45,
+  "fields": {
+    "iso2": "CL",
+    "country_name": "Chile",
+    "long_country_name": "Republic of Chile",
+    "iso3": "CHL",
+    "num_code": "152",
+    "calling_code": "56",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.857",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.858"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 46,
+  "fields": {
+    "iso2": "CN",
+    "country_name": "China",
+    "long_country_name": "People's Republic of China",
+    "iso3": "CHN",
+    "num_code": "156",
+    "calling_code": "86",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:42.948",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:42.948"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 47,
+  "fields": {
+    "iso2": "CX",
+    "country_name": "Christmas Island",
+    "long_country_name": "Christmas Island",
+    "iso3": "CXR",
+    "num_code": "162",
+    "calling_code": "61",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.043",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.045"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 48,
+  "fields": {
+    "iso2": "CC",
+    "country_name": "Cocos (Keeling) Islands",
+    "long_country_name": "Cocos (Keeling) Islands",
+    "iso3": "CCK",
+    "num_code": "166",
+    "calling_code": "61",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.140",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.140"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 49,
+  "fields": {
+    "iso2": "CO",
+    "country_name": "Colombia",
+    "long_country_name": "Republic of Colombia",
+    "iso3": "COL",
+    "num_code": "170",
+    "calling_code": "57",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.232",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.232"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 50,
+  "fields": {
+    "iso2": "KM",
+    "country_name": "Comoros",
+    "long_country_name": "Union of the Comoros",
+    "iso3": "COM",
+    "num_code": "174",
+    "calling_code": "269",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.326",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.326"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 51,
+  "fields": {
+    "iso2": "CG",
+    "country_name": "Congo",
+    "long_country_name": "Republic of the Congo",
+    "iso3": "COG",
+    "num_code": "178",
+    "calling_code": "242",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.416",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.416"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 52,
+  "fields": {
+    "iso2": "CK",
+    "country_name": "Cook Islands",
+    "long_country_name": "Cook Islands",
+    "iso3": "COK",
+    "num_code": "184",
+    "calling_code": "682",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.493",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.493"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 53,
+  "fields": {
+    "iso2": "CR",
+    "country_name": "Costa Rica",
+    "long_country_name": "Republic of Costa Rica",
+    "iso3": "CRI",
+    "num_code": "188",
+    "calling_code": "506",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.581",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.581"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 54,
+  "fields": {
+    "iso2": "CI",
+    "country_name": "Cote d'ivoire (Ivory Coast)",
+    "long_country_name": "Republic of C&ocirc;te D'Ivoire (Ivory Coast)",
+    "iso3": "CIV",
+    "num_code": "384",
+    "calling_code": "225",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.659",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.659"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 55,
+  "fields": {
+    "iso2": "HR",
+    "country_name": "Croatia",
+    "long_country_name": "Republic of Croatia",
+    "iso3": "HRV",
+    "num_code": "191",
+    "calling_code": "385",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.736",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.736"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 56,
+  "fields": {
+    "iso2": "CU",
+    "country_name": "Cuba",
+    "long_country_name": "Republic of Cuba",
+    "iso3": "CUB",
+    "num_code": "192",
+    "calling_code": "53",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.818",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.818"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 57,
+  "fields": {
+    "iso2": "CW",
+    "country_name": "Curacao",
+    "long_country_name": "Cura&ccedil;ao",
+    "iso3": "CUW",
+    "num_code": "531",
+    "calling_code": "599",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.893",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.894"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 58,
+  "fields": {
+    "iso2": "CY",
+    "country_name": "Cyprus",
+    "long_country_name": "Republic of Cyprus",
+    "iso3": "CYP",
+    "num_code": "196",
+    "calling_code": "357",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:43.983",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:43.983"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 59,
+  "fields": {
+    "iso2": "C",
+    "country_name": "Cech Republic",
+    "long_country_name": "Cech Republic",
+    "iso3": "CE",
+    "num_code": "203",
+    "calling_code": "420",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.083",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.083"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 60,
+  "fields": {
+    "iso2": "CD",
+    "country_name": "Democratic Republic of the Congo",
+    "long_country_name": "Democratic Republic of the Congo",
+    "iso3": "COD",
+    "num_code": "180",
+    "calling_code": "243",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.185",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.185"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 61,
+  "fields": {
+    "iso2": "DK",
+    "country_name": "Denmark",
+    "long_country_name": "Kingdom of Denmark",
+    "iso3": "DNK",
+    "num_code": "208",
+    "calling_code": "45",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.289",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.289"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 62,
+  "fields": {
+    "iso2": "DJ",
+    "country_name": "Djibouti",
+    "long_country_name": "Republic of Djibouti",
+    "iso3": "DJI",
+    "num_code": "262",
+    "calling_code": "253",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.383",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.383"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 63,
+  "fields": {
+    "iso2": "DM",
+    "country_name": "Dominica",
+    "long_country_name": "Commonwealth of Dominica",
+    "iso3": "DMA",
+    "num_code": "212",
+    "calling_code": "1+767",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.466",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.466"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 64,
+  "fields": {
+    "iso2": "DO",
+    "country_name": "Dominican Republic",
+    "long_country_name": "Dominican Republic",
+    "iso3": "DOM",
+    "num_code": "214",
+    "calling_code": "1+809, 8",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.550",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.550"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 65,
+  "fields": {
+    "iso2": "EC",
+    "country_name": "Ecuador",
+    "long_country_name": "Republic of Ecuador",
+    "iso3": "ECU",
+    "num_code": "218",
+    "calling_code": "593",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.622",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.623"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 66,
+  "fields": {
+    "iso2": "EG",
+    "country_name": "Egypt",
+    "long_country_name": "Arab Republic of Egypt",
+    "iso3": "EGY",
+    "num_code": "818",
+    "calling_code": "20",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.701",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.701"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 67,
+  "fields": {
+    "iso2": "SV",
+    "country_name": "El Salvador",
+    "long_country_name": "Republic of El Salvador",
+    "iso3": "SLV",
+    "num_code": "222",
+    "calling_code": "503",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.777",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.777"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 68,
+  "fields": {
+    "iso2": "GQ",
+    "country_name": "Equatorial Guinea",
+    "long_country_name": "Republic of Equatorial Guinea",
+    "iso3": "GNQ",
+    "num_code": "226",
+    "calling_code": "240",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.846",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.846"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 69,
+  "fields": {
+    "iso2": "ER",
+    "country_name": "Eritrea",
+    "long_country_name": "State of Eritrea",
+    "iso3": "ERI",
+    "num_code": "232",
+    "calling_code": "291",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:44.925",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:44.925"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 70,
+  "fields": {
+    "iso2": "EE",
+    "country_name": "Estonia",
+    "long_country_name": "Republic of Estonia",
+    "iso3": "EST",
+    "num_code": "233",
+    "calling_code": "372",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.104",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.104"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 71,
+  "fields": {
+    "iso2": "ET",
+    "country_name": "Ethiopia",
+    "long_country_name": "Federal Democratic Republic of Ethiopia",
+    "iso3": "ETH",
+    "num_code": "231",
+    "calling_code": "251",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.191",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.191"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 72,
+  "fields": {
+    "iso2": "FK",
+    "country_name": "Falkland Islands (Malvinas)",
+    "long_country_name": "The Falkland Islands (Malvinas)",
+    "iso3": "FLK",
+    "num_code": "238",
+    "calling_code": "500",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.282",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.282"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 73,
+  "fields": {
+    "iso2": "FO",
+    "country_name": "Faroe Islands",
+    "long_country_name": "The Faroe Islands",
+    "iso3": "FRO",
+    "num_code": "234",
+    "calling_code": "298",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.387",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.387"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 74,
+  "fields": {
+    "iso2": "FJ",
+    "country_name": "Fiji",
+    "long_country_name": "Republic of Fiji",
+    "iso3": "FJI",
+    "num_code": "242",
+    "calling_code": "679",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.483",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.483"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 75,
+  "fields": {
+    "iso2": "FI",
+    "country_name": "Finland",
+    "long_country_name": "Republic of Finland",
+    "iso3": "FIN",
+    "num_code": "246",
+    "calling_code": "358",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.570",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.570"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 76,
+  "fields": {
+    "iso2": "FR",
+    "country_name": "France",
+    "long_country_name": "French Republic",
+    "iso3": "FRA",
+    "num_code": "250",
+    "calling_code": "33",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.659",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.659"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 77,
+  "fields": {
+    "iso2": "GF",
+    "country_name": "French Guiana",
+    "long_country_name": "French Guiana",
+    "iso3": "GUF",
+    "num_code": "254",
+    "calling_code": "594",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.748",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.748"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 78,
+  "fields": {
+    "iso2": "PF",
+    "country_name": "French Polynesia",
+    "long_country_name": "French Polynesia",
+    "iso3": "PYF",
+    "num_code": "258",
+    "calling_code": "689",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.827",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.827"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 79,
+  "fields": {
+    "iso2": "TF",
+    "country_name": "French Southern Territories",
+    "long_country_name": "French Southern Territories",
+    "iso3": "ATF",
+    "num_code": "260",
+    "calling_code": "NULL",
+    "international_region": 7,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.904",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.904"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 80,
+  "fields": {
+    "iso2": "GA",
+    "country_name": "Gabon",
+    "long_country_name": "Gabonese Republic",
+    "iso3": "GAB",
+    "num_code": "266",
+    "calling_code": "241",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:45.982",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:45.982"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 81,
+  "fields": {
+    "iso2": "GM",
+    "country_name": "Gambia",
+    "long_country_name": "Republic of The Gambia",
+    "iso3": "GMB",
+    "num_code": "270",
+    "calling_code": "220",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.054",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.054"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 82,
+  "fields": {
+    "iso2": "GE",
+    "country_name": "Georgia",
+    "long_country_name": "Georgia",
+    "iso3": "GEO",
+    "num_code": "268",
+    "calling_code": "995",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.125",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.125"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 83,
+  "fields": {
+    "iso2": "DE",
+    "country_name": "Germany",
+    "long_country_name": "Federal Republic of Germany",
+    "iso3": "DEU",
+    "num_code": "276",
+    "calling_code": "49",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.214",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.214"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 84,
+  "fields": {
+    "iso2": "GH",
+    "country_name": "Ghana",
+    "long_country_name": "Republic of Ghana",
+    "iso3": "GHA",
+    "num_code": "288",
+    "calling_code": "233",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.304",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.304"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 85,
+  "fields": {
+    "iso2": "GI",
+    "country_name": "Gibraltar",
+    "long_country_name": "Gibraltar",
+    "iso3": "GIB",
+    "num_code": "292",
+    "calling_code": "350",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.402",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.402"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 86,
+  "fields": {
+    "iso2": "GR",
+    "country_name": "Greece",
+    "long_country_name": "Hellenic Republic",
+    "iso3": "GRC",
+    "num_code": "300",
+    "calling_code": "30",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.489",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.489"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 87,
+  "fields": {
+    "iso2": "GL",
+    "country_name": "Greenland",
+    "long_country_name": "Greenland",
+    "iso3": "GRL",
+    "num_code": "304",
+    "calling_code": "299",
+    "international_region": 10,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.582",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.582"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 88,
+  "fields": {
+    "iso2": "GD",
+    "country_name": "Grenada",
+    "long_country_name": "Grenada",
+    "iso3": "GRD",
+    "num_code": "308",
+    "calling_code": "1+473",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.661",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.661"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 89,
+  "fields": {
+    "iso2": "GP",
+    "country_name": "Guadeloupe",
+    "long_country_name": "Guadeloupe",
+    "iso3": "GLP",
+    "num_code": "312",
+    "calling_code": "590",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.736",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.737"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 90,
+  "fields": {
+    "iso2": "GU",
+    "country_name": "Guam",
+    "long_country_name": "Guam",
+    "iso3": "GUM",
+    "num_code": "316",
+    "calling_code": "1+671",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.817",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.817"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 91,
+  "fields": {
+    "iso2": "GT",
+    "country_name": "Guatemala",
+    "long_country_name": "Republic of Guatemala",
+    "iso3": "GTM",
+    "num_code": "320",
+    "calling_code": "502",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.893",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.893"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 92,
+  "fields": {
+    "iso2": "GG",
+    "country_name": "Guernsey",
+    "long_country_name": "Guernsey",
+    "iso3": "GGY",
+    "num_code": "831",
+    "calling_code": "44",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:46.971",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:46.971"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 93,
+  "fields": {
+    "iso2": "GN",
+    "country_name": "Guinea",
+    "long_country_name": "Republic of Guinea",
+    "iso3": "GIN",
+    "num_code": "324",
+    "calling_code": "224",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.047",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.048"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 94,
+  "fields": {
+    "iso2": "GW",
+    "country_name": "Guinea-Bissau",
+    "long_country_name": "Republic of Guinea-Bissau",
+    "iso3": "GNB",
+    "num_code": "624",
+    "calling_code": "245",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.127",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.127"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 95,
+  "fields": {
+    "iso2": "GY",
+    "country_name": "Guyana",
+    "long_country_name": "Co-operative Republic of Guyana",
+    "iso3": "GUY",
+    "num_code": "328",
+    "calling_code": "592",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.215",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.215"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 96,
+  "fields": {
+    "iso2": "HT",
+    "country_name": "Haiti",
+    "long_country_name": "Republic of Haiti",
+    "iso3": "HTI",
+    "num_code": "332",
+    "calling_code": "509",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.304",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.304"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 97,
+  "fields": {
+    "iso2": "HM",
+    "country_name": "Heard Island and McDonald Islands",
+    "long_country_name": "Heard Island and McDonald Islands",
+    "iso3": "HMD",
+    "num_code": "334",
+    "calling_code": "NONE",
+    "international_region": 7,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.402",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.403"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 98,
+  "fields": {
+    "iso2": "HN",
+    "country_name": "Honduras",
+    "long_country_name": "Republic of Honduras",
+    "iso3": "HND",
+    "num_code": "340",
+    "calling_code": "504",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.504",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.504"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 99,
+  "fields": {
+    "iso2": "HK",
+    "country_name": "Hong Kong",
+    "long_country_name": "Hong Kong",
+    "iso3": "HKG",
+    "num_code": "344",
+    "calling_code": "852",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.589",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.589"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 100,
+  "fields": {
+    "iso2": "HU",
+    "country_name": "Hungary",
+    "long_country_name": "Hungary",
+    "iso3": "HUN",
+    "num_code": "348",
+    "calling_code": "36",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.671",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.671"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 101,
+  "fields": {
+    "iso2": "IS",
+    "country_name": "Iceland",
+    "long_country_name": "Republic of Iceland",
+    "iso3": "ISL",
+    "num_code": "352",
+    "calling_code": "354",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.748",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.748"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 102,
+  "fields": {
+    "iso2": "IN",
+    "country_name": "India",
+    "long_country_name": "Republic of India",
+    "iso3": "IND",
+    "num_code": "356",
+    "calling_code": "91",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.827",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.828"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 103,
+  "fields": {
+    "iso2": "ID",
+    "country_name": "Indonesia",
+    "long_country_name": "Republic of Indonesia",
+    "iso3": "IDN",
+    "num_code": "360",
+    "calling_code": "62",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.903",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.903"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 104,
+  "fields": {
+    "iso2": "IR",
+    "country_name": "Iran",
+    "long_country_name": "Islamic Republic of Iran",
+    "iso3": "IRN",
+    "num_code": "364",
+    "calling_code": "98",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:47.984",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:47.984"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 105,
+  "fields": {
+    "iso2": "IQ",
+    "country_name": "Iraq",
+    "long_country_name": "Republic of Iraq",
+    "iso3": "IRQ",
+    "num_code": "368",
+    "calling_code": "964",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.057",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.058"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 106,
+  "fields": {
+    "iso2": "IE",
+    "country_name": "Ireland",
+    "long_country_name": "Ireland",
+    "iso3": "IRL",
+    "num_code": "372",
+    "calling_code": "353",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.138",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.138"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 107,
+  "fields": {
+    "iso2": "IM",
+    "country_name": "Isle of Man",
+    "long_country_name": "Isle of Man",
+    "iso3": "IMN",
+    "num_code": "833",
+    "calling_code": "44",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.237",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.237"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 108,
+  "fields": {
+    "iso2": "IL",
+    "country_name": "Israel",
+    "long_country_name": "State of Israel",
+    "iso3": "ISR",
+    "num_code": "376",
+    "calling_code": "972",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.327",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.327"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 109,
+  "fields": {
+    "iso2": "IT",
+    "country_name": "Italy",
+    "long_country_name": "Italian Republic",
+    "iso3": "ITA",
+    "num_code": "380",
+    "calling_code": "39",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.424",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.424"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 110,
+  "fields": {
+    "iso2": "JM",
+    "country_name": "Jamaica",
+    "long_country_name": "Jamaica",
+    "iso3": "JAM",
+    "num_code": "388",
+    "calling_code": "1+876",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.527",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.527"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 111,
+  "fields": {
+    "iso2": "JP",
+    "country_name": "Japan",
+    "long_country_name": "Japan",
+    "iso3": "JPN",
+    "num_code": "392",
+    "calling_code": "81",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.621",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.621"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 112,
+  "fields": {
+    "iso2": "JE",
+    "country_name": "Jersey",
+    "long_country_name": "The Bailiwick of Jersey",
+    "iso3": "JEY",
+    "num_code": "832",
+    "calling_code": "44",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.715",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.715"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 113,
+  "fields": {
+    "iso2": "JO",
+    "country_name": "Jordan",
+    "long_country_name": "Hashemite Kingdom of Jordan",
+    "iso3": "JOR",
+    "num_code": "400",
+    "calling_code": "962",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.914",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.914"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 114,
+  "fields": {
+    "iso2": "K",
+    "country_name": "Kaakhstan",
+    "long_country_name": "Republic of Kaakhstan",
+    "iso3": "KA",
+    "num_code": "398",
+    "calling_code": "7",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:48.995",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:48.995"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 115,
+  "fields": {
+    "iso2": "KE",
+    "country_name": "Kenya",
+    "long_country_name": "Republic of Kenya",
+    "iso3": "KEN",
+    "num_code": "404",
+    "calling_code": "254",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.115",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.115"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 116,
+  "fields": {
+    "iso2": "KI",
+    "country_name": "Kiribati",
+    "long_country_name": "Republic of Kiribati",
+    "iso3": "KIR",
+    "num_code": "296",
+    "calling_code": "686",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.193",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.193"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 117,
+  "fields": {
+    "iso2": "XK",
+    "country_name": "Kosovo",
+    "long_country_name": "Republic of Kosovo",
+    "iso3": "---",
+    "num_code": "---",
+    "calling_code": "381",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.269",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.269"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 118,
+  "fields": {
+    "iso2": "KW",
+    "country_name": "Kuwait",
+    "long_country_name": "State of Kuwait",
+    "iso3": "KWT",
+    "num_code": "414",
+    "calling_code": "965",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.359",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.360"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 119,
+  "fields": {
+    "iso2": "KG",
+    "country_name": "Kyrgystan",
+    "long_country_name": "Kyrgy Republic",
+    "iso3": "KG",
+    "num_code": "417",
+    "calling_code": "996",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.458",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.458"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 120,
+  "fields": {
+    "iso2": "LA",
+    "country_name": "Laos",
+    "long_country_name": "Lao People's Democratic Republic",
+    "iso3": "LAO",
+    "num_code": "418",
+    "calling_code": "856",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.539",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.539"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 121,
+  "fields": {
+    "iso2": "LV",
+    "country_name": "Latvia",
+    "long_country_name": "Republic of Latvia",
+    "iso3": "LVA",
+    "num_code": "428",
+    "calling_code": "371",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.637",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.637"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 122,
+  "fields": {
+    "iso2": "LB",
+    "country_name": "Lebanon",
+    "long_country_name": "Republic of Lebanon",
+    "iso3": "LBN",
+    "num_code": "422",
+    "calling_code": "961",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.736",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.736"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 123,
+  "fields": {
+    "iso2": "LS",
+    "country_name": "Lesotho",
+    "long_country_name": "Kingdom of Lesotho",
+    "iso3": "LSO",
+    "num_code": "426",
+    "calling_code": "266",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.826",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.826"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 124,
+  "fields": {
+    "iso2": "LR",
+    "country_name": "Liberia",
+    "long_country_name": "Republic of Liberia",
+    "iso3": "LBR",
+    "num_code": "430",
+    "calling_code": "231",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:49.916",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:49.916"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 125,
+  "fields": {
+    "iso2": "LY",
+    "country_name": "Libya",
+    "long_country_name": "Libya",
+    "iso3": "LBY",
+    "num_code": "434",
+    "calling_code": "218",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.002",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.002"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 126,
+  "fields": {
+    "iso2": "LI",
+    "country_name": "Liechtenstein",
+    "long_country_name": "Principality of Liechtenstein",
+    "iso3": "LIE",
+    "num_code": "438",
+    "calling_code": "423",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.083",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.083"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 127,
+  "fields": {
+    "iso2": "LT",
+    "country_name": "Lithuania",
+    "long_country_name": "Republic of Lithuania",
+    "iso3": "LTU",
+    "num_code": "440",
+    "calling_code": "370",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.159",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.159"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 128,
+  "fields": {
+    "iso2": "LU",
+    "country_name": "Luxembourg",
+    "long_country_name": "Grand Duchy of Luxembourg",
+    "iso3": "LUX",
+    "num_code": "442",
+    "calling_code": "352",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.240",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.240"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 129,
+  "fields": {
+    "iso2": "MO",
+    "country_name": "Macao",
+    "long_country_name": "The Macao Special Administrative Region",
+    "iso3": "MAC",
+    "num_code": "446",
+    "calling_code": "853",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.314",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.314"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 130,
+  "fields": {
+    "iso2": "MK",
+    "country_name": "Macedonia",
+    "long_country_name": "The Former Yugoslav Republic of Macedonia",
+    "iso3": "MKD",
+    "num_code": "807",
+    "calling_code": "389",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.394",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.394"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 131,
+  "fields": {
+    "iso2": "MG",
+    "country_name": "Madagascar",
+    "long_country_name": "Republic of Madagascar",
+    "iso3": "MDG",
+    "num_code": "450",
+    "calling_code": "261",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.492",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.492"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 132,
+  "fields": {
+    "iso2": "MW",
+    "country_name": "Malawi",
+    "long_country_name": "Republic of Malawi",
+    "iso3": "MWI",
+    "num_code": "454",
+    "calling_code": "265",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.582",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.582"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 133,
+  "fields": {
+    "iso2": "MY",
+    "country_name": "Malaysia",
+    "long_country_name": "Malaysia",
+    "iso3": "MYS",
+    "num_code": "458",
+    "calling_code": "60",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.683",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.683"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 134,
+  "fields": {
+    "iso2": "MV",
+    "country_name": "Maldives",
+    "long_country_name": "Republic of Maldives",
+    "iso3": "MDV",
+    "num_code": "462",
+    "calling_code": "960",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.790",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.790"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 135,
+  "fields": {
+    "iso2": "ML",
+    "country_name": "Mali",
+    "long_country_name": "Republic of Mali",
+    "iso3": "MLI",
+    "num_code": "466",
+    "calling_code": "223",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.881",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.881"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 136,
+  "fields": {
+    "iso2": "MT",
+    "country_name": "Malta",
+    "long_country_name": "Republic of Malta",
+    "iso3": "MLT",
+    "num_code": "470",
+    "calling_code": "356",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:50.984",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:50.984"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 137,
+  "fields": {
+    "iso2": "MH",
+    "country_name": "Marshall Islands",
+    "long_country_name": "Republic of the Marshall Islands",
+    "iso3": "MHL",
+    "num_code": "584",
+    "calling_code": "692",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.058",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.058"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 138,
+  "fields": {
+    "iso2": "MQ",
+    "country_name": "Martinique",
+    "long_country_name": "Martinique",
+    "iso3": "MTQ",
+    "num_code": "474",
+    "calling_code": "596",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.138",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.138"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 139,
+  "fields": {
+    "iso2": "MR",
+    "country_name": "Mauritania",
+    "long_country_name": "Islamic Republic of Mauritania",
+    "iso3": "MRT",
+    "num_code": "478",
+    "calling_code": "222",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.215",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.215"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 140,
+  "fields": {
+    "iso2": "MU",
+    "country_name": "Mauritius",
+    "long_country_name": "Republic of Mauritius",
+    "iso3": "MUS",
+    "num_code": "480",
+    "calling_code": "230",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.296",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.296"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 141,
+  "fields": {
+    "iso2": "YT",
+    "country_name": "Mayotte",
+    "long_country_name": "Mayotte",
+    "iso3": "MYT",
+    "num_code": "175",
+    "calling_code": "262",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.370",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.370"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 142,
+  "fields": {
+    "iso2": "MX",
+    "country_name": "Mexico",
+    "long_country_name": "United Mexican States",
+    "iso3": "MEX",
+    "num_code": "484",
+    "calling_code": "52",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.447",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.448"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 143,
+  "fields": {
+    "iso2": "FM",
+    "country_name": "Micronesia",
+    "long_country_name": "Federated States of Micronesia",
+    "iso3": "FSM",
+    "num_code": "583",
+    "calling_code": "691",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.538",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.538"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 144,
+  "fields": {
+    "iso2": "MD",
+    "country_name": "Moldova",
+    "long_country_name": "Republic of Moldova",
+    "iso3": "MDA",
+    "num_code": "498",
+    "calling_code": "373",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.628",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.628"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 145,
+  "fields": {
+    "iso2": "MC",
+    "country_name": "Monaco",
+    "long_country_name": "Principality of Monaco",
+    "iso3": "MCO",
+    "num_code": "492",
+    "calling_code": "377",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.725",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.725"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 146,
+  "fields": {
+    "iso2": "MN",
+    "country_name": "Mongolia",
+    "long_country_name": "Mongolia",
+    "iso3": "MNG",
+    "num_code": "496",
+    "calling_code": "976",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.834",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.834"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 147,
+  "fields": {
+    "iso2": "ME",
+    "country_name": "Montenegro",
+    "long_country_name": "Montenegro",
+    "iso3": "MNE",
+    "num_code": "499",
+    "calling_code": "382",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:51.921",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:51.921"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 148,
+  "fields": {
+    "iso2": "MS",
+    "country_name": "Montserrat",
+    "long_country_name": "Montserrat",
+    "iso3": "MSR",
+    "num_code": "500",
+    "calling_code": "1+664",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.003",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.003"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 149,
+  "fields": {
+    "iso2": "MA",
+    "country_name": "Morocco",
+    "long_country_name": "Kingdom of Morocco",
+    "iso3": "MAR",
+    "num_code": "504",
+    "calling_code": "212",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.092",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.092"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 150,
+  "fields": {
+    "iso2": "M",
+    "country_name": "Moambique",
+    "long_country_name": "Republic of Moambique",
+    "iso3": "MO",
+    "num_code": "508",
+    "calling_code": "258",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.171",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.171"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 151,
+  "fields": {
+    "iso2": "MM",
+    "country_name": "Myanmar (Burma)",
+    "long_country_name": "Republic of the Union of Myanmar",
+    "iso3": "MMR",
+    "num_code": "104",
+    "calling_code": "95",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.249",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.249"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 152,
+  "fields": {
+    "iso2": "NA",
+    "country_name": "Namibia",
+    "long_country_name": "Republic of Namibia",
+    "iso3": "NAM",
+    "num_code": "516",
+    "calling_code": "264",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.328",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.329"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 153,
+  "fields": {
+    "iso2": "NR",
+    "country_name": "Nauru",
+    "long_country_name": "Republic of Nauru",
+    "iso3": "NRU",
+    "num_code": "520",
+    "calling_code": "674",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.403",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.403"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 154,
+  "fields": {
+    "iso2": "NP",
+    "country_name": "Nepal",
+    "long_country_name": "Federal Democratic Republic of Nepal",
+    "iso3": "NPL",
+    "num_code": "524",
+    "calling_code": "977",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.482",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.482"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 155,
+  "fields": {
+    "iso2": "NL",
+    "country_name": "Netherlands",
+    "long_country_name": "Kingdom of the Netherlands",
+    "iso3": "NLD",
+    "num_code": "528",
+    "calling_code": "31",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.685",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.685"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 156,
+  "fields": {
+    "iso2": "NC",
+    "country_name": "New Caledonia",
+    "long_country_name": "New Caledonia",
+    "iso3": "NCL",
+    "num_code": "540",
+    "calling_code": "687",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.781",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.781"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 157,
+  "fields": {
+    "iso2": "N",
+    "country_name": "New ealand",
+    "long_country_name": "New ealand",
+    "iso3": "NL",
+    "num_code": "554",
+    "calling_code": "64",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:52.884",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:52.884"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 158,
+  "fields": {
+    "iso2": "NI",
+    "country_name": "Nicaragua",
+    "long_country_name": "Republic of Nicaragua",
+    "iso3": "NIC",
+    "num_code": "558",
+    "calling_code": "505",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 159,
+  "fields": {
+    "iso2": "NE",
+    "country_name": "Niger",
+    "long_country_name": "Republic of Niger",
+    "iso3": "NER",
+    "num_code": "562",
+    "calling_code": "227",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.091",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.091"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 160,
+  "fields": {
+    "iso2": "NG",
+    "country_name": "Nigeria",
+    "long_country_name": "Federal Republic of Nigeria",
+    "iso3": "NGA",
+    "num_code": "566",
+    "calling_code": "234",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.167",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.167"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 161,
+  "fields": {
+    "iso2": "NU",
+    "country_name": "Niue",
+    "long_country_name": "Niue",
+    "iso3": "NIU",
+    "num_code": "570",
+    "calling_code": "683",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.247",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.247"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 162,
+  "fields": {
+    "iso2": "NF",
+    "country_name": "Norfolk Island",
+    "long_country_name": "Norfolk Island",
+    "iso3": "NFK",
+    "num_code": "574",
+    "calling_code": "672",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.327",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.327"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 163,
+  "fields": {
+    "iso2": "KP",
+    "country_name": "North Korea",
+    "long_country_name": "Democratic People's Republic of Korea",
+    "iso3": "PRK",
+    "num_code": "408",
+    "calling_code": "850",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.403",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.403"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 164,
+  "fields": {
+    "iso2": "MP",
+    "country_name": "Northern Mariana Islands",
+    "long_country_name": "Northern Mariana Islands",
+    "iso3": "MNP",
+    "num_code": "580",
+    "calling_code": "1+670",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.484",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.484"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 165,
+  "fields": {
+    "iso2": "NO",
+    "country_name": "Norway",
+    "long_country_name": "Kingdom of Norway",
+    "iso3": "NOR",
+    "num_code": "578",
+    "calling_code": "47",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.561",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.561"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 166,
+  "fields": {
+    "iso2": "OM",
+    "country_name": "Oman",
+    "long_country_name": "Sultanate of Oman",
+    "iso3": "OMN",
+    "num_code": "512",
+    "calling_code": "968",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.636",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.636"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 167,
+  "fields": {
+    "iso2": "PK",
+    "country_name": "Pakistan",
+    "long_country_name": "Islamic Republic of Pakistan",
+    "iso3": "PAK",
+    "num_code": "586",
+    "calling_code": "92",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.725",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.725"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 168,
+  "fields": {
+    "iso2": "PW",
+    "country_name": "Palau",
+    "long_country_name": "Republic of Palau",
+    "iso3": "PLW",
+    "num_code": "585",
+    "calling_code": "680",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.826",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.826"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 169,
+  "fields": {
+    "iso2": "PS",
+    "country_name": "Palestine",
+    "long_country_name": "State of Palestine (or Occupied Palestinian Territory)",
+    "iso3": "PSE",
+    "num_code": "275",
+    "calling_code": "970",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:53.916",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:53.916"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 170,
+  "fields": {
+    "iso2": "PA",
+    "country_name": "Panama",
+    "long_country_name": "Republic of Panama",
+    "iso3": "PAN",
+    "num_code": "591",
+    "calling_code": "507",
+    "international_region": 11,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.013",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.013"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 171,
+  "fields": {
+    "iso2": "PG",
+    "country_name": "Papua New Guinea",
+    "long_country_name": "Independent State of Papua New Guinea",
+    "iso3": "PNG",
+    "num_code": "598",
+    "calling_code": "675",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.090",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.090"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 172,
+  "fields": {
+    "iso2": "PY",
+    "country_name": "Paraguay",
+    "long_country_name": "Republic of Paraguay",
+    "iso3": "PRY",
+    "num_code": "600",
+    "calling_code": "595",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.171",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.171"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 173,
+  "fields": {
+    "iso2": "PE",
+    "country_name": "Peru",
+    "long_country_name": "Republic of Peru",
+    "iso3": "PER",
+    "num_code": "604",
+    "calling_code": "51",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.249",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.249"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 174,
+  "fields": {
+    "iso2": "PH",
+    "country_name": "Phillipines",
+    "long_country_name": "Republic of the Philippines",
+    "iso3": "PHL",
+    "num_code": "608",
+    "calling_code": "63",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.329",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.329"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 175,
+  "fields": {
+    "iso2": "PN",
+    "country_name": "Pitcairn",
+    "long_country_name": "Pitcairn",
+    "iso3": "PCN",
+    "num_code": "612",
+    "calling_code": "NONE",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.402",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.402"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 176,
+  "fields": {
+    "iso2": "PL",
+    "country_name": "Poland",
+    "long_country_name": "Republic of Poland",
+    "iso3": "POL",
+    "num_code": "616",
+    "calling_code": "48",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.485",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.485"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 177,
+  "fields": {
+    "iso2": "PT",
+    "country_name": "Portugal",
+    "long_country_name": "Portuguese Republic",
+    "iso3": "PRT",
+    "num_code": "620",
+    "calling_code": "351",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.557",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.557"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 178,
+  "fields": {
+    "iso2": "PR",
+    "country_name": "Puerto Rico",
+    "long_country_name": "Commonwealth of Puerto Rico",
+    "iso3": "PRI",
+    "num_code": "630",
+    "calling_code": "1+939",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.637",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.637"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 179,
+  "fields": {
+    "iso2": "QA",
+    "country_name": "Qatar",
+    "long_country_name": "State of Qatar",
+    "iso3": "QAT",
+    "num_code": "634",
+    "calling_code": "974",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.735",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.735"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 180,
+  "fields": {
+    "iso2": "RE",
+    "country_name": "Reunion",
+    "long_country_name": "R&eacute;union",
+    "iso3": "REU",
+    "num_code": "638",
+    "calling_code": "262",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.826",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.827"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 181,
+  "fields": {
+    "iso2": "RO",
+    "country_name": "Romania",
+    "long_country_name": "Romania",
+    "iso3": "ROU",
+    "num_code": "642",
+    "calling_code": "40",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:54.911",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:54.911"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 182,
+  "fields": {
+    "iso2": "RU",
+    "country_name": "Russia",
+    "long_country_name": "Russian Federation",
+    "iso3": "RUS",
+    "num_code": "643",
+    "calling_code": "7",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.001",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.001"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 183,
+  "fields": {
+    "iso2": "RW",
+    "country_name": "Rwanda",
+    "long_country_name": "Republic of Rwanda",
+    "iso3": "RWA",
+    "num_code": "646",
+    "calling_code": "250",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.076",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.076"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 184,
+  "fields": {
+    "iso2": "BL",
+    "country_name": "Saint Barthelemy",
+    "long_country_name": "Saint Barth&eacute;lemy",
+    "iso3": "BLM",
+    "num_code": "652",
+    "calling_code": "590",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.158",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.158"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 185,
+  "fields": {
+    "iso2": "SH",
+    "country_name": "Saint Helena",
+    "long_country_name": "Saint Helena, Ascension and Tristan da Cunha",
+    "iso3": "SHN",
+    "num_code": "654",
+    "calling_code": "290",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.236",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.236"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 186,
+  "fields": {
+    "iso2": "KN",
+    "country_name": "Saint Kitts and Nevis",
+    "long_country_name": "Federation of Saint Christopher and Nevis",
+    "iso3": "KNA",
+    "num_code": "659",
+    "calling_code": "1+869",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.317",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.317"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 187,
+  "fields": {
+    "iso2": "LC",
+    "country_name": "Saint Lucia",
+    "long_country_name": "Saint Lucia",
+    "iso3": "LCA",
+    "num_code": "662",
+    "calling_code": "1+758",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.392",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.392"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 188,
+  "fields": {
+    "iso2": "MF",
+    "country_name": "Saint Martin",
+    "long_country_name": "Saint Martin",
+    "iso3": "MAF",
+    "num_code": "663",
+    "calling_code": "590",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.472",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.472"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 189,
+  "fields": {
+    "iso2": "PM",
+    "country_name": "Saint Pierre and Miquelon",
+    "long_country_name": "Saint Pierre and Miquelon",
+    "iso3": "SPM",
+    "num_code": "666",
+    "calling_code": "508",
+    "international_region": 10,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.548",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.548"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 190,
+  "fields": {
+    "iso2": "VC",
+    "country_name": "Saint Vincent and the Grenadines",
+    "long_country_name": "Saint Vincent and the Grenadines",
+    "iso3": "VCT",
+    "num_code": "670",
+    "calling_code": "1+784",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.628",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.628"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 191,
+  "fields": {
+    "iso2": "WS",
+    "country_name": "Samoa",
+    "long_country_name": "Independent State of Samoa",
+    "iso3": "WSM",
+    "num_code": "882",
+    "calling_code": "685",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.725",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.725"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 192,
+  "fields": {
+    "iso2": "SM",
+    "country_name": "San Marino",
+    "long_country_name": "Republic of San Marino",
+    "iso3": "SMR",
+    "num_code": "674",
+    "calling_code": "378",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.818",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.819"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 193,
+  "fields": {
+    "iso2": "ST",
+    "country_name": "Sao Tome and Principe",
+    "long_country_name": "Democratic Republic of S&atilde;o Tom&eacute; and Pr&iacute;ncipe",
+    "iso3": "STP",
+    "num_code": "678",
+    "calling_code": "239",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:55.925",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:55.926"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 194,
+  "fields": {
+    "iso2": "SA",
+    "country_name": "Saudi Arabia",
+    "long_country_name": "Kingdom of Saudi Arabia",
+    "iso3": "SAU",
+    "num_code": "682",
+    "calling_code": "966",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.027",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.027"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 195,
+  "fields": {
+    "iso2": "SN",
+    "country_name": "Senegal",
+    "long_country_name": "Republic of Senegal",
+    "iso3": "SEN",
+    "num_code": "686",
+    "calling_code": "221",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.117",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.117"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 196,
+  "fields": {
+    "iso2": "RS",
+    "country_name": "Serbia",
+    "long_country_name": "Republic of Serbia",
+    "iso3": "SRB",
+    "num_code": "688",
+    "calling_code": "381",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.190",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.190"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 197,
+  "fields": {
+    "iso2": "SC",
+    "country_name": "Seychelles",
+    "long_country_name": "Republic of Seychelles",
+    "iso3": "SYC",
+    "num_code": "690",
+    "calling_code": "248",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.382",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.382"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 198,
+  "fields": {
+    "iso2": "SL",
+    "country_name": "Sierra Leone",
+    "long_country_name": "Republic of Sierra Leone",
+    "iso3": "SLE",
+    "num_code": "694",
+    "calling_code": "232",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.461",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.461"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 199,
+  "fields": {
+    "iso2": "SG",
+    "country_name": "Singapore",
+    "long_country_name": "Republic of Singapore",
+    "iso3": "SGP",
+    "num_code": "702",
+    "calling_code": "65",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.536",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.536"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 200,
+  "fields": {
+    "iso2": "SX",
+    "country_name": "Sint Maarten",
+    "long_country_name": "Sint Maarten",
+    "iso3": "SXM",
+    "num_code": "534",
+    "calling_code": "1+721",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.617",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.617"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 201,
+  "fields": {
+    "iso2": "SK",
+    "country_name": "Slovakia",
+    "long_country_name": "Slovak Republic",
+    "iso3": "SVK",
+    "num_code": "703",
+    "calling_code": "421",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.692",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.692"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 202,
+  "fields": {
+    "iso2": "SI",
+    "country_name": "Slovenia",
+    "long_country_name": "Republic of Slovenia",
+    "iso3": "SVN",
+    "num_code": "705",
+    "calling_code": "386",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.768",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.768"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 203,
+  "fields": {
+    "iso2": "SB",
+    "country_name": "Solomon Islands",
+    "long_country_name": "Solomon Islands",
+    "iso3": "SLB",
+    "num_code": "90",
+    "calling_code": "677",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.856",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.856"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 204,
+  "fields": {
+    "iso2": "SO",
+    "country_name": "Somalia",
+    "long_country_name": "Somali Republic",
+    "iso3": "SOM",
+    "num_code": "706",
+    "calling_code": "252",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:56.949",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:56.949"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 205,
+  "fields": {
+    "iso2": "A",
+    "country_name": "South 4",
+    "long_country_name": "Republic of South 4",
+    "iso3": "AF",
+    "num_code": "710",
+    "calling_code": "27",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.057",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.057"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 206,
+  "fields": {
+    "iso2": "GS",
+    "country_name": "South Georgia and the South Sandwich Islands",
+    "long_country_name": "South Georgia and the South Sandwich Islands",
+    "iso3": "SGS",
+    "num_code": "239",
+    "calling_code": "500",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.160",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.160"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 207,
+  "fields": {
+    "iso2": "KR",
+    "country_name": "South Korea",
+    "long_country_name": "Republic of Korea",
+    "iso3": "KOR",
+    "num_code": "410",
+    "calling_code": "82",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.246",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.246"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 208,
+  "fields": {
+    "iso2": "SS",
+    "country_name": "South Sudan",
+    "long_country_name": "Republic of South Sudan",
+    "iso3": "SSD",
+    "num_code": "728",
+    "calling_code": "211",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.326",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.326"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 209,
+  "fields": {
+    "iso2": "ES",
+    "country_name": "Spain",
+    "long_country_name": "Kingdom of Spain",
+    "iso3": "ESP",
+    "num_code": "724",
+    "calling_code": "34",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.414",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.414"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 210,
+  "fields": {
+    "iso2": "LK",
+    "country_name": "Sri Lanka",
+    "long_country_name": "Democratic Socialist Republic of Sri Lanka",
+    "iso3": "LKA",
+    "num_code": "144",
+    "calling_code": "94",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.494",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.495"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 211,
+  "fields": {
+    "iso2": "SD",
+    "country_name": "Sudan",
+    "long_country_name": "Republic of the Sudan",
+    "iso3": "SDN",
+    "num_code": "729",
+    "calling_code": "249",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.568",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.568"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 212,
+  "fields": {
+    "iso2": "SR",
+    "country_name": "Suriname",
+    "long_country_name": "Republic of Suriname",
+    "iso3": "SUR",
+    "num_code": "740",
+    "calling_code": "597",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.648",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.648"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 213,
+  "fields": {
+    "iso2": "SJ",
+    "country_name": "Svalbard and Jan Mayen",
+    "long_country_name": "Svalbard and Jan Mayen",
+    "iso3": "SJM",
+    "num_code": "744",
+    "calling_code": "47",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.733",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.733"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 214,
+  "fields": {
+    "iso2": "S",
+    "country_name": "Swailand",
+    "long_country_name": "Kingdom of Swailand",
+    "iso3": "SW",
+    "num_code": "748",
+    "calling_code": "268",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.813",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.813"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 215,
+  "fields": {
+    "iso2": "SE",
+    "country_name": "Sweden",
+    "long_country_name": "Kingdom of Sweden",
+    "iso3": "SWE",
+    "num_code": "752",
+    "calling_code": "46",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:57.900",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:57.900"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 216,
+  "fields": {
+    "iso2": "CH",
+    "country_name": "Switerland",
+    "long_country_name": "Swiss Confederation",
+    "iso3": "CHE",
+    "num_code": "756",
+    "calling_code": "41",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.002",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.002"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 217,
+  "fields": {
+    "iso2": "SY",
+    "country_name": "Syria",
+    "long_country_name": "Syrian Arab Republic",
+    "iso3": "SYR",
+    "num_code": "760",
+    "calling_code": "963",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.092",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.092"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 218,
+  "fields": {
+    "iso2": "TW",
+    "country_name": "Taiwan",
+    "long_country_name": "Republic of China (Taiwan)",
+    "iso3": "TWN",
+    "num_code": "158",
+    "calling_code": "886",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.181",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.181"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 219,
+  "fields": {
+    "iso2": "TJ",
+    "country_name": "Tajikistan",
+    "long_country_name": "Republic of Tajikistan",
+    "iso3": "TJK",
+    "num_code": "762",
+    "calling_code": "992",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.269",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.269"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 220,
+  "fields": {
+    "iso2": "T",
+    "country_name": "Tanania",
+    "long_country_name": "United Republic of Tanania",
+    "iso3": "TA",
+    "num_code": "834",
+    "calling_code": "255",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.347",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.347"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 221,
+  "fields": {
+    "iso2": "TH",
+    "country_name": "Thailand",
+    "long_country_name": "Kingdom of Thailand",
+    "iso3": "THA",
+    "num_code": "764",
+    "calling_code": "66",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.436",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.436"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 222,
+  "fields": {
+    "iso2": "TL",
+    "country_name": "Timor-Leste (East Timor)",
+    "long_country_name": "Democratic Republic of Timor-Leste",
+    "iso3": "TLS",
+    "num_code": "626",
+    "calling_code": "670",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.512",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.512"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 223,
+  "fields": {
+    "iso2": "TG",
+    "country_name": "Togo",
+    "long_country_name": "Togolese Republic",
+    "iso3": "TGO",
+    "num_code": "768",
+    "calling_code": "228",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.580",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.580"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 224,
+  "fields": {
+    "iso2": "TK",
+    "country_name": "Tokelau",
+    "long_country_name": "Tokelau",
+    "iso3": "TKL",
+    "num_code": "772",
+    "calling_code": "690",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.659",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.660"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 225,
+  "fields": {
+    "iso2": "TO",
+    "country_name": "Tonga",
+    "long_country_name": "Kingdom of Tonga",
+    "iso3": "TON",
+    "num_code": "776",
+    "calling_code": "676",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.758",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.758"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 226,
+  "fields": {
+    "iso2": "TT",
+    "country_name": "Trinidad and Tobago",
+    "long_country_name": "Republic of Trinidad and Tobago",
+    "iso3": "TTO",
+    "num_code": "780",
+    "calling_code": "1+868",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.862",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.862"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 227,
+  "fields": {
+    "iso2": "TN",
+    "country_name": "Tunisia",
+    "long_country_name": "Republic of Tunisia",
+    "iso3": "TUN",
+    "num_code": "788",
+    "calling_code": "216",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:58.958",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:58.959"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 228,
+  "fields": {
+    "iso2": "TR",
+    "country_name": "Turkey",
+    "long_country_name": "Republic of Turkey",
+    "iso3": "TUR",
+    "num_code": "792",
+    "calling_code": "90",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.051",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.051"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 229,
+  "fields": {
+    "iso2": "TM",
+    "country_name": "Turkmenistan",
+    "long_country_name": "Turkmenistan",
+    "iso3": "TKM",
+    "num_code": "795",
+    "calling_code": "993",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.159",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.159"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 230,
+  "fields": {
+    "iso2": "TC",
+    "country_name": "Turks and Caicos Islands",
+    "long_country_name": "Turks and Caicos Islands",
+    "iso3": "TCA",
+    "num_code": "796",
+    "calling_code": "1+649",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.261",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.262"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 231,
+  "fields": {
+    "iso2": "TV",
+    "country_name": "Tuvalu",
+    "long_country_name": "Tuvalu",
+    "iso3": "TUV",
+    "num_code": "798",
+    "calling_code": "688",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.349",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.349"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 232,
+  "fields": {
+    "iso2": "UG",
+    "country_name": "Uganda",
+    "long_country_name": "Republic of Uganda",
+    "iso3": "UGA",
+    "num_code": "800",
+    "calling_code": "256",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.423",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.423"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 233,
+  "fields": {
+    "iso2": "UA",
+    "country_name": "Ukraine",
+    "long_country_name": "Ukraine",
+    "iso3": "UKR",
+    "num_code": "804",
+    "calling_code": "380",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.502",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.502"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 234,
+  "fields": {
+    "iso2": "AE",
+    "country_name": "United Arab Emirates",
+    "long_country_name": "United Arab Emirates",
+    "iso3": "ARE",
+    "num_code": "784",
+    "calling_code": "971",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.583",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.583"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 235,
+  "fields": {
+    "iso2": "GB",
+    "country_name": "United Kingdom",
+    "long_country_name": "United Kingdom of Great Britain and Nothern Ireland",
+    "iso3": "GBR",
+    "num_code": "826",
+    "calling_code": "44",
+    "international_region": 2,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.658",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.658"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 236,
+  "fields": {
+    "iso2": "US",
+    "country_name": "United States",
+    "long_country_name": "United States of America",
+    "iso3": "USA",
+    "num_code": "840",
+    "calling_code": "1",
+    "international_region": 10,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.739",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.739"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 237,
+  "fields": {
+    "iso2": "UM",
+    "country_name": "United States Minor Outlying Islands",
+    "long_country_name": "United States Minor Outlying Islands",
+    "iso3": "UMI",
+    "num_code": "581",
+    "calling_code": "NONE",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.826",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.826"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 238,
+  "fields": {
+    "iso2": "UY",
+    "country_name": "Uruguay",
+    "long_country_name": "Eastern Republic of Uruguay",
+    "iso3": "URY",
+    "num_code": "858",
+    "calling_code": "598",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:09:59.917",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:09:59.917"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 239,
+  "fields": {
+    "iso2": "U",
+    "country_name": "Ubekistan",
+    "long_country_name": "Republic of Ubekistan",
+    "iso3": "UB",
+    "num_code": "860",
+    "calling_code": "998",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.016",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.016"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 240,
+  "fields": {
+    "iso2": "VU",
+    "country_name": "Vanuatu",
+    "long_country_name": "Republic of Vanuatu",
+    "iso3": "VUT",
+    "num_code": "548",
+    "calling_code": "678",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.215",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.215"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 241,
+  "fields": {
+    "iso2": "VA",
+    "country_name": "Vatican City",
+    "long_country_name": "State of the Vatican City",
+    "iso3": "VAT",
+    "num_code": "336",
+    "calling_code": "39",
+    "international_region": 3,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.315",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.315"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 242,
+  "fields": {
+    "iso2": "VE",
+    "country_name": "Veneuela",
+    "long_country_name": "Bolivarian Republic of Veneuela",
+    "iso3": "VEN",
+    "num_code": "862",
+    "calling_code": "58",
+    "international_region": 8,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.405",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.405"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 243,
+  "fields": {
+    "iso2": "VN",
+    "country_name": "Vietnam",
+    "long_country_name": "Socialist Republic of Vietnam",
+    "iso3": "VNM",
+    "num_code": "704",
+    "calling_code": "84",
+    "international_region": 1,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.487",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.487"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 244,
+  "fields": {
+    "iso2": "VG",
+    "country_name": "Virgin Islands, British",
+    "long_country_name": "British Virgin Islands",
+    "iso3": "VGB",
+    "num_code": "92",
+    "calling_code": "1+284",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.572",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.572"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 245,
+  "fields": {
+    "iso2": "VI",
+    "country_name": "Virgin Islands, US",
+    "long_country_name": "Virgin Islands of the United States",
+    "iso3": "VIR",
+    "num_code": "850",
+    "calling_code": "1+340",
+    "international_region": 6,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.647",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.647"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 246,
+  "fields": {
+    "iso2": "WF",
+    "country_name": "Wallis and Futuna",
+    "long_country_name": "Wallis and Futuna",
+    "iso3": "WLF",
+    "num_code": "876",
+    "calling_code": "681",
+    "international_region": 5,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.727",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.727"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 247,
+  "fields": {
+    "iso2": "EH",
+    "country_name": "Western Sahara",
+    "long_country_name": "Western Sahara",
+    "iso3": "ESH",
+    "num_code": "732",
+    "calling_code": "212",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.802",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.802"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 248,
+  "fields": {
+    "iso2": "YE",
+    "country_name": "Yemen",
+    "long_country_name": "Republic of Yemen",
+    "iso3": "YEM",
+    "num_code": "887",
+    "calling_code": "967",
+    "international_region": 9,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.886",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.886"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 249,
+  "fields": {
+    "iso2": "M",
+    "country_name": "ambia",
+    "long_country_name": "Republic of ambia",
+    "iso3": "MB",
+    "num_code": "894",
+    "calling_code": "260",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:00.957",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:00.957"
+  }
+},
+{
+  "model": "administrator.country",
+  "pk": 250,
+  "fields": {
+    "iso2": "W",
+    "country_name": "imbabwe",
+    "long_country_name": "Republic of imbabwe",
+    "iso3": "WE",
+    "num_code": "716",
+    "calling_code": "263",
+    "international_region": 4,
+    "created_by": 1,
+    "created_at": "2024-08-15T06:10:01.038",
+    "updated_by": null,
+    "updated_at": "2024-08-15T06:10:01.038"
+  }
+}
+]
