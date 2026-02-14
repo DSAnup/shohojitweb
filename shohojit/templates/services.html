@@ -1,0 +1,342 @@
+{% extends 'shohojit_base.html' %}
+
+{% block title %} Sohoj IT - IT Training Institute & Solutions Agency {% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dist/css/services.css' %}?v=1.0.2">
+<!-- Service Hero Section -->
+    <section class="about-hero">
+        <div class="container about-hero-content">
+            <h1>Our Professional IT Services</h1>
+            <p>Comprehensive IT solutions tailored to your business needs. From training to consultancy, we've got you covered.</p>
+            <a href="#contact" class="btn btn-primary">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Service Categories Section -->
+    <section id="service-categories" class="service-details">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-layer-group"></i></div>
+                <h2>Our Service Categories</h2>
+                <p>Explore our comprehensive range of IT services designed for individuals and businesses</p>
+            </div>
+            
+            <div class="service-categories">
+                <!-- IT Training Services -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>IT Training Institute</h3>
+                        <p>Professional courses to launch your IT career</p>
+                    </div>
+                    <div class="category-body">
+                        <ul class="service-list">
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Web Development</h4>
+                                    <p>Full-stack web development training</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Graphic Design</h4>
+                                    <p>Professional design with Adobe tools</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Digital Marketing</h4>
+                                    <p>SEO, social media, and online marketing</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Programming</h4>
+                                    <p>Python, JavaScript, and more</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- IT Solutions Services -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>IT Solutions Agency</h3>
+                        <p>Custom solutions for your business needs</p>
+                    </div>
+                    <div class="category-body">
+                        <ul class="service-list">
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Custom Web Development</h4>
+                                    <p>Tailored websites and web applications</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>E-commerce Solutions</h4>
+                                    <p>Online stores and payment integration</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Mobile App Development</h4>
+                                    <p>iOS and Android applications</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>System Maintenance</h4>
+                                    <p>Regular updates and technical support</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Business Services -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Business Services</h3>
+                        <p>Supporting your business growth</p>
+                    </div>
+                    <div class="category-body">
+                        <ul class="service-list">
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Corporate Training</h4>
+                                    <p>Team training for digital transformation</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>IT Consultancy</h4>
+                                    <p>Strategic IT planning and advice</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Cloud Solutions</h4>
+                                    <p>Cloud migration and management</p>
+                                </div>
+                            </li>
+                            <li class="service-list-item">
+                                <div class="service-list-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-list-content">
+                                    <h4>Cybersecurity</h4>
+                                    <p>Security audits and protection</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services Section -->
+    <section class="featured-services">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-star"></i></div>
+                <h2>Featured Services</h2>
+                <p>Our most popular and impactful services that drive results</p>
+            </div>
+            
+            <div class="featured-container">
+                <div class="featured-service">
+                    <div class="featured-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Professional IT Training</h3>
+                    <p>Industry-relevant courses taught by experienced professionals with hands-on projects and career support.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="featured-service">
+                    <div class="featured-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Custom Web Solutions</h3>
+                    <p>Tailored web development services that align with your business goals and deliver measurable results.</p>
+                    <a href="#contact" class="btn btn-outline">Get Quote</a>
+                </div>
+                
+                <div class="featured-service">
+                    <div class="featured-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Corporate IT Training</h3>
+                    <p>Customized training programs for businesses to upskill their teams and embrace digital transformation.</p>
+                    <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-cogs"></i></div>
+                <h2>Our Service Process</h2>
+                <p>How we work to deliver exceptional results every time</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Requirement Analysis</h4>
+                        <p>We begin by thoroughly understanding your needs, goals, and constraints through detailed discussions and analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Solution Design</h4>
+                        <p>Our experts design a tailored solution with clear specifications, timelines, and cost estimates.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Development & Training</h4>
+                        <p>We implement the solution while maintaining transparent communication and providing regular updates.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Delivery & Support</h4>
+                        <p>After successful delivery, we provide ongoing support, maintenance, and optimization services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-medal"></i></div>
+                <h2>Why Choose Our Services</h2>
+                <p>The advantages of partnering with Sohoj IT for your IT needs</p>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our team consists of certified professionals with 5+ years of industry experience.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Timely Delivery</h3>
+                    <p>We respect deadlines and deliver projects on time without compromising quality.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock technical support to ensure your systems run smoothly.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Client-Centric</h3>
+                    <p>We prioritize your needs and maintain transparent communication throughout.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Cost-Effective</h3>
+                    <p>Competitive pricing with no hidden costs and flexible payment options.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous testing and quality checks ensure superior deliverables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Get in touch with us today to discuss your IT needs. Let's create something amazing together!</p>
+                <div class="cta-buttons">
+                    <a href="tel:+8801234567890" class="btn btn-secondary">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                    <a href="mailto:info@sohojit.com" class="btn btn-accent">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                    <a href="index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Book Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'dist/js/services.js' %}?v=1.0.0"></script>
+{% endblock %}

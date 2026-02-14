@@ -1,0 +1,103 @@
+{% extends 'shohojit_base.html' %}
+
+{% block title %} Sohoj IT - IT Training Institute & Solutions Agency {% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dist/css/team.css' %}?v=1.0.1">
+    <!-- Hero Section -->
+    <section class="team-hero">
+        <div class="container">
+            <h1>Meet Our Expert Team</h1>
+            <p>Passionate professionals dedicated to your success in the digital world</p>
+            <a href="#team-members" class="btn btn-primary">Meet Our Team</a>
+        </div>
+    </section>
+
+    <!-- Team Filter -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-user-tie"></i></div>
+                <h2>Our Expert Team</h2>
+                <p>Meet the talented professionals who make Sohoj IT a leader in IT education and solutions</p>
+            </div>
+            
+            <div class="team-filter">
+                <button class="filter-btn active" data-filter="all">All Team Members</button>
+                <button class="filter-btn" data-filter="management">Management</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </div>
+
+            <!-- Team Members -->
+            <div id="team-members" class="team-container">
+                <!-- Team members will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-chart-line"></i></div>
+                <h2>Areas of Expertise</h2>
+                <p>Our team covers all aspects of IT education and solutions</p>
+            </div>
+            
+            <div class="expertise-container">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Expertise in modern web technologies including JavaScript, React, Node.js, and full-stack development.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Creative professionals skilled in Adobe Creative Suite, UI/UX design, and brand identity.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Specialists in SEO, social media marketing, content strategy, and digital advertising.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>IT Education</h3>
+                    <p>Experienced trainers with proven track records in student success and skill development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Team Section -->
+    <section class="join-team-section">
+        <div class="container">
+            <h2>Join Our Team</h2>
+            <p>Passionate about IT education? We're always looking for talented professionals to join our mission of empowering the next generation.</p>
+            <a href="index.html#contact" class="btn btn-secondary">Explore Career Opportunities</a>
+        </div>
+    </section>
+
+
+    <script>
+        // === INITIALIZATION ===
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollAnimations();
+            setupEventListeners();
+            setupDropdowns();
+        });
+    </script>
+    <script src="{% static 'dist/js/team.js' %}?v=1.0.0"></script>
+{% endblock %}

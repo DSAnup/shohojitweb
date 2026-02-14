@@ -1,0 +1,47 @@
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Sohoj IT</h3>
+                <p>Sohoj IT is a premier IT training institute and solutions agency dedicated to providing high-quality education and services in modern technology.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'courses' %}">Courses</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a href="{% url 'course_detail' 1 %}">Web Development</a></li>
+                    <li><a href="{% url 'course_detail' 2 %}">Graphic Design</a></li>
+                    <li><a href="{% url 'course_detail' 3 %}">Digital Marketing</a></li>
+                    <li><a href="{% url 'course_detail' 4 %}">Programming</a></li>
+                    <li><a href="{% url 'course_detail' 5 %}">Freelancing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 IT Tower, Dhaka</li>
+                    <li><i class="fas fa-phone-alt"></i> +880 1234 567890</li>
+                    <li><i class="fas fa-envelope"></i> info@sohojit.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Sohoj IT. All Rights Reserved. | Institute & IT Solutions Agency</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,216 @@
+{% extends 'shohojit_base.html' %}
+
+{% block title %} Sohoj IT - IT Training Institute & Solutions Agency {% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dist/css/about.css' %}?v=1.0.1">
+<!-- About Section -->
+<!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Sohoj IT</h1>
+            <p>Empowering the next generation of IT professionals since 2015 with quality education and innovative solutions</p>
+            <a href="#mission-vision" class="btn btn-primary">Our Mission & Vision</a>
+        </div>
+    </section>
+
+        <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="mission-vision-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                <h2>Our Mission & Vision</h2>
+                <p>Driving innovation through education and technology solutions</p>
+            </div>
+            <div class="mission-vision-container">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide accessible, high-quality IT education and solutions that empower individuals and businesses to thrive in the digital age. We're committed to bridging the digital skills gap through practical, industry-relevant training and innovative technology services.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become Bangladesh's leading IT education and solutions provider, recognized for transforming lives and businesses through technology. We envision a future where every individual has access to the digital skills needed to succeed in the global economy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-heart"></i></div>
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>We strive for excellence in everything we do, from course content to client services.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>Continuously updating our curriculum and services with the latest technologies.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Integrity</h4>
+                    <p>Honest, transparent, and ethical practices in all our interactions.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Empowerment</h4>
+                    <p>Equipping students and clients with skills for long-term success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="our-team" class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-user-tie"></i></div>
+                <h2>Meet Our Team</h2>
+                <p>Industry experts dedicated to your success</p>
+            </div>
+            <div class="team-container">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'shohojit/about/Md. Shariful Islam.jpg' %}" alt="CEO">
+                    </div>
+                    <div class="team-info">
+                        <h3>Md. Shariful Islam</h3>
+                        <p class="position">CEO & Founder</p>
+                        <p>10+ years experience in software development and IT education. Passionate about bridging the digital skills gap.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'shohojit/about/Kamrul Islam.jpg' %}" alt="Lead Instructor">
+                    </div>
+                    <div class="team-info">
+                        <h3>Md. Kamrul Islam</h3>
+                        <p class="position">Graphic Designer</p>
+                        <p>Graphic designer with 8 years of experience. Specializes in Adobe Photoshop, Illustrator, and InDesign.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'shohojit/about/Golam Robbany.jpg' %}" alt="Design Lead">
+                    </div>
+                    <div class="team-info">
+                        <h3>Golam Robbany</h3>
+                        <p class="position">Marketing Head</p>
+                        <p>7 years of experience. Expert in SEO, Google Ads, and social media marketing.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'shohojit/about/Sumon Sarker.jpg' %}" alt="Marketing Head">
+                    </div>
+                    <div class="team-info">
+                        <h3>Sumon Sarkar</h3>
+                        <p class="position">Hardware Engineer</p>
+                        <p>Hardware engineer with 6 years of experience. Specializes in computer hardware assembly, maintenance, and troubleshooting.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-history"></i></div>
+                <h2>Our Journey</h2>
+                <p>Milestones in our growth and development</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>Foundation</h3>
+                        <p>Sohoj IT was founded with a vision to provide quality IT education in Dhaka. Started with basic computer courses.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-content">
+                        <h3>Expansion</h3>
+                        <p>Introduced advanced courses in web development and graphic design. Expanded team to 5 instructors.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>IT Solutions Launch</h3>
+                        <p>Started offering IT consultancy and web development services to businesses alongside training programs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <h3>Digital Transformation</h3>
+                        <p>Launched online courses and hybrid learning models to reach students across Bangladesh.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>500+ Graduates</h3>
+                        <p>Celebrated 500+ successful graduates and expanded our corporate training programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // === INITIALIZATION ===
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollAnimations();
+            setupEventListeners();
+            setupDropdowns();
+        });
+    </script>
+    <script src="{% static 'dist/js/about.js' %}?v=1.0.0"></script>
+{% endblock %}

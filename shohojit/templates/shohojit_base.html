@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload hero images -->
+    <link rel="preload" href="images/IT skills slide.png" as="image">
+    <link rel="preload" href="images/web development-slide.jpg" as="image">
+    <link rel="preload" href="images/graphi design-slide.jpg" as="image">
+    <link rel="preload" href="images/Freelancing-slide.png" as="image">
+
+</head>
+<body>
+    <!-- Loading Screen -->
+    <!-- <div class="loading">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    {% include 'includes/navbar.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- Footer -->
+    {% include 'includes/footer.html' %}
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <i class="fas fa-times close"></i>
+        <img class="lightbox-content" id="lightbox-img" alt="Full screen image">
+    </div>
+<script src="{% static 'dist/js/shohoj_dropdown.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+{% extends 'shohojit_base.html' %}
+
+{% block title %} Sohoj IT - IT Training Institute & Solutions Agency {% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dist/css/contact.css' %}?v=1.0.1">
+<!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="floating-icons">
+            <div class="floating-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="floating-icon"><i class="fas fa-envelope"></i></div>
+            <div class="floating-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="floating-icon"><i class="fas fa-comments"></i></div>
+            <div class="floating-icon"><i class="fas fa-headset"></i></div>
+        </div>
+        <div class="container contact-hero-content">
+            <h1>Get In Touch With Us</h1>
+            <p>We're here to help you with your IT training and solution needs. Reach out to us through any channel below.</p>
+            <div class="hero-buttons" style="margin-top: 40px;">
+                <a href="#contact-form" class="btn btn-primary" style="margin: 5px;">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </a>
+                <a href="tel:+8801234567890" class="btn btn-secondary" style="margin: 5px;">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+                <a href="#map-section" class="btn btn-accent" style="margin: 5px;">
+                    <i class="fas fa-map-marked-alt"></i> Visit Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Cards Section -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>123 IT Tower, Digital Street, Dhaka 1207, Bangladesh</p>
+                    <a href="#map-section" class="contact-link">
+                        View on Map <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p>+880 1234 567890<br>+880 9876 543210</p>
+                    <a href="tel:+8801234567890" class="contact-link">
+                        Call Now <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Address</h3>
+                    <p>info@sohojit.com<br>support@sohojit.com</p>
+                    <a href="mailto:info@sohojit.com" class="contact-link">
+                        Email Us <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Opening Hours</h3>
+                    <p>Saturday - Thursday: 9AM - 8PM<br>Friday: 3PM - 8PM</p>
+                    <a href="#contact-form" class="contact-link">
+                        Book Appointment <i class="fas fa-calendar-check"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="map-section" class="map-section">
+        <div class="map-container">
+            <div id="google-map"></div>
+            <div id="map-fallback" class="map-fallback" style="display: none;">
+                <div class="map-fallback-content">
+                    <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                    <p>123 IT Tower, Digital Street, Dhaka 1207, Bangladesh</p>
+                    <p><i class="fas fa-phone"></i> +880 1234 567890</p>
+                    <p><i class="fas fa-envelope"></i> info@sohojit.com</p>
+                    <a href="https://maps.google.com/?q=123+IT+Tower+Digital+Street+Dhaka+1207" 
+                        target="_blank" 
+                        class="btn btn-primary" 
+                        style="margin-top: 20px;">
+                        <i class="fas fa-directions"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+            <div class="map-overlay">
+                <div class="map-info-box">
+                    <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                    <p>123 IT Tower, Digital Street<br>Dhaka 1207, Bangladesh</p>
+                    <div style="margin: 20px 0;">
+                        <p><i class="fas fa-phone"></i> +880 1234 567890</p>
+                        <p><i class="fas fa-envelope"></i> info@sohojit.com</p>
+                    </div>
+                    <a href="https://maps.google.com/?q=123+IT+Tower+Digital+Street+Dhaka+1207" 
+                        target="_blank" 
+                        class="btn btn-primary" 
+                        style="width: 100%;">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Have questions about our courses or services? Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+                <div class="contact-form-wrapper">
+                    <div class="form-illustration">
+                        <div class="illustration">
+                            <div class="illustration-content">
+                                <i class="fas fa-comments"></i>
+                                <h3>We're Here to Help</h3>
+                                <p>Our team is ready to assist you with any questions about IT training and solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-box">
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Full Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                    <div class="error-message" id="name-error">Please enter your name</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                                    <div class="error-message" id="email-error">Please enter a valid email</div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="+880 1234 567890">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="subject">Subject</label>
+                                    <input type="text" id="subject" class="form-control" placeholder="How can we help you?">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="service">Service Interested In</label>
+                                <select id="service" class="form-control">
+                                    <option value="">Select a service</option>
+                                    <option value="training">IT Training</option>
+                                    <option value="web-dev">Web Development</option>
+                                    <option value="graphic-design">Graphic Design</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="freelancing">Freelancing</option>
+                                    <option value="corporate">Corporate Training</option>
+                                    <option value="consultancy">IT Consultancy</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Your Message</label>
+                                <textarea id="message" class="form-control" placeholder="Tell us about your requirements..." rows="6" required></textarea>
+                                <div class="error-message" id="message-error">Please enter your message</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit-btn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Connect Section -->
+    <section class="social-connect">
+        <div class="container social-container">
+            <div class="social-header">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media for updates, tips, and success stories</p>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p class="social-text">Stay updated with our latest courses, workshops, and IT solutions</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-question-circle"></i></div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are your course admission requirements?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most of our courses require basic computer knowledge. For advanced courses like Web Development, we recommend having basic understanding of HTML/CSS. No formal education background is required for most courses.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide job placement assistance?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have a dedicated placement cell that helps our students with job placements, internships, and freelancing opportunities. We also conduct regular job fairs and have partnerships with IT companies.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash, bank transfer, bKash, Nagad, Rocket, and credit/debit cards. We also offer installment plans for most courses to make them more accessible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer online classes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer both online and offline classes. You can choose the mode that suits you best. Our online classes are conducted through Zoom/Google Meet with live instructor support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'dist/js/contact.js' %}?v=1.0.0"></script>
+{% endblock %}

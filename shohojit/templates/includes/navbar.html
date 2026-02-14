@@ -1,0 +1,52 @@
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="/" class="logo"><i class="fas fa-laptop-code"></i> <span>Sohoj</span> <span>IT</span></a>
+        <button class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+            <li class="nav-item">
+                <a href="{% url 'about' %}" class="nav-link">
+                    <span>About Us</span>
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </a>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}" class="dropdown-item">About Company</a>
+                    <a href="{% url 'teams' %}" class="dropdown-item">Our Team</a>
+                    <a href="{% url 'about' %}#mission-vision" class="dropdown-item">Mission & Vision</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item">
+                <a href="{% url 'courses' %}" class="nav-link">
+                    <span>Courses</span>
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </a>
+                <div class="dropdown">
+                    <a href="{% url 'course_detail' 1 %}" class="dropdown-item">Web Development</a>
+                    <a href="{% url 'course_detail' 2 %}" class="dropdown-item">Graphic Design</a>
+                    <a href="{% url 'course_detail' 3 %}" class="dropdown-item">Digital Marketing</a>
+                    <a href="{% url 'course_detail' 4 %}" class="dropdown-item">Programming</a>
+                    <a href="{% url 'course_detail' 5 %}" class="dropdown-item">Freelancing</a>
+                    <a href="{% url 'course_detail' 6 %}" class="dropdown-item">Basic Computer</a>
+                    <a href="{% url 'course_detail' 7 %}" class="dropdown-item">Advance Office</a>
+                </div>
+            </li> -->
+            <!-- <li class="nav-item">
+                <a href="{% url 'services' %}" class="nav-link">
+                    <span>Services</span>
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </a>
+                <div class="dropdown">
+                    <a href="{% url 'service_detail' 1 %}" class="dropdown-item">Corporate Training</a>
+                    <a href="{% url 'service_detail' 2 %}" class="dropdown-item">IT Consultancy</a>
+                    <a href="{% url 'service_detail' 3 %}" class="dropdown-item">Web Development</a>
+                    <a href="{% url 'service_detail' 4 %}" class="dropdown-item">Digital Marketing</a>
+                </div>
+            </li> -->
+            <!-- <li class="nav-item"><a href="{% url 'gallery' %}" class="nav-link">Gallery</a></li> -->
+            <li class="nav-item"><a href="/#clients" class="nav-link">Clients</a></li>
+            <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,27 @@
+{% extends 'shohojit_base.html' %}
+
+{% block title %} Sohoj IT - IT Training Institute & Solutions Agency {% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dist/css/about.css' %}?v=1.0.1">
+<!-- About Section -->
+<!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Coming soon</h1>
+            <p>Empowering the next generation of IT professionals since 2015 with quality education and innovative solutions</p>
+            <a href="#mission-vision" class="btn btn-primary">Our Mission & Vision</a>
+        </div>
+    </section>
+
+    <script>
+        // === INITIALIZATION ===
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollAnimations();
+            setupEventListeners();
+            setupDropdowns();
+        });
+    </script>
+    <script src="{% static 'dist/js/about.js' %}?v=1.0.0"></script>
+{% endblock %}
