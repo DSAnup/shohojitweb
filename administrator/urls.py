@@ -56,6 +56,11 @@ urlpatterns = [
     path('user_active_status/', views.toggle_user_active_status, name='user_active_status'), 
     path('user_admin_status/', views.toggle_user_admin_status, name='user_admin_status'), 
 
+    # generic urls end
+    # shohoj it urls
+    path('slider/', views.list_slider, name='list_slider'),
+    path('stats/', views.stats_settings, name='stats_settings'),
+
 ]
 
 if settings.DEBUG:

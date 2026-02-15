@@ -17,7 +17,7 @@ from django.template.loader import render_to_string
 from django.views.decorators.cache import never_cache
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-from administrator.decorators import staff_or_permission_required
+from administrator.decorators import manager_only, staff_or_permission_required
 from administrator.forms import CompanySettingsFormSuperUser, PasswordResetEmailForm, UserPasswordUpdateForm, UserRegistrationForm, CompanySettingsForm, AccessModelNameForm
 from administrator.mixins import get_app_name
 from administrator.models import Internationalregion, Country, CompanySettings, AccessModelName, SiteSettings, SiteUser, SubscriptionPlan
@@ -25,6 +25,8 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
+from shohojit.models import Slider, Stats
+from shohojit.forms import StatsForm
 
 @never_cache
 def user_login(request):
@@ -352,7 +354,44 @@ def list_siteuser(request):
         'columns' : 2
     }
     return render(request, 'administrator/admin/list_siteuser.html', context)
+@login_required
+@manager_only
+def list_slider(request):
+    slider_list = Slider.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'slider_list': slider_list, 
+        'model_name': 'slider',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_slider.html', context)
 
+def stats_settings(request):
+    stats, created = Stats.objects.get_or_create(pk=1)
+    if request.method == 'POST':
+        form = StatsForm(request.POST, instance=stats)
+        if form.is_valid():
+            stats_form = form.save(commit=False)
+            if stats.created_by:
+                stats_form.updated_by = request.user
+            else:
+                stats_form.created_by = request.user
+            stats_form.save()
+            messages.success(request, 'Stats settings has been updated.')
+            log_admin_action(request, stats_form, CHANGE, f'Stats settings updated {stats_form}')
+            return redirect('stats_settings') 
+    else:
+        form = StatsForm(instance=stats)
+
+    app_name = get_app_name(stats_settings)
+    context = {
+        'model_name': 'stats',
+        'app_name' : app_name,
+        'form': form,
+    }
+
+    return render(request, 'stats_settings.html', context)
 
 @login_required
 def dashboard(request):
