@@ -255,6 +255,22 @@
                 Team Members
             </a>
             {% endif%}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+            <a class="dropdown-item {% if model_name == 'gallerycategory' %}active{% endif %}" href="{% url 'list_gallerycategory' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-file-image"></i>
+                </span>
+                Gallery Category
+            </a>
+            {% endif%}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+            <a class="dropdown-item {% if model_name == 'galleryimages' %}active{% endif %}" href="{% url 'list_galleryimages' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-card-image"></i>
+                </span>
+                Gallery Images
+            </a>
+            {% endif%}
             
         </div>
         </div>

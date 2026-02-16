@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import ContactUs, HomeAboutFeature, HomeAboutSection, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.models import ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -431,6 +431,32 @@ def list_teammembers(request):
         'columns' : 2
     }
     return render(request, 'list_team_members.html', context)
+
+@login_required
+@manager_only
+def list_gallerycategory(request):
+    gallery_category_list = GalleryCategory.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'gallery_category_list': gallery_category_list, 
+        'model_name': 'gallerycategory',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_gallery_category.html', context)
+
+@login_required
+@manager_only
+def list_galleryimages(request):
+    gallery_images_list = GalleryImages.objects.all().select_related('category')
+    app_name = 'shohojit'
+    context = {
+        'gallery_images_list': gallery_images_list, 
+        'model_name': 'galleryimages',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_gallery_images.html', context)
 
 @login_required
 @manager_only
