@@ -1,5 +1,5 @@
 from administrator.forms import GroupForm, GroupFormSuper, CountryForm, InternationalregionForm, SiteSettingsForm, SiteUserForm, SubscriptionPlanForm, UserForm, UserFormSuper
-from shohojit.forms import SliderForm
+from shohojit.forms import HomeAboutFeatureForm, SliderForm
 
 MODEL_FORM_MAPPING = {
     'group': GroupForm,
@@ -12,4 +12,5 @@ MODEL_FORM_MAPPING = {
     'siteuser': SiteUserForm,
     'subscriptionplan': SubscriptionPlanForm,
     'slider': SliderForm,
+    'homeaboutfeature': HomeAboutFeatureForm,
 }

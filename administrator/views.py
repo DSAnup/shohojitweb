@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import HomeAboutSection, Slider, Stats
+from shohojit.models import HomeAboutFeature, HomeAboutSection, Slider, Stats
 from shohojit.forms import HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -366,6 +366,19 @@ def list_slider(request):
         'columns' : 2
     }
     return render(request, 'list_slider.html', context)
+
+@login_required
+@manager_only
+def list_homeaboutfeature(request):
+    home_about_feature_list = HomeAboutFeature.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'home_about_feature_list': home_about_feature_list, 
+        'model_name': 'homeaboutfeature',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_home_about_feature.html', context)
 @login_required
 @manager_only
 def stats_settings(request):

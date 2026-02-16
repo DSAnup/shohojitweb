@@ -183,6 +183,15 @@
                 About Settings
             </a>
             {% endif%}
+
+            {% if 'administrator.view_homeaboutfeature' in perms or request.user.is_staff %}
+            <a class="dropdown-item {% if model_name == 'homeaboutfeature' %}active{% endif %}" href="{% url 'list_homeaboutfeature' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-gear"></i>
+                </span>
+                About Feature
+            </a>
+            {% endif%}
         </div>
         </div>
     </div>
