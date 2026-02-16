@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import ContactUs, HomeAboutFeature, HomeAboutSection, Slider, Stats
+from shohojit.models import ContactUs, HomeAboutFeature, HomeAboutSection, Slider, Stats, Testimonials
 from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -379,6 +379,19 @@ def list_homeaboutfeature(request):
         'columns' : 2
     }
     return render(request, 'list_home_about_feature.html', context)
+
+@login_required
+@manager_only
+def list_testimonials(request):
+    testimonials_list = Testimonials.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'testimonials_list': testimonials_list, 
+        'model_name': 'testimonials',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_testimonials.html', context)
 @login_required
 @manager_only
 def stats_settings(request):

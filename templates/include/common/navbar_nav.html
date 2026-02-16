@@ -201,6 +201,15 @@
                 Contact Settings
             </a>
             {% endif%}
+
+            {% if 'administrator.view_testimonials' in perms or request.user.is_staff %}
+            <a class="dropdown-item {% if model_name == 'testimonials' %}active{% endif %}" href="{% url 'list_testimonials' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-gear"></i>
+                </span>
+                Testimonials
+            </a>
+            {% endif%}
         </div>
         </div>
     </div>
