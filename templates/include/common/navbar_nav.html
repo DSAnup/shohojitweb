@@ -247,6 +247,14 @@
                 Team Category
             </a>
             {% endif%}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+            <a class="dropdown-item {% if model_name == 'teammembers' %}active{% endif %}" href="{% url 'list_teammembers' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-person-fill-add"></i>
+                </span>
+                Team Members
+            </a>
+            {% endif%}
             
         </div>
         </div>

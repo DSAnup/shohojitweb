@@ -66,6 +66,7 @@ urlpatterns = [
     path('testimonials/', views.list_testimonials, name='list_testimonials'),
     path('testimonials-images/', views.list_testimonialsimages, name='list_testimonialsimages'),
     path('team-category/', views.list_teamcategory, name='list_teamcategory'),
+    path('team-members/', views.list_teammembers, name='list_teammembers'),
 
 ]
 

@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import ContactUs, HomeAboutFeature, HomeAboutSection, Slider, Stats, TeamCategory, Testimonials, TestimonialsImages
+from shohojit.models import ContactUs, HomeAboutFeature, HomeAboutSection, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -418,6 +418,19 @@ def list_teamcategory(request):
         'columns' : 2
     }
     return render(request, 'list_team_category.html', context)
+
+@login_required
+@manager_only
+def list_teammembers(request):
+    team_members_list = TeamMembers.objects.all().select_related('category')
+    app_name = 'shohojit'
+    context = {
+        'team_members_list': team_members_list, 
+        'model_name': 'teammembers',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_team_members.html', context)
 
 @login_required
 @manager_only
