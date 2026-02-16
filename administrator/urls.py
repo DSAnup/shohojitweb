@@ -65,6 +65,7 @@ urlpatterns = [
     path('contact-us/', views.contact_us_settings, name='contact_us_settings'),
     path('testimonials/', views.list_testimonials, name='list_testimonials'),
     path('testimonials-images/', views.list_testimonialsimages, name='list_testimonialsimages'),
+    path('team-category/', views.list_teamcategory, name='list_teamcategory'),
 
 ]
 

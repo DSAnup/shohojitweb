@@ -1,6 +1,6 @@
 from django import forms
 from administrator.mixins import  CustomWidgetMixin
-from shohojit.models import ContactUs, Messages, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TestimonialsImages, Testimonials 
+from shohojit.models import ContactUs, Messages, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials 
 
 class SliderForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
@@ -52,3 +52,25 @@ class MessageForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
         model = Messages
         fields = ['full_name', 'email', 'phone', 'service', 'subject', 'message']
+
+class TeamCategoryForm(CustomWidgetMixin, forms.ModelForm):
+    class Meta:
+        model = TeamCategory
+        fields = ['name']
+
+class TeamMembersForm(CustomWidgetMixin, forms.ModelForm):
+    category = forms.ModelChoiceField(queryset=TeamCategory.objects.all(), widget=forms.Select(attrs={'class': 'form-control required', 'id':'select-states1', 'placeholder': 'Select a Category'}))
+    class Meta:
+        model = TeamMembers
+        fields = ['category', 'full_name', 'position', 'profile_image', 'linkedin_url', 'twitter_url', 'facebook_url', 'about_me']
+
+class GalaryCategoryForm(CustomWidgetMixin, forms.ModelForm):
+    class Meta:
+        model = GalleryCategory
+        fields = ['name']
+
+class GalleryImagesForm(CustomWidgetMixin, forms.ModelForm):
+    category = forms.ModelChoiceField(queryset=GalleryCategory.objects.all(), widget=forms.Select(attrs={'class': 'form-control required', 'id':'select-states1', 'placeholder': 'Select a Category'}))
+    class Meta:
+        model = GalleryImages
+        fields = ['category', 'title', 'subtitle', 'image']

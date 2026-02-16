@@ -3,6 +3,7 @@
 {% administrator_active_list as administrator_active %}
 {% admin_active_list as admin_active %}
 {% home_section_active_list as home_section_active %}
+{% team_gallery_active_list as team_gallery_active %}
 
 {% if company_settings.company_menu_hover %}
     <link href="{% static 'dist/css/menu_hover.css' %}" rel="stylesheet">
@@ -149,7 +150,7 @@
     ">
     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <i class="bi bi-house-gear-fill"></i>
+            <i class="bi bi-house-door"></i>
         </span>
         <span class="nav-link-title">
         Home Section
@@ -158,15 +159,15 @@
     <div class="dropdown-menu {% if model_name in administrator_active and company_settings.company_layout == 'A' %}show {% elif model_name in admin_active and company_settings.company_layout == 'A' %}show{% endif %}">
         <div class="dropdown-menu-columns">
         <div class="dropdown-menu-column">
-            {% if 'administrator.view_slider' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
             <a class="dropdown-item {% if model_name == 'slider' %}active{% endif %}" href="{% url 'list_slider' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-gear"></i>
+                    <i class="bi bi-sliders"></i>
                 </span>
                 Slider
             </a>
             {% endif%}
-            {% if 'administrator.view_stats' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
             <a class="dropdown-item {% if model_name == 'stats' %}active{% endif %}" href="{% url 'stats_settings' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <i class="bi bi-gear"></i>
@@ -175,25 +176,25 @@
             </a>
             {% endif%}
 
-            {% if 'administrator.view_homeaboutsection' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
             <a class="dropdown-item {% if model_name == 'homeaboutsection' %}active{% endif %}" href="{% url 'home_about_section_settings' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-gear"></i>
+                    <i class="bi bi-gear-wide"></i>
                 </span>
                 About Settings
             </a>
             {% endif%}
 
-            {% if 'administrator.view_homeaboutfeature' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager%}
             <a class="dropdown-item {% if model_name == 'homeaboutfeature' %}active{% endif %}" href="{% url 'list_homeaboutfeature' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-gear"></i>
+                    <i class="bi bi-bookmark"></i>
                 </span>
                 About Feature
             </a>
             {% endif%}
 
-            {% if 'administrator.view_contactus' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
             <a class="dropdown-item {% if model_name == 'contactus' %}active{% endif %}" href="{% url 'contact_us_settings' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <i class="bi bi-gear"></i>
@@ -202,19 +203,19 @@
             </a>
             {% endif%}
 
-            {% if 'administrator.view_testimonials' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
             <a class="dropdown-item {% if model_name == 'testimonials' %}active{% endif %}" href="{% url 'list_testimonials' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-gear"></i>
+                    <i class="bi bi-capsule"></i>
                 </span>
                 Testimonials
             </a>
             {% endif%}
 
-            {% if 'administrator.view_testimonialsimages' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
             <a class="dropdown-item {% if model_name == 'testimonialsimages' %}active{% endif %}" href="{% url 'list_testimonialsimages' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-gear"></i>
+                    <i class="bi bi-image"></i>
                 </span>
                 Testimonials Images
             </a>
@@ -223,6 +224,35 @@
         </div>
     </div>
     </li>
+
+    <li class="nav-item dropdown 
+    {% if model_name in team_gallery_active %}active{% endif %}
+    ">
+    <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+        <span class="nav-link-icon d-md-none d-lg-inline-block">
+            <i class="bi bi-images"></i>
+        </span>
+        <span class="nav-link-title">
+        Gallery & Team
+        </span>
+    </a>
+    <div class="dropdown-menu {% if model_name in administrator_active and company_settings.company_layout == 'A' %}show {% elif model_name in admin_active and company_settings.company_layout == 'A' %}show{% endif %}">
+        <div class="dropdown-menu-columns">
+        <div class="dropdown-menu-column">
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+            <a class="dropdown-item {% if model_name == 'teamcategory' %}active{% endif %}" href="{% url 'list_teamcategory' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-people"></i>
+                </span>
+                Team Category
+            </a>
+            {% endif%}
+            
+        </div>
+        </div>
+    </div>
+    </li>
+
 
 
 </ul>

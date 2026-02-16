@@ -14,7 +14,11 @@ def admin_active_list():
 
 @register.simple_tag
 def home_section_active_list():
-    return ['slider', 'stats', 'contactus', 'homeaboutsection', 'homeaboutfeature', ]
+    return ['slider', 'stats', 'contactus', 'homeaboutsection', 'homeaboutfeature', 'testimonials', 'testimonialsimages']
+
+@register.simple_tag
+def team_gallery_active_list():
+    return ['teamcategory', 'teammembers', 'gallerycategory', 'galleryimages', ]
 
 @register.filter
 def is_select(field):

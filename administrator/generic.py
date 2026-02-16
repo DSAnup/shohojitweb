@@ -15,7 +15,6 @@ from django.views.decorators.csrf import csrf_exempt
 from urllib.parse import urlencode
 from administrator.decorators import admin_only, staff_only, manager_only
 from administrator.form_mapping import MODEL_FORM_MAPPING
-from administrator.permission_mixins import AUTH_PERMISSION_LIST, get_permission_add_list, get_permission_change_list, get_permission_delete_list
 from administrator.utils import log_admin_action
 from adminsettings import settings
 
