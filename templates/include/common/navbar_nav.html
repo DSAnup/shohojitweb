@@ -2,6 +2,7 @@
 {% load active_tags %}
 {% administrator_active_list as administrator_active %}
 {% admin_active_list as admin_active %}
+{% home_section_active_list as home_section_active %}
 
 {% if company_settings.company_menu_hover %}
     <link href="{% static 'dist/css/menu_hover.css' %}" rel="stylesheet">
@@ -144,7 +145,7 @@
     {% endif %}
     
     <li class="nav-item dropdown 
-    {% if model_name in administrator_active %}active{% endif %}
+    {% if model_name in home_section_active %}active{% endif %}
     ">
     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -170,7 +171,16 @@
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <i class="bi bi-gear"></i>
                 </span>
-                Stats
+                Stats Settings
+            </a>
+            {% endif%}
+
+            {% if 'administrator.view_homeaboutsection' in perms or request.user.is_staff %}
+            <a class="dropdown-item {% if model_name == 'homeaboutsection' %}active{% endif %}" href="{% url 'home_about_section_settings' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-gear"></i>
+                </span>
+                About Settings
             </a>
             {% endif%}
         </div>

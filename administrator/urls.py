@@ -60,6 +60,7 @@ urlpatterns = [
     # shohoj it urls
     path('slider/', views.list_slider, name='list_slider'),
     path('stats/', views.stats_settings, name='stats_settings'),
+    path('home-about-section/', views.home_about_section_settings, name='home_about_section_settings'),
 
 ]
 

@@ -12,6 +12,10 @@ def administrator_active_list():
 def admin_active_list():
     return ['group', 'user', 'subscriptionplan', 'sitesettings', 'siteuser', 'logentry']
 
+@register.simple_tag
+def home_section_active_list():
+    return ['slider', 'stats']
+
 @register.filter
 def is_select(field):
     return isinstance(field.field.widget, Select)

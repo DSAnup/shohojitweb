@@ -25,8 +25,8 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import Slider, Stats
-from shohojit.forms import StatsForm
+from shohojit.models import HomeAboutSection, Slider, Stats
+from shohojit.forms import HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
 def user_login(request):
@@ -366,7 +366,8 @@ def list_slider(request):
         'columns' : 2
     }
     return render(request, 'list_slider.html', context)
-
+@login_required
+@manager_only
 def stats_settings(request):
     stats, created = Stats.objects.get_or_create(pk=1)
     if request.method == 'POST':
@@ -392,6 +393,34 @@ def stats_settings(request):
     }
 
     return render(request, 'stats_settings.html', context)
+
+@login_required
+@manager_only
+def home_about_section_settings(request):
+    home_about_section, created = HomeAboutSection.objects.get_or_create(pk=1)
+    if request.method == 'POST':
+        form = HomeAboutSectionForm(request.POST, instance=home_about_section, files=request.FILES)
+        if form.is_valid():
+            home_about_section_form = form.save(commit=False)
+            if home_about_section.created_by:
+                home_about_section_form.updated_by = request.user
+            else:
+                home_about_section_form.created_by = request.user
+            home_about_section_form.save()
+            messages.success(request, 'Home about section settings has been updated.')
+            log_admin_action(request, home_about_section_form, CHANGE, f'Home about section settings updated {home_about_section_form}')
+            return redirect('home_about_section_settings') 
+    else:
+        form = HomeAboutSectionForm(instance=home_about_section)
+
+    app_name = get_app_name(home_about_section_settings)
+    context = {
+        'model_name': 'homeaboutsection',
+        'app_name' : app_name,
+        'form': form,
+    }
+
+    return render(request, 'home_about_section_settings.html', context)
 
 @login_required
 def dashboard(request):
