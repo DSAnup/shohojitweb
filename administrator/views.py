@@ -25,8 +25,8 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import HomeAboutFeature, HomeAboutSection, Slider, Stats
-from shohojit.forms import HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
+from shohojit.models import ContactUs, HomeAboutFeature, HomeAboutSection, Slider, Stats
+from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
 def user_login(request):
@@ -434,6 +434,34 @@ def home_about_section_settings(request):
     }
 
     return render(request, 'home_about_section_settings.html', context)
+
+@login_required
+@manager_only
+def contact_us_settings(request):
+    contact_us, created = ContactUs.objects.get_or_create(pk=1)
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST, instance=contact_us)
+        if form.is_valid():
+            contact_us_form = form.save(commit=False)
+            if contact_us.created_by:
+                contact_us_form.updated_by = request.user
+            else:
+                contact_us_form.created_by = request.user
+            contact_us_form.save()
+            messages.success(request, 'Contact us settings has been updated.')
+            log_admin_action(request, contact_us_form, CHANGE, f'Contact us settings updated {contact_us_form}')
+            return redirect('contact_us_settings') 
+    else:
+        form = ContactUsForm(instance=contact_us)
+
+    app_name = get_app_name(contact_us_settings)
+    context = {
+        'model_name': 'contactus',
+        'app_name' : app_name,
+        'form': form,
+    }
+
+    return render(request, 'contact_us_settings.html', context)
 
 @login_required
 def dashboard(request):

@@ -192,6 +192,15 @@
                 About Feature
             </a>
             {% endif%}
+
+            {% if 'administrator.view_contactus' in perms or request.user.is_staff %}
+            <a class="dropdown-item {% if model_name == 'contactus' %}active{% endif %}" href="{% url 'contact_us_settings' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-gear"></i>
+                </span>
+                Contact Settings
+            </a>
+            {% endif%}
         </div>
         </div>
     </div>

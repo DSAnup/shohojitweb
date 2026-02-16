@@ -43,7 +43,7 @@ class TestimonialsForm(CustomWidgetMixin, forms.ModelForm):
         model = Testimonials
         fields = ['full_name', 'feedback']
 
-class ContactUsForm(CustomWidgetMixin, forms.Form):
+class ContactUsForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
         model = ContactUs
         fields = ['location', 'phone_number_one', 'phone_number_two', 'email_one', 'email_two', 'opening_hours']
