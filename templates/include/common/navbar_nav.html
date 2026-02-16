@@ -210,6 +210,15 @@
                 Testimonials
             </a>
             {% endif%}
+
+            {% if 'administrator.view_testimonialsimages' in perms or request.user.is_staff %}
+            <a class="dropdown-item {% if model_name == 'testimonialsimages' %}active{% endif %}" href="{% url 'list_testimonialsimages' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-gear"></i>
+                </span>
+                Testimonials Images
+            </a>
+            {% endif%}
         </div>
         </div>
     </div>

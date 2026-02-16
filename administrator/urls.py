@@ -64,6 +64,7 @@ urlpatterns = [
     path('home-about-feature/', views.list_homeaboutfeature, name='list_homeaboutfeature'),
     path('contact-us/', views.contact_us_settings, name='contact_us_settings'),
     path('testimonials/', views.list_testimonials, name='list_testimonials'),
+    path('testimonials-images/', views.list_testimonialsimages, name='list_testimonialsimages'),
 
 ]
 
