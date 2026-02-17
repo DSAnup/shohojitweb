@@ -163,8 +163,6 @@ def list_user(request):
         users = User.objects.exclude(id=request.user.id)
     else:
         users = User.objects.exclude(id=request.user.id).filter(is_superuser=False)
-        siteuser_list = SiteUser.objects.filter(site=request.site, is_active=True).values_list('user', flat=True)
-        users = users.filter(id__in=siteuser_list)
     context = {
         'users': users, 
         'model_name': 'user',

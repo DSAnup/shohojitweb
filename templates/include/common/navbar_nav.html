@@ -29,7 +29,7 @@
     ">
     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <i class="bi bi-house-gear-fill"></i>
+            <i class="bi bi-gear-wide-connected"></i>
         </span>
         <span class="nav-link-title">
         Administrator 
@@ -152,7 +152,7 @@
     ">
     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <i class="bi bi-house-door"></i>
+            <i class="bi bi-house-door-fill"></i>
         </span>
         <span class="nav-link-title">
         Home Section
@@ -284,7 +284,7 @@
     ">
     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <i class="bi bi-images"></i>
+            <i class="bi bi-book-half"></i>
         </span>
         <span class="nav-link-title">
         Course & Services
@@ -296,7 +296,7 @@
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'service' %}active{% endif %}" href="{% url 'list_service' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-bookmark"></i>
                 </span>
                 Services
             </a>
@@ -312,7 +312,7 @@
     ">
     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <i class="bi bi-images"></i>
+            <i class="bi bi-journal"></i>
         </span>
         <span class="nav-link-title">
         Others
@@ -324,7 +324,7 @@
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'aboutus' %}active{% endif %}" href="{% url 'about_us_settings' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-journal-code"></i>
                 </span>
                 About Us
             </a>
@@ -332,7 +332,7 @@
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'messages' %}active{% endif %}" href="{% url 'list_messages' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-envelope"></i>
                 </span>
                 Messages
             </a>
@@ -340,7 +340,7 @@
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'ourjourney' %}active{% endif %}" href="{% url 'list_ourjourney' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-suitcase2"></i>
                 </span>
                 Our Journey
             </a>
@@ -348,7 +348,7 @@
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'faq' %}active{% endif %}" href="{% url 'list_faq' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-question-octagon"></i>
                 </span>
                 FAQ
             </a>
