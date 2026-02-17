@@ -329,6 +329,14 @@
                 Messages
             </a>
             {% endif%}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
+            <a class="dropdown-item {% if model_name == 'faq' %}active{% endif %}" href="{% url 'list_faq' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-people"></i>
+                </span>
+                FAQ
+            </a>
+            {% endif%}
             
         </div>
         </div>

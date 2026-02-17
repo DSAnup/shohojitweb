@@ -18,7 +18,7 @@ def home_section_active_list():
 
 @register.simple_tag
 def others_active_list():
-    return ['messages' ]
+    return ['messages', 'faq' ]
 
 @register.simple_tag
 def course_services_active_list():
