@@ -4,6 +4,7 @@
 {% admin_active_list as admin_active %}
 {% home_section_active_list as home_section_active %}
 {% team_gallery_active_list as team_gallery_active %}
+{% others_active_list as others_active %}
 
 {% if company_settings.company_menu_hover %}
     <link href="{% static 'dist/css/menu_hover.css' %}" rel="stylesheet">
@@ -72,7 +73,7 @@
                         Subscription Plan
                     </a>
                     {% endif %}
-                {% if 'auth.view_sitesettings' in perms or request.user.is_superuser or request.user.userrole.role|is_allowed_admin %}
+                {% if 'auth.view_sitesettings' in perms or request.user.is_superuser %}
                 <a href="{% url 'list_sitesettings' %}" class="dropdown-item {% if model_name == 'sitesettings' %}active{% endif %}">
                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                         <i class="bi bi-diagram-2"></i>
@@ -98,7 +99,7 @@
                 {% endif %}
             </div>
             </div>
-            {% if 'administrator.view_companysettings' in perms or request.user.is_staff %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_admin %}
             <a class="dropdown-item {% if model_name == 'companysettings' %}active{% endif %}" href="{% url 'company_settings' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <i class="bi bi-gear"></i>
@@ -269,6 +270,34 @@
                     <i class="bi bi-card-image"></i>
                 </span>
                 Gallery Images
+            </a>
+            {% endif%}
+            
+        </div>
+        </div>
+    </div>
+    </li>
+
+    <li class="nav-item dropdown 
+    {% if model_name in others_active %}active{% endif %}
+    ">
+    <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+        <span class="nav-link-icon d-md-none d-lg-inline-block">
+            <i class="bi bi-images"></i>
+        </span>
+        <span class="nav-link-title">
+        Others
+        </span>
+    </a>
+    <div class="dropdown-menu {% if model_name in administrator_active and company_settings.company_layout == 'A' %}show {% elif model_name in admin_active and company_settings.company_layout == 'A' %}show{% endif %}">
+        <div class="dropdown-menu-columns">
+        <div class="dropdown-menu-column">
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
+            <a class="dropdown-item {% if model_name == 'messages' %}active{% endif %}" href="{% url 'list_messages' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-people"></i>
+                </span>
+                Messages
             </a>
             {% endif%}
             

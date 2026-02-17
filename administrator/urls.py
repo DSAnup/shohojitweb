@@ -69,6 +69,7 @@ urlpatterns = [
     path('team-members/', views.list_teammembers, name='list_teammembers'),
     path('gallery-category/', views.list_gallerycategory, name='list_gallerycategory'),
     path('gallery-images/', views.list_galleryimages, name='list_galleryimages'),
+    path('messages/', views.list_messages, name='list_messages'),
 
 ]
 

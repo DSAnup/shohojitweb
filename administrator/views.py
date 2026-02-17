@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.models import ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -457,6 +457,19 @@ def list_galleryimages(request):
         'columns' : 2
     }
     return render(request, 'list_gallery_images.html', context)
+
+@login_required
+@manager_only
+def list_messages(request):
+    messages_list = Messages.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'messages_list': messages_list, 
+        'model_name': 'messages',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_messages.html', context)
 
 @login_required
 @manager_only

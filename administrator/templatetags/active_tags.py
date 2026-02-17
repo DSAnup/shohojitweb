@@ -17,6 +17,10 @@ def home_section_active_list():
     return ['slider', 'stats', 'contactus', 'homeaboutsection', 'homeaboutfeature', 'testimonials', 'testimonialsimages']
 
 @register.simple_tag
+def others_active_list():
+    return ['messages' ]
+
+@register.simple_tag
 def team_gallery_active_list():
     return ['teamcategory', 'teammembers', 'gallerycategory', 'galleryimages', ]
 
