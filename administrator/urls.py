@@ -70,6 +70,7 @@ urlpatterns = [
     path('gallery-category/', views.list_gallerycategory, name='list_gallerycategory'),
     path('gallery-images/', views.list_galleryimages, name='list_galleryimages'),
     path('messages/', views.list_messages, name='list_messages'),
+    path('services/', views.list_service, name='list_service'),
 
 ]
 

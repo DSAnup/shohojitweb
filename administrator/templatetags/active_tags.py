@@ -21,6 +21,10 @@ def others_active_list():
     return ['messages' ]
 
 @register.simple_tag
+def course_services_active_list():
+    return ['course', 'service' ]
+
+@register.simple_tag
 def team_gallery_active_list():
     return ['teamcategory', 'teammembers', 'gallerycategory', 'galleryimages', ]
 

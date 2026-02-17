@@ -1,6 +1,6 @@
 from django import forms
 from administrator.mixins import  CustomWidgetMixin
-from shohojit.models import ContactUs, Messages, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials 
+from shohojit.models import ContactUs, Messages, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials, Service, Course, CourseCurriculum
 
 class SliderForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
@@ -74,3 +74,13 @@ class GalleryImagesForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
         model = GalleryImages
         fields = ['category', 'title', 'subtitle', 'image']
+
+class ServicesForm(CustomWidgetMixin, forms.ModelForm):
+    class Meta:
+        model = Service
+        fields = ['service_name', 'title', 'subtitle', 'service_image', 'icon_class', 'is_active', 'hero_image', 'service_description']
+
+class CourseForm(CustomWidgetMixin, forms.ModelForm):
+    class Meta:
+        model = Course
+        fields = ['course_name', 'title', 'subtitle', 'course_image', 'is_active', 'hero_image', 'course_description', 'course_highlight', 'duration', 'practical_learning', 'real_projects']
