@@ -73,6 +73,7 @@ urlpatterns = [
     path('services/', views.list_service, name='list_service'),
     path('faq/', views.list_faq, name='list_faq'),
     path('our-journey/', views.list_ourjourney, name='list_ourjourney'),
+    path('about-us/', views.about_us_settings, name='about_us_settings'),
 
 ]
 

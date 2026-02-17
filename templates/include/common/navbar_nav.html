@@ -322,6 +322,14 @@
         <div class="dropdown-menu-columns">
         <div class="dropdown-menu-column">
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
+            <a class="dropdown-item {% if model_name == 'aboutus' %}active{% endif %}" href="{% url 'about_us_settings' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-people"></i>
+                </span>
+                About Us
+            </a>
+            {% endif%}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'messages' %}active{% endif %}" href="{% url 'list_messages' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <i class="bi bi-people"></i>

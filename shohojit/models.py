@@ -371,7 +371,7 @@ class TeamMembers(models.Model):
 
 class AboutUs(models.Model):
     mission = models.TextField(max_length=500, blank=True, null=True)
-    vission = models.TextField(max_length=500, blank=True, null=True)
+    vision = models.TextField(max_length=500, blank=True, null=True)
     excelence = models.CharField(max_length=150, blank=True, null=True)
     innovation = models.CharField(max_length=150, blank=True, null=True)
     integrity = models.CharField(max_length=150, blank=True, null=True)

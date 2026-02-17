@@ -25,8 +25,8 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import FAQ, ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
-from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
+from shohojit.models import FAQ, AboutUs, ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.forms import AboutUsForm, ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
 def user_login(request):
@@ -566,6 +566,34 @@ def home_about_section_settings(request):
 
     return render(request, 'home_about_section_settings.html', context)
 
+
+@login_required
+@manager_only
+def about_us_settings(request):
+    about_us, created = AboutUs.objects.get_or_create(pk=1)
+    if request.method == 'POST':
+        form = AboutUsForm(request.POST, instance=about_us, files=request.FILES)
+        if form.is_valid():
+            about_us_form = form.save(commit=False)
+            if about_us.created_by:
+                about_us_form.updated_by = request.user
+            else:
+                about_us_form.created_by = request.user
+            about_us_form.save()
+            messages.success(request, 'About us settings has been updated.')
+            log_admin_action(request, about_us_form, CHANGE, f'About us settings updated {about_us_form}')
+            return redirect('about_us_settings') 
+    else:
+        form = AboutUsForm(instance=about_us)
+
+    app_name = get_app_name(about_us_settings)
+    context = {
+        'model_name': 'aboutus',
+        'app_name' : app_name,
+        'form': form,
+    }
+
+    return render(request, 'about_us_settings.html', context)
 @login_required
 @manager_only
 def contact_us_settings(request):
