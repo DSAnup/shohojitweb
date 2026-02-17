@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import FAQ, ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.models import FAQ, ContactUs, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 from shohojit.forms import ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -496,6 +496,19 @@ def list_faq(request):
         'columns' : 2
     }
     return render(request, 'list_faq.html', context)
+
+@login_required
+@manager_only
+def list_ourjourney(request):
+    our_journey_list = OurJourney.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'our_journey_list': our_journey_list, 
+        'model_name': 'ourjourney',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_our_journey.html', context)
 
 @login_required
 @manager_only

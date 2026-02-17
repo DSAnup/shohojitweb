@@ -72,6 +72,7 @@ urlpatterns = [
     path('messages/', views.list_messages, name='list_messages'),
     path('services/', views.list_service, name='list_service'),
     path('faq/', views.list_faq, name='list_faq'),
+    path('our-journey/', views.list_ourjourney, name='list_ourjourney'),
 
 ]
 

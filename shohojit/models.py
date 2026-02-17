@@ -404,12 +404,12 @@ class AboutUs(models.Model):
     def __str__(self):
         return self.excelence
     
-class OurMission(models.Model):
-    title = models.CharField(max_length=200, blank=True, null=True)
-    year = models.TextField(blank=True, null=True)
-    short_description = models.TextField(blank=True, null=True)
-    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='created_by_our_mission')
-    updated_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='updated_by_our_mission')
+class OurJourney(models.Model):
+    title = models.CharField(max_length=150, blank=True, null=True)
+    year = models.CharField(max_length=10, blank=True, null=True)
+    short_description = models.CharField(max_length=200, blank=True, null=True)
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='created_by_our_journey')
+    updated_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='updated_by_our_journey')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

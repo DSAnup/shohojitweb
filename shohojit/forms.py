@@ -1,6 +1,6 @@
 from django import forms
 from administrator.mixins import  CustomWidgetMixin
-from shohojit.models import FAQ, ContactUs, Messages, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials, Service, Course, CourseCurriculum
+from shohojit.models import FAQ, ContactUs, Messages, OurJourney, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials, Service, Course, CourseCurriculum
 
 class SliderForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
@@ -89,3 +89,8 @@ class FaqForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
         model = FAQ
         fields = ['question', 'answer']
+
+class OurJourneyForm(CustomWidgetMixin, forms.ModelForm):
+    class Meta:
+        model = OurJourney
+        fields = ['title', 'year', 'short_description']
