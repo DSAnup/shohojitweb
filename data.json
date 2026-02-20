@@ -579,35 +579,683 @@
   "model": "auth.permission",
   "pk": 65,
   "fields": {
-    "name": "Can add history entry",
+    "name": "Can add about us",
     "content_type": 17,
-    "codename": "add_historyentry"
+    "codename": "add_aboutus"
   }
 },
 {
   "model": "auth.permission",
   "pk": 66,
   "fields": {
-    "name": "Can change history entry",
+    "name": "Can change about us",
     "content_type": 17,
-    "codename": "change_historyentry"
+    "codename": "change_aboutus"
   }
 },
 {
   "model": "auth.permission",
   "pk": 67,
   "fields": {
-    "name": "Can delete history entry",
+    "name": "Can delete about us",
     "content_type": 17,
-    "codename": "delete_historyentry"
+    "codename": "delete_aboutus"
   }
 },
 {
   "model": "auth.permission",
   "pk": 68,
   "fields": {
-    "name": "Can view history entry",
+    "name": "Can view about us",
     "content_type": 17,
+    "codename": "view_aboutus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add contact us",
+    "content_type": 18,
+    "codename": "add_contactus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change contact us",
+    "content_type": 18,
+    "codename": "change_contactus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete contact us",
+    "content_type": 18,
+    "codename": "delete_contactus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view contact us",
+    "content_type": 18,
+    "codename": "view_contactus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add course",
+    "content_type": 19,
+    "codename": "add_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change course",
+    "content_type": 19,
+    "codename": "change_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete course",
+    "content_type": 19,
+    "codename": "delete_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view course",
+    "content_type": 19,
+    "codename": "view_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add course curriculum",
+    "content_type": 20,
+    "codename": "add_coursecurriculum"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change course curriculum",
+    "content_type": 20,
+    "codename": "change_coursecurriculum"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete course curriculum",
+    "content_type": 20,
+    "codename": "delete_coursecurriculum"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view course curriculum",
+    "content_type": 20,
+    "codename": "view_coursecurriculum"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add faq",
+    "content_type": 21,
+    "codename": "add_faq"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change faq",
+    "content_type": 21,
+    "codename": "change_faq"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete faq",
+    "content_type": 21,
+    "codename": "delete_faq"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view faq",
+    "content_type": 21,
+    "codename": "view_faq"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add gallery category",
+    "content_type": 22,
+    "codename": "add_gallerycategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change gallery category",
+    "content_type": 22,
+    "codename": "change_gallerycategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete gallery category",
+    "content_type": 22,
+    "codename": "delete_gallerycategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view gallery category",
+    "content_type": 22,
+    "codename": "view_gallerycategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add gallery images",
+    "content_type": 23,
+    "codename": "add_galleryimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change gallery images",
+    "content_type": 23,
+    "codename": "change_galleryimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete gallery images",
+    "content_type": 23,
+    "codename": "delete_galleryimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view gallery images",
+    "content_type": 23,
+    "codename": "view_galleryimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add home about feature",
+    "content_type": 24,
+    "codename": "add_homeaboutfeature"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change home about feature",
+    "content_type": 24,
+    "codename": "change_homeaboutfeature"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete home about feature",
+    "content_type": 24,
+    "codename": "delete_homeaboutfeature"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view home about feature",
+    "content_type": 24,
+    "codename": "view_homeaboutfeature"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add home about section",
+    "content_type": 25,
+    "codename": "add_homeaboutsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change home about section",
+    "content_type": 25,
+    "codename": "change_homeaboutsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete home about section",
+    "content_type": 25,
+    "codename": "delete_homeaboutsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view home about section",
+    "content_type": 25,
+    "codename": "view_homeaboutsection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Can add our journey",
+    "content_type": 26,
+    "codename": "add_ourjourney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Can change our journey",
+    "content_type": 26,
+    "codename": "change_ourjourney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can delete our journey",
+    "content_type": 26,
+    "codename": "delete_ourjourney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can view our journey",
+    "content_type": 26,
+    "codename": "view_ourjourney"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 105,
+  "fields": {
+    "name": "Can add service",
+    "content_type": 27,
+    "codename": "add_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 106,
+  "fields": {
+    "name": "Can change service",
+    "content_type": 27,
+    "codename": "change_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 107,
+  "fields": {
+    "name": "Can delete service",
+    "content_type": 27,
+    "codename": "delete_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 108,
+  "fields": {
+    "name": "Can view service",
+    "content_type": 27,
+    "codename": "view_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 109,
+  "fields": {
+    "name": "Can add messages",
+    "content_type": 28,
+    "codename": "add_messages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 110,
+  "fields": {
+    "name": "Can change messages",
+    "content_type": 28,
+    "codename": "change_messages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 111,
+  "fields": {
+    "name": "Can delete messages",
+    "content_type": 28,
+    "codename": "delete_messages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 112,
+  "fields": {
+    "name": "Can view messages",
+    "content_type": 28,
+    "codename": "view_messages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 113,
+  "fields": {
+    "name": "Can add slider",
+    "content_type": 29,
+    "codename": "add_slider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 114,
+  "fields": {
+    "name": "Can change slider",
+    "content_type": 29,
+    "codename": "change_slider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 115,
+  "fields": {
+    "name": "Can delete slider",
+    "content_type": 29,
+    "codename": "delete_slider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 116,
+  "fields": {
+    "name": "Can view slider",
+    "content_type": 29,
+    "codename": "view_slider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 117,
+  "fields": {
+    "name": "Can add stats",
+    "content_type": 30,
+    "codename": "add_stats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 118,
+  "fields": {
+    "name": "Can change stats",
+    "content_type": 30,
+    "codename": "change_stats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 119,
+  "fields": {
+    "name": "Can delete stats",
+    "content_type": 30,
+    "codename": "delete_stats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 120,
+  "fields": {
+    "name": "Can view stats",
+    "content_type": 30,
+    "codename": "view_stats"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 121,
+  "fields": {
+    "name": "Can add team category",
+    "content_type": 31,
+    "codename": "add_teamcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 122,
+  "fields": {
+    "name": "Can change team category",
+    "content_type": 31,
+    "codename": "change_teamcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 123,
+  "fields": {
+    "name": "Can delete team category",
+    "content_type": 31,
+    "codename": "delete_teamcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 124,
+  "fields": {
+    "name": "Can view team category",
+    "content_type": 31,
+    "codename": "view_teamcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 125,
+  "fields": {
+    "name": "Can add team members",
+    "content_type": 32,
+    "codename": "add_teammembers"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 126,
+  "fields": {
+    "name": "Can change team members",
+    "content_type": 32,
+    "codename": "change_teammembers"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 127,
+  "fields": {
+    "name": "Can delete team members",
+    "content_type": 32,
+    "codename": "delete_teammembers"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 128,
+  "fields": {
+    "name": "Can view team members",
+    "content_type": 32,
+    "codename": "view_teammembers"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 129,
+  "fields": {
+    "name": "Can add testimonials",
+    "content_type": 33,
+    "codename": "add_testimonials"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 130,
+  "fields": {
+    "name": "Can change testimonials",
+    "content_type": 33,
+    "codename": "change_testimonials"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 131,
+  "fields": {
+    "name": "Can delete testimonials",
+    "content_type": 33,
+    "codename": "delete_testimonials"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 132,
+  "fields": {
+    "name": "Can view testimonials",
+    "content_type": 33,
+    "codename": "view_testimonials"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 133,
+  "fields": {
+    "name": "Can add testimonials images",
+    "content_type": 34,
+    "codename": "add_testimonialsimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 134,
+  "fields": {
+    "name": "Can change testimonials images",
+    "content_type": 34,
+    "codename": "change_testimonialsimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 135,
+  "fields": {
+    "name": "Can delete testimonials images",
+    "content_type": 34,
+    "codename": "delete_testimonialsimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 136,
+  "fields": {
+    "name": "Can view testimonials images",
+    "content_type": 34,
+    "codename": "view_testimonialsimages"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 137,
+  "fields": {
+    "name": "Can add history entry",
+    "content_type": 35,
+    "codename": "add_historyentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 138,
+  "fields": {
+    "name": "Can change history entry",
+    "content_type": 35,
+    "codename": "change_historyentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 139,
+  "fields": {
+    "name": "Can delete history entry",
+    "content_type": 35,
+    "codename": "delete_historyentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 140,
+  "fields": {
+    "name": "Can view history entry",
+    "content_type": 35,
     "codename": "view_historyentry"
   }
 },
@@ -796,6 +1444,150 @@
 {
   "model": "contenttypes.contenttype",
   "pk": 17,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "aboutus"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "contactus"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "course"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "coursecurriculum"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "faq"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "gallerycategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "galleryimages"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "homeaboutfeature"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "homeaboutsection"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "ourjourney"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 27,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "service"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 28,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "messages"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 29,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "slider"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 30,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "stats"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 31,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "teamcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 32,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "teammembers"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 33,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "testimonials"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 34,
+  "fields": {
+    "app_label": "shohojit",
+    "model": "testimonialsimages"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 35,
   "fields": {
     "app_label": "debug_toolbar",
     "model": "historyentry"
@@ -5257,8 +6049,8 @@
     "is_active": true,
     "created_by": null,
     "updated_by": null,
-    "created_at": "2026-02-01T16:57:09.705",
-    "updated_at": "2026-02-01T16:57:09.705"
+    "created_at": "2026-02-20T13:51:25.621",
+    "updated_at": "2026-02-20T13:51:25.623"
   }
 },
 {
@@ -5270,8 +6062,8 @@
     "is_active": false,
     "created_by": null,
     "updated_by": null,
-    "created_at": "2026-02-01T16:57:09.724",
-    "updated_at": "2026-02-01T16:57:09.724"
+    "created_at": "2026-02-20T13:51:26.686",
+    "updated_at": "2026-02-20T13:51:26.686"
   }
 },
 {
@@ -5280,8 +6072,8 @@
   "fields": {
     "user": 1,
     "role": "staff",
-    "created_at": "2026-02-01T16:57:09.450",
-    "updated_at": "2026-02-01T16:57:09.450"
+    "created_at": "2026-02-20T13:51:22.121",
+    "updated_at": "2026-02-20T13:51:22.121"
   }
 },
 {
@@ -5290,8 +6082,8 @@
   "fields": {
     "user": 2,
     "role": "staff",
-    "created_at": "2026-02-01T16:57:09.450",
-    "updated_at": "2026-02-01T16:57:09.450"
+    "created_at": "2026-02-20T13:51:22.413",
+    "updated_at": "2026-02-20T13:51:22.413"
   }
 },
 {
@@ -5300,8 +6092,8 @@
   "fields": {
     "user": 3,
     "role": "staff",
-    "created_at": "2026-02-01T16:57:09.467",
-    "updated_at": "2026-02-01T16:57:09.467"
+    "created_at": "2026-02-20T13:51:23.458",
+    "updated_at": "2026-02-20T13:51:23.458"
   }
 }
 ]
