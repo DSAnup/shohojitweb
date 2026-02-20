@@ -11,8 +11,8 @@ jobs:
       matrix:
         site:
           - name: shohojitinstitute
-            path: /home/shohojitinstitute/htdocs/www.shohojitinstitute.com
-            gunicorn: gunicorn_shohojitinstitute
+            path: /home/sohojitinstitute/htdocs/www.sohojitinstitute.com
+            gunicorn: gunicorn_sohojit
 
     steps:
       - name: Checkout code
