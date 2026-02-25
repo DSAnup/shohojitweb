@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import FAQ, AboutUs, ContactUs, Course, CourseHighlight, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.models import FAQ, AboutUs, ContactUs, Course, CourseCurriculum, CourseHighlight, CurriculumContent, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 from shohojit.forms import AboutUsForm, ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -524,7 +524,7 @@ def list_course(request):
 @login_required
 @manager_only
 def list_coursehighlight(request):
-    coursehighlight_list = CourseHighlight.objects.all()
+    coursehighlight_list = CourseHighlight.objects.all().select_related('course')
     app_name = 'shohojit'
     context = {
         'coursehighlight_list': coursehighlight_list, 
@@ -533,6 +533,32 @@ def list_coursehighlight(request):
         'columns' : 2
     }
     return render(request, 'list_coursehighlight.html', context)
+
+@login_required
+@manager_only
+def list_coursecurriculumn(request):
+    coursecurriculumn_list = CourseCurriculum.objects.all().select_related('course')
+    app_name = 'shohojit'
+    context = {
+        'coursecurriculumn_list': coursecurriculumn_list, 
+        'model_name': 'coursecurriculumn',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_coursecurriculumn.html', context)
+
+@login_required
+@manager_only
+def list_curriculumncontent(request):
+    curriculumncontent_list = CurriculumContent.objects.all().select_related('curriculum')
+    app_name = 'shohojit'
+    context = {
+        'curriculumncontent_list': curriculumncontent_list, 
+        'model_name': 'curriculumncontent',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_curriculumncontent.html', context)
 
 @login_required
 @manager_only

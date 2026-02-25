@@ -313,6 +313,23 @@
             {% endif %}
 
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
+            <a class="dropdown-item {% if model_name == 'coursecurriculumn' %}active{% endif %}" href="{% url 'list_coursecurriculumn' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-bookmark"></i>
+                </span>
+                Courses Curriculumn
+            </a>
+            {% endif %}
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
+            <a class="dropdown-item {% if model_name == 'curriculumncontent' %}active{% endif %}" href="{% url 'list_curriculumncontent' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-bookmark"></i>
+                </span>
+                Curriculumn Content
+            </a>
+            {% endif %}
+
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'service' %}active{% endif %}" href="{% url 'list_service' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <i class="bi bi-bookmark"></i>

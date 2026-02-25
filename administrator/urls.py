@@ -76,6 +76,8 @@ urlpatterns = [
     path('about-us/', views.about_us_settings, name='about_us_settings'),
     path('courses/', views.list_course, name='list_course'), 
     path('coursehighlight/', views.list_coursehighlight, name='list_coursehighlight'),   
+    path('coursecurriculumn/', views.list_coursecurriculumn, name='list_coursecurriculumn'), 
+    path('curriculumncontent/', views.list_curriculumncontent, name='list_curriculumncontent'),  
 
 ]
 

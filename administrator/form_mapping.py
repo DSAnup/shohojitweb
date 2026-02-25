@@ -22,7 +22,7 @@ MODEL_FORM_MAPPING = {
     'service': ServicesForm,
     'course': CourseForm,
     'coursehighlight': CourseHighlightForm,
-    'coursecurriculum': CourseCurriculumForm,
+    'coursecurriculumn': CourseCurriculumForm,
     'curriculumncontent': CurriculumContentForm,
     'faq': FaqForm,
     'ourjourney': OurJourneyForm,
