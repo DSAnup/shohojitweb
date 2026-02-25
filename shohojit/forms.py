@@ -88,7 +88,7 @@ class ServicesForm(CustomWidgetMixin, forms.ModelForm):
 class CourseForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
         model = Course
-        fields = ['course_name', 'title', 'subtitle', 'course_image', 'is_active', 'hero_image', 'course_description', 'course_highlight', 'duration', 'practical_learning', 'real_projects']
+        fields = ['course_name', 'title', 'subtitle', 'course_image', 'is_active', 'hero_image', 'course_description', 'duration', 'practical_learning', 'real_projects']
 
 class FaqForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:

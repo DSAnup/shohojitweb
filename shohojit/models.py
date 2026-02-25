@@ -6,6 +6,15 @@ from imagekit.models import ProcessedImageField
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 
+class CommonFields(models.Model):
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='created_by_%(class)s')
+    updated_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='updated_by_%(class)s')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+        
 class Slider(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200, blank=True, null=True)      
@@ -87,7 +96,6 @@ class Course(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
     subtitle = models.CharField(max_length=200, blank=True, null=True)
     course_description = models.TextField(blank=True, null=True)
-    course_highlight = models.TextField(blank=True, null=True)
     duration = models.CharField(max_length=50, blank=True, null=True)
     practical_learning = models.CharField(max_length=50, blank=True, null=True)
     mentor_support = models.CharField(max_length=50, blank=True, null=True)
@@ -133,6 +141,13 @@ class Course(models.Model):
     def __str__(self):
         return self.course_name
     
+class CourseHighlight(CommonFields):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='highlights')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return f"{self.course.course_name} - {self.title}"
+    
 class CourseCurriculum(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='curriculums')
     title = models.CharField(max_length=200)
@@ -146,6 +161,13 @@ class CourseCurriculum(models.Model):
 
     def __str__(self):
         return f"{self.course.course_name} - {self.title}"
+
+class CurriculumContent(CommonFields): 
+    curriculum = models.ForeignKey(CourseCurriculum, on_delete=models.CASCADE, related_name='contents')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return f"{self.curriculum.course.course_name} - {self.curriculum.title} - {self.title}"
     
 class Service(models.Model):
     service_name = models.CharField(max_length=200)
@@ -426,4 +448,5 @@ class FAQ(models.Model):
 
     def __str__(self):
         return self.question
-    
+
+

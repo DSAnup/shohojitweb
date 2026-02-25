@@ -213,11 +213,11 @@ const coursesData = [
 
 // === INITIALIZATION ===
 document.addEventListener('DOMContentLoaded', function() {
-    generateCourses();
+    // generateCourses();
     initScrollAnimations();
     setupEventListeners();
     setupDropdowns();
-    setupCategoryFilters();
+    // setupCategoryFilters();
     setupModal();
 });
 

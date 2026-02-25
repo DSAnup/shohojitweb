@@ -4,14 +4,278 @@
 {% block content %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'dist/css/about.css' %}?v=1.0.1">
+<link rel="stylesheet" href="{% static 'dist/css/course_details.css' %}?v=1.0.0">
 <!-- About Section -->
 <!-- Hero Section -->
-    <section class="about-hero">
+    <section class="course-hero">
+        <div class="container course-hero-content">
+            <span class="course-badge"><i class="fas fa-code"></i> Full Stack Web Development</span>
+            <h1>Become a Full Stack Web Developer</h1>
+            <p>Master HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build real-world projects and launch your career as a professional web developer in just 6 months.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#enrollment" class="btn btn-primary">Enroll Now</a>
+                <a href="#curriculum" class="btn btn-secondary">View Curriculum</a>
+                <a href="#contact" class="btn btn-accent">Book Free Demo</a>
+            </div>
+        </div>
+    </section>
+
+
+   <section class="course-overview-section">
         <div class="container">
-            <h1>Course Details Comming soon</h1>
-            <p>Empowering the next generation of IT professionals since 2015 with quality education and innovative solutions</p>
-            <a href="#mission-vision" class="btn btn-primary">Our Mission & Vision</a>
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                <h2>Course Overview</h2>
+                <p>Everything you need to know about our Full Stack Web Development course</p>
+            </div>
+            
+            <div class="overview-container">
+                <div class="overview-content">
+                    <h3>Why Learn Web Development?</h3>
+                    <p>Web development is one of the most in-demand skills in today's digital economy. With businesses moving online, the demand for skilled web developers has skyrocketed. Our Full Stack Web Development course is designed to take you from beginner to job-ready developer in just 6 months.</p>
+                    
+                    <div class="overview-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Months Duration</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Real Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Practical Learning</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Mentor Support</div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="font-size: 1.8rem; margin: 30px 0 20px; color: var(--primary);">Course Highlights</h4>
+                    <ul style="list-style: none; margin: 20px 0;">
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.2rem;"></i>
+                            <span style="font-size: 1.1rem;">Learn both Frontend and Backend development</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.2rem;"></i>
+                            <span style="font-size: 1.1rem;">Build and deploy 15+ real-world projects</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.2rem;"></i>
+                            <span style="font-size: 1.1rem;">Get job-ready with career support and placement assistance</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary); font-size: 1.2rem;"></i>
+                            <span style="font-size: 1.1rem;">Learn from industry experts with 5+ years of experience</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="overview-image">
+                    <img src="web development/overview.jpg" alt="Web Development Course Overview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section (Static - No JavaScript) -->
+    <section id="curriculum" class="curriculum-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-icon"><i class="fas fa-book"></i></div>
+                <h2>Course Curriculum</h2>
+                <p>Comprehensive 6-month curriculum covering everything from basics to advanced topics</p>
+            </div>
+            
+            <div class="curriculum-container">
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fas fa-html5"></i>
+                            </div>
+                            <span>Module 1: Web Fundamentals</span>
+                        </h3>
+                        <div class="module-duration">4 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> HTML5 & Semantic HTML</li>
+                            <li><i class="fas fa-circle"></i> CSS3 & Modern Layouts</li>
+                            <li><i class="fas fa-circle"></i> Responsive Web Design</li>
+                            <li><i class="fas fa-circle"></i> CSS Flexbox & Grid</li>
+                            <li><i class="fas fa-circle"></i> CSS Animations & Transitions</li>
+                            <li><i class="fas fa-circle"></i> Version Control with Git & GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <span>Module 2: JavaScript Mastery</span>
+                        </h3>
+                        <div class="module-duration">6 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> JavaScript Fundamentals</li>
+                            <li><i class="fas fa-circle"></i> ES6+ Modern JavaScript</li>
+                            <li><i class="fas fa-circle"></i> DOM Manipulation</li>
+                            <li><i class="fas fa-circle"></i> Async JavaScript & APIs</li>
+                            <li><i class="fas fa-circle"></i> Error Handling & Debugging</li>
+                            <li><i class="fas fa-circle"></i> JavaScript Best Practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>Module 3: Frontend with React</span>
+                        </h3>
+                        <div class="module-duration">6 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> React Fundamentals</li>
+                            <li><i class="fas fa-circle"></i> Components & Props</li>
+                            <li><i class="fas fa-circle"></i> State & Lifecycle</li>
+                            <li><i class="fas fa-circle"></i> React Hooks</li>
+                            <li><i class="fas fa-circle"></i> React Router</li>
+                            <li><i class="fas fa-circle"></i> State Management with Redux</li>
+                            <li><i class="fas fa-circle"></i> Context API</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Module 4: Backend with Node.js</span>
+                        </h3>
+                        <div class="module-duration">5 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> Node.js Fundamentals</li>
+                            <li><i class="fas fa-circle"></i> Express.js Framework</li>
+                            <li><i class="fas fa-circle"></i> RESTful API Development</li>
+                            <li><i class="fas fa-circle"></i> Authentication & Authorization</li>
+                            <li><i class="fas fa-circle"></i> Middleware & Error Handling</li>
+                            <li><i class="fas fa-circle"></i> File Uploads & Processing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>Module 5: Database with MongoDB</span>
+                        </h3>
+                        <div class="module-duration">4 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> MongoDB Fundamentals</li>
+                            <li><i class="fas fa-circle"></i> Mongoose ODM</li>
+                            <li><i class="fas fa-circle"></i> Database Design</li>
+                            <li><i class="fas fa-circle"></i> CRUD Operations</li>
+                            <li><i class="fas fa-circle"></i> Aggregation Framework</li>
+                            <li><i class="fas fa-circle"></i> Database Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <span>Module 6: Deployment & DevOps</span>
+                        </h3>
+                        <div class="module-duration">3 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> Cloud Deployment (AWS, Heroku)</li>
+                            <li><i class="fas fa-circle"></i> Docker Basics</li>
+                            <li><i class="fas fa-circle"></i> CI/CD Pipeline</li>
+                            <li><i class="fas fa-circle"></i> Performance Optimization</li>
+                            <li><i class="fas fa-circle"></i> Security Best Practices</li>
+                            <li><i class="fas fa-circle"></i> Monitoring & Debugging</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <span>Module 7: Advanced Topics</span>
+                        </h3>
+                        <div class="module-duration">4 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> TypeScript Fundamentals</li>
+                            <li><i class="fas fa-circle"></i> Next.js Framework</li>
+                            <li><i class="fas fa-circle"></i> GraphQL API Development</li>
+                            <li><i class="fas fa-circle"></i> WebSockets & Real-time Apps</li>
+                            <li><i class="fas fa-circle"></i> Testing (Jest, React Testing Library)</li>
+                            <li><i class="fas fa-circle"></i> Progressive Web Apps</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="module">
+                    <div class="module-header">
+                        <h3>
+                            <div class="module-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <span>Module 8: Career Development</span>
+                        </h3>
+                        <div class="module-duration">2 Weeks</div>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topics-list">
+                            <li><i class="fas fa-circle"></i> Portfolio Development</li>
+                            <li><i class="fas fa-circle"></i> Resume & LinkedIn Optimization</li>
+                            <li><i class="fas fa-circle"></i> Technical Interview Preparation</li>
+                            <li><i class="fas fa-circle"></i> Freelancing & Job Search</li>
+                            <li><i class="fas fa-circle"></i> Salary Negotiation</li>
+                            <li><i class="fas fa-circle"></i> Career Roadmap Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -25,5 +289,5 @@
             setupDropdowns();
         });
     </script>
-    <script src="{% static 'dist/js/about.js' %}?v=1.0.0"></script>
+    <script src="{% static 'dist/js/course_detail.js' %}?v=1.0.1"></script>
 {% endblock %}
