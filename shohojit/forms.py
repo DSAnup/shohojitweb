@@ -1,6 +1,6 @@
 from django import forms
 from administrator.mixins import  CustomWidgetMixin
-from shohojit.models import FAQ, AboutUs, ContactUs, Messages, OurJourney, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials, Service, Course, CourseCurriculum
+from shohojit.models import FAQ, AboutUs, ContactUs, CourseHighlight, CurriculumContent, Messages, OurJourney, Slider, HomeAboutFeature, GalleryCategory, GalleryImages,HomeAboutSection, Stats, TeamCategory, TeamMembers, TeamMembers, TestimonialsImages, Testimonials, Service, Course, CourseCurriculum
 
 class SliderForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
@@ -88,7 +88,25 @@ class ServicesForm(CustomWidgetMixin, forms.ModelForm):
 class CourseForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:
         model = Course
-        fields = ['course_name', 'title', 'subtitle', 'course_image', 'is_active', 'hero_image', 'course_description', 'duration', 'practical_learning', 'real_projects']
+        fields = ['course_name', 'title', 'subtitle', 'course_image', 'hero_image', 'duration', 'practical_learning', 'real_projects', 'is_active', 'course_description']
+
+class CourseHighlightForm(CustomWidgetMixin, forms.ModelForm):
+    course = forms.ModelChoiceField(queryset=Course.objects.all(), widget=forms.Select(attrs={'class': 'form-control required', 'id':'select-states1', 'placeholder': 'Select a Course'}))  
+    class Meta:
+        model = CourseHighlight
+        fields = ['course', 'title']
+
+class CourseCurriculumForm(CustomWidgetMixin, forms.ModelForm):
+    course = forms.ModelChoiceField(queryset=Course.objects.all(), widget=forms.Select(attrs={'class': 'form-control required', 'id':'select-states1', 'placeholder': 'Select a Course'}))  
+    class Meta:
+        model = CourseCurriculum
+        fields = ['course', 'title', 'duration', 'icon_class']
+
+class CurriculumContentForm(CustomWidgetMixin, forms.ModelForm):
+    curriculum = forms.ModelChoiceField(queryset=CourseCurriculum.objects.all(), widget=forms.Select(attrs={'class': 'form-control required', 'id':'select-states1', 'placeholder': 'Select a Curriculum'}))
+    class Meta:
+        model = CurriculumContent
+        fields = ['curriculum', 'title']
 
 class FaqForm(CustomWidgetMixin, forms.ModelForm):
     class Meta:

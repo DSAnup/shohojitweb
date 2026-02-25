@@ -293,6 +293,16 @@
     <div class="dropdown-menu {% if model_name in administrator_active and company_settings.company_layout == 'A' %}show {% elif model_name in admin_active and company_settings.company_layout == 'A' %}show{% endif %}">
         <div class="dropdown-menu-columns">
         <div class="dropdown-menu-column">
+            
+            {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
+            <a class="dropdown-item {% if model_name == 'course' %}active{% endif %}" href="{% url 'list_course' %}">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="bi bi-bookmark"></i>
+                </span>
+                Courses
+            </a>
+            {% endif %}
+
             {% if request.user.is_superuser or request.user.userrole.role|is_allowed_staff %}
             <a class="dropdown-item {% if model_name == 'service' %}active{% endif %}" href="{% url 'list_service' %}">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -300,7 +310,7 @@
                 </span>
                 Services
             </a>
-            {% endif%}
+            {% endif %}
             
         </div>
         </div>

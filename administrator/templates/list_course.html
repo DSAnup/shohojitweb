@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block title %} Course List {% endblock %}
+
+{% block content %}
+{% load active_tags %}
+{% load static %}
+
+  <div class="page">
+    
+    {% include 'include/layout.html' %}
+
+    <div class="page-wrapper">
+      <!-- Page body -->
+      
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="card">
+            {% include 'include/flash_message.html' %} <!--  flash message -->
+            <div class="card-body">
+
+              <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-end margin_bottom_33">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Course</li>
+                </ol>
+              </nav>
+
+              <div class="row">
+                <div class="col-md-12" style="padding-bottom: 10px;">
+
+                  {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+                      <a href="{% url 'add' 'course' 2 %}" class="btn btn-primary margin_bottom_33">Add New</a>
+                  {% endif %}
+
+                  {% if company_settings.company_import_option %}
+                      <a href="{% url 'import_csv' app_name model_name %}" class="btn btn-secondary margin_bottom_33">Import Data</a>
+                  {% endif %}
+
+                  {% if company_settings.company_delete_all %}
+                      <a class="btn btn-info margin_bottom_33">
+                        <img src="{% static 'icon/svg/checkbox.svg' %}" alt="#" width="24" height="24" style="padding-right: 5px;"/>
+                        <input type="checkbox" id="check-all"> <span style="padding-left: 5px;">Check All</span>
+                      </a>
+                      <button class="btn btn-danger margin_bottom_33" data-bs-toggle="modal" data-bs-target="#deleteModalMulti" >Delete Selected</button>
+                  {% endif %}
+
+                  </div>
+              </div>
+              
+              <div id="table-default" class="table-responsive">
+                <table id="dataTable1" class="table table-hover">
+                  
+                  {% if company_settings.company_datatable_column_visiable %}
+                    <input type="hidden" id="colvis" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_csv %}
+                    <input type="hidden" id="csv" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_copy %}
+                    <input type="hidden" id="copy" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_excel %}
+                    <input type="hidden" id="excel" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_pdf %}
+                    <input type="hidden" id="pdf" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_print %}
+                    <input type="hidden" id="printall" value="1">
+                  {% endif %}
+                  {% if company_settings.company_datatable_print_selected %}
+                    <input type="hidden" id="printselected" value="1">
+                  {% endif %}
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th class="sl_no">SL</th>
+                      <th>Course Name</th>
+                      <th>Title</th>
+                      <th>Subtitle</th>
+                      <th>Course Image</th>
+                      <th>Hero Image</th>
+                      <th>Duration</th>
+                      <th>Status</th>
+                      {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+                        <th>Action</th>
+                      {% endif %}
+                    </tr>
+                  </thead>
+                  <tbody class="table-tbody">
+                    {% for course in course_list %}
+                      <tr>
+                          <td class="sl_no">{{ forloop.counter }}. </td>
+                          <td>
+                            {% if company_settings.company_delete_all %}
+                              <input type="checkbox" name="selected_rows" value="{{ course.pk }}" class="checkbox"> 
+                            {% endif %}
+                            {{ course.course_name }}
+                          </td>
+                          <td>{{ course.title }}</td>
+                          <td>{{ course.subtitle|truncatechars:50 }}</td>
+                          <td>
+                            {% if course.course_image %}
+                              <img src="{{ course.course_image.url }}" alt="Course Image" width="80" height="60" style="object-fit: cover;">
+                            {% else %}
+                              <span class="text-muted">No image</span>
+                            {% endif %}
+                          </td>
+                          <td>
+                            {% if course.hero_image %}
+                              <img src="{{ course.hero_image.url }}" alt="Hero Image" width="80" height="60" style="object-fit: cover;">
+                            {% else %}
+                              <span class="text-muted">No image</span>
+                            {% endif %}
+                          </td>
+                          <td>{{ course.duration }}</td>
+                          <td>
+                            {% if course.is_active %}
+                              <span class="badge bg-success">Active</span>
+                            {% else %}
+                              <span class="badge bg-danger">Inactive</span>
+                            {% endif %}
+                          </td>
+                          
+                          {% if request.user.is_superuser or request.user.userrole.role|is_allowed_manager %}
+                            <td>
+                              <div class="btn-group" role="group">
+                                <a href="{% url 'change' course.pk app_name model_name 2 %}" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit">
+                                  <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal" data-url="{% url 'delete' course.pk app_name model_name %}" data-toggle="tooltip" title="Delete">
+                                  <i class="bi bi-trash"></i>
+                                </button>
+                              </div>
+                            </td>
+                          {% endif %}
+                      </tr>>
+                    {% endfor %}
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal start -->
+      {% include 'include/delete_modal_multi.html' %}
+      {% include 'include/delete_modal.html' %}
+      <!-- modal end -->
+      <!--  footer start  -->
+      {% include 'include/footer.html' %}
+      <!--  footer end -->
+    </div>
+  </div>
+  <script src="{% static 'dist/js/custom_datatable.js' %}" defer></script>
+  <script src="{% static 'dist/js/modal_delete_action.js' %}" defer></script>
+  <script src="{% static 'dist/js/modal_delete_multi_action.js' %}" defer></script>
+  <script src="{% static 'dist/js/checked_all.js' %}" defer></script>
+
+{% endblock %}

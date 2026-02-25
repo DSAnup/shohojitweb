@@ -1,5 +1,5 @@
 from administrator.forms import GroupForm, GroupFormSuper, CountryForm, InternationalregionForm, SiteSettingsForm, SiteUserForm, SubscriptionPlanForm, UserForm, UserFormSuper
-from shohojit.forms import CourseForm, FaqForm, GalleryCategoryForm, GalleryImagesForm, HomeAboutFeatureForm, OurJourneyForm, OurJourneyForm, ServicesForm, SliderForm, TeamCategoryForm, TeamMembersForm, TestimonialsForm, TestimonialsImagesForm, TestimonialsImagesForm
+from shohojit.forms import CourseCurriculumForm, CourseForm, CourseHighlightForm, CurriculumContentForm, FaqForm, GalleryCategoryForm, GalleryImagesForm, HomeAboutFeatureForm, OurJourneyForm, OurJourneyForm, ServicesForm, SliderForm, TeamCategoryForm, TeamMembersForm, TestimonialsForm, TestimonialsImagesForm, TestimonialsImagesForm
 
 MODEL_FORM_MAPPING = {
     'group': GroupForm,
@@ -21,6 +21,9 @@ MODEL_FORM_MAPPING = {
     'galleryimages': GalleryImagesForm,
     'service': ServicesForm,
     'course': CourseForm,
+    'coursehighlight': CourseHighlightForm,
+    'coursecurriculum': CourseCurriculumForm,
+    'curriculumncontent': CurriculumContentForm,
     'faq': FaqForm,
     'ourjourney': OurJourneyForm,
 }
