@@ -74,7 +74,8 @@ urlpatterns = [
     path('faq/', views.list_faq, name='list_faq'),
     path('our-journey/', views.list_ourjourney, name='list_ourjourney'),
     path('about-us/', views.about_us_settings, name='about_us_settings'),
-    path('courses/', views.list_course, name='list_course'),    
+    path('courses/', views.list_course, name='list_course'), 
+    path('coursehighlight/', views.list_coursehighlight, name='list_coursehighlight'),   
 
 ]
 

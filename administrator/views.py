@@ -25,7 +25,7 @@ from administrator.utils import log_admin_action
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION
 from adminsettings import commonsettings
 from adminsettings.settings import DJANGO_ENV
-from shohojit.models import FAQ, AboutUs, ContactUs, Course, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.models import FAQ, AboutUs, ContactUs, Course, CourseHighlight, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Service, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 from shohojit.forms import AboutUsForm, ContactUsForm, ContactUsForm, HomeAboutSectionForm, HomeAboutSectionForm, StatsForm
 
 @never_cache
@@ -515,11 +515,24 @@ def list_course(request):
     app_name = 'shohojit'
     context = {
         'course_list': course_list, 
-        'model_name': 'ourjourney',
+        'model_name': 'course',
         'app_name' : app_name,
         'columns' : 2
     }
     return render(request, 'list_course.html', context)
+
+@login_required
+@manager_only
+def list_coursehighlight(request):
+    coursehighlight_list = CourseHighlight.objects.all()
+    app_name = 'shohojit'
+    context = {
+        'coursehighlight_list': coursehighlight_list, 
+        'model_name': 'coursehighlight',
+        'app_name' : app_name,
+        'columns' : 2
+    }
+    return render(request, 'list_coursehighlight.html', context)
 
 @login_required
 @manager_only
