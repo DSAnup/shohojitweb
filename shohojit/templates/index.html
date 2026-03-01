@@ -9,30 +9,31 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="slider-container">
-            <div class="slide active" style="background-image: url('{% static 'shohojit/images/IT skills slide.png' %}');">
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide" style="background-image: url('{% static 'shohojit/images/web development-slide.jpg' %}');">
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide" style="background-image: url('{% static 'shohojit/images/graphi design-slide.jpg' %}');">
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide" style="background-image: url('{% static 'shohojit/images/Freelancing-slide.png' %}');">
-                <div class="slide-overlay"></div>
-            </div>
+            {% for slider in sliders%}
+                <div class="slide {% if forloop.first %}active{% endif %}" style="background-image: url('{{ slider.image.url }}');">
+                    <div class="slide-overlay"></div>
+                </div>
+            {% endfor %}
         </div>
-        
         <div class="container hero-content">
-            <h1 id="hero-title">Learn IT Skills Easily</h1>
-            <p id="hero-subtitle">Start Your Digital Career with Sohoj IT</p>
+            <h1 id="hero-title">
+                {% if sliders %}
+                    {{ sliders.0.title }}
+                {% endif %}
+            </h1>
+            <p id="hero-subtitle">
+                {% if sliders %}
+                    {{ sliders.0.subtitle }}
+                {% endif %}
+            </p>
             <div class="hero-buttons">
-                <a href="#courses" class="btn btn-primary">🎓 Explore Courses</a>
-                <a href="#services" class="btn btn-secondary">🛠️ Our Services</a>
+                <a href="/courses" class="btn btn-primary">🎓 Explore Courses</a>
+                {% comment %} <a href="#services" class="btn btn-secondary">🛠️ Our Services</a> {% endcomment %}
                 <a href="#contact" class="btn btn-accent">🎥 Free Demo Class</a>
             </div>
         </div>
-
+        
+        {% if sliders|length > 1 %}
         <!-- Slider Controls -->
         <div class="slider-controls">
             <div class="slider-arrow prev-btn">
@@ -42,12 +43,12 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
+        {% endif %}
         <div class="slider-dots-container">
             <div class="slider-dots">
-                <div class="slider-dot active" data-slide="0"></div>
-                <div class="slider-dot" data-slide="1"></div>
-                <div class="slider-dot" data-slide="2"></div>
-                <div class="slider-dot" data-slide="3"></div>
+                {% for slider in sliders%}
+                    <div class="slider-dot {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.counter0}}"></div>
+                {% endfor%}
             </div>
         </div>
     </section>
@@ -58,38 +59,26 @@
             <div class="section-title">
                 <div class="section-icon"><i class="fas fa-users"></i></div>
                 <h2>About Sohoj IT</h2>
-                <p>Transforming lives through IT education and services since 2015</p>
+                <p>{{ homeabout.title }}</p>
             </div>
             <div class="about-container">
                 <div class="about-image">
-                    <img src="{% static 'shohojit/images/about section.webp' %}" alt="Sohoj IT Classroom">
+                    <img src="{{ homeabout.image.url }}" alt="Sohoj IT Classroom">
                 </div>
                 <div class="about-content">
-                    <h3>Empowering the Next Generation of IT Professionals</h3>
-                    <p>Sohoj IT is a premier IT training institute and solutions agency dedicated to providing high-quality education and services in web development, graphic design, programming, and digital marketing.</p>
+                    <h3>{{ homeabout.subtitle }}</h3>
+                    <p>{{ homeabout.description }}</p>
                     
                     <div class="features-list">
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
-                            <div>
-                                <h4>Expert Trainers</h4>
-                                <p>Industry professionals with 5+ years of experience</p>
+                        {% for feature in aboutfeature %}
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="{{ feature.icon_class }}"></i></div>
+                                <div>
+                                    <h4>{{ feature.title }}</h4>
+                                    <p>{{ feature.subtitle }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
-                            <div>
-                                <h4>Practical Projects</h4>
-                                <p>Real-world projects to build your portfolio</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
-                            <div>
-                                <h4>Career Support</h4>
-                                <p>Job placement assistance and career counseling</p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                     
                     <a href="#contact" class="btn btn-primary">Learn More</a>
@@ -99,6 +88,7 @@
     </section>
 
     <!-- Courses Section -->
+    {% if courses %}
     <section id="courses" class="courses-section">
         <div class="container">
             <div class="section-title">
@@ -107,64 +97,32 @@
                 <p>Professional training in modern IT skills that will boost your career</p>
             </div>
             <div class="courses-container">
-                <div class="course-card" style="transition-delay: 0.1s;">
-                    <div class="course-image">
-                        <img src="{% static 'shohojit/images/classes.webp' %}" alt="Web Development" loading="lazy">
-                        <div class="course-overlay">
-                            <div class="course-icon">
-                                <i class="fas fa-code"></i> 
+                {% for course in courses%}
+                    <div class="course-card" style="transition-delay: 0.1s;">
+                        <div class="course-image">
+                            <img src="{{ course.course_image.url }}" alt="Web Development" loading="lazy">
+                            <div class="course-overlay">
+                                <div class="course-icon">
+                                    <i class="fas fa-code"></i> 
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="course-content">
-                        <h3>Web Development Bootcamp</h3> <p>Learn HTML, CSS, and JavaScript from scratch.</p> <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 12 Weeks</span> <span><i class="fas fa-project-diagram"></i> 4 Projects</span> </div>
-                        
-                        <a href="#contact" class="btn btn-outline" style="margin-top: auto;">View Details</a>
-                    </div>
-                </div>
-                <div class="course-card" style="transition-delay: 0.1s;">
-                    <div class="course-image">
-                        <img src="{% static 'shohojit/images/classes.webp' %}" alt="Web Development" loading="lazy">
-                        <div class="course-overlay">
-                            <div class="course-icon">
-                                <i class="fas fa-code"></i> 
+                        <div class="course-content">
+                            <h3>{{ course.course_name }}</h3> 
+                            <p>{{ course.subtitle }}</p> 
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> {{ course.duration }}</span> <span><i class="fas fa-project-diagram"></i> {{ course.real_projects }}</span> 
                             </div>
+                            
+                            <a href="{% url 'course_detail' course.course_slug %}" class="btn btn-outline" style="margin-top: auto;">View Details</a>
                         </div>
                     </div>
-
-                    <div class="course-content">
-                        <h3>Web Development Bootcamp</h3> <p>Learn HTML, CSS, and JavaScript from scratch.</p> <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 12 Weeks</span> <span><i class="fas fa-project-diagram"></i> 4 Projects</span> </div>
-                        
-                        <a href="#contact" class="btn btn-outline" style="margin-top: auto;">View Details</a>
-                    </div>
-                </div>
-
-                <div class="course-card" style="transition-delay: 0.1s;">
-                    <div class="course-image">
-                        <img src="{% static 'shohojit/images/classes.webp' %}" alt="Web Development" loading="lazy">
-                        <div class="course-overlay">
-                            <div class="course-icon">
-                                <i class="fas fa-code"></i> 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-content">
-                        <h3>Web Development Bootcamp</h3> <p>Learn HTML, CSS, and JavaScript from scratch.</p> <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 12 Weeks</span> <span><i class="fas fa-project-diagram"></i> 4 Projects</span> </div>
-                        
-                        <a href="#contact" class="btn btn-outline" style="margin-top: auto;">View Details</a>
-                    </div>
-                </div>
-
-
+                {% endfor %}
             </div>
         </div>
     </section>  
-
+    {% endif %}
     <!-- Services Section -->
     <!-- <section id="services" class="services-section">
         <div class="container">
@@ -203,19 +161,19 @@
         <div class="container">
             <div class="stats-container">
                 <div class="stat-item">
-                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-number" data-count="{{ stats.students }}">0</div>
                     <div class="stat-text">Students</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-number" data-count="{{ stats.courses }}">0</div>
                     <div class="stat-text">Courses</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-number" data-count="{{ stats.projects }}">0</div>
                     <div class="stat-text">Projects</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-number" data-count="{{ stats.trainers }}">0</div>
                     <div class="stat-text">Trainers</div>
                 </div>
             </div>
@@ -223,6 +181,7 @@
     </section>
 
     <!-- Gallery Section -->
+    {% if galleries %}
     <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="section-title">
@@ -231,31 +190,20 @@
                 <p>Take a look at our classes, events, and student activities</p>
             </div>
             <div class="gallery-container">
-                <div class="gallery-item" style="transition-delay: 0.1s;">
-                    <img src="{% static 'shohojit/images/classes.webp' %}" alt="Gallery Image 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                {% for gallery in galleries %}
+                    <div class="gallery-item" style="transition-delay: 0.{{ forloop.counter }}s;">
+                        <img src="{{ gallery.image.url }}" alt="Gallery Image 1" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
                     </div>
-                </div>
-
-                <div class="gallery-item" style="transition-delay: 0.2s;">
-                    <img src="{% static 'shohojit/images/students.jpg' %}" alt="Gallery Image 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="transition-delay: 0.3s;">
-                    <img src="{% static 'shohojit/images/events.webp' %}" alt="Gallery Image 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section> 
-
+    {% endif %}
     <!-- Clients Section -->
+    {% if testiominals %}
     <section id="clients" class="clients-section">
         <div class="container">
             <div class="section-title">
@@ -264,23 +212,23 @@
                 <p>Success stories from our graduates and business clients</p>
             </div>
             <div class="testimonial-container">
+                {% for testimonial in testiominals %}
                 <div class="testimonial">
-                    <p class="testimonial-text">"Sohoj IT completely transformed my career. After completing their web development course, I landed a job at a tech startup within 2 months!"</p>
-                    <p class="testimonial-author">– Rahman, Web Developer</p>
+                    <p class="testimonial-text">"{{ testimonial.feedback }}"</p>
+                    <p class="testimonial-author">– {{ testimonial.full_name }}</p>
                 </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">"Their IT solutions helped our business streamline operations with a custom CRM system. Professional service and excellent support!"</p>
-                    <p class="testimonial-author">– Tech Solutions Ltd.</p>
-                </div>
+                {% endfor %}
+                {% if testimonial_images %}
                 <div class="logo-slider">
-                    <img src="{% static 'shohojit/images/client1.avif' %}" alt="Client Logo" class="client-logo">
-                    <img src="{% static 'shohojit/images/client2.avif' %}" alt="Client Logo" class="client-logo">
-                    <img src="{% static 'shohojit/images/client3.avif' %}" alt="Client Logo" class="client-logo">
-                    <img src="{% static 'shohojit/images/client4.avif' %}" alt="Client Logo" class="client-logo">
+                    {% for testimonials_image in testimonial_images %}
+                        <img src="{{ testimonial_images.images.url }}" alt="Client Logo" class="client-logo">
+                    {% endfor %}
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>
+    {% endif %}
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -296,28 +244,28 @@
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h3>Our Location</h3>
-                            <p>123 IT Tower, Digital Street, Dhaka 1207</p>
+                            <p>{{ contact_us.location }}</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                         <div>
                             <h3>Phone Number</h3>
-                            <p>+880 1234 567890</p>
+                            <p>{{ contact_us.phone_number_one }}</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h3>Email Address</h3>
-                            <p>info@sohojit.com</p>
+                            <p>{{ contact_us.email_one }}</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div>
                             <h3>Opening Hours</h3>
-                            <p>Sat-Thu: 9AM - 8PM<br>Friday: 3PM - 8PM</p>
+                            <p>{{ contact_us.opening_hours }}</p>
                         </div>
                     </div>
                 </div>
@@ -328,18 +276,12 @@
                             <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                            <label for="email">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Write your subject" required>
                         </div>
                         <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" class="form-control">
-                                <option value="">Select a service</option>
-                                <option value="training">IT Training</option>
-                                <option value="web-dev">Web Development</option>
-                                <option value="graphic-design">Graphic Design</option>
-                                <option value="digital-marketing">Digital Marketing</option>
-                            </select>
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" class="form-control" placeholder="0172...." required>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
@@ -356,5 +298,116 @@
         <i class="fas fa-times close"></i>
         <img class="lightbox-content" id="lightbox-img" alt="Full screen image">
     </div>
-    <script src="{% static 'dist/js/shohojit.js' %}?v=1.0.1"></script>
+    <script>
+        const sliderContent = [
+            {% for slider in sliders %}
+                {
+                    title: "{{ slider.title|escapejs }}",
+                    subtitle: "{{ slider.subtitle|escapejs }}"
+                }{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        ];
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const heroTitle = document.getElementById('hero-title');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+
+            if (slides.length === 0) return;
+
+            let currentSlide = 0;
+            let isTransitioning = false;
+            let slideInterval;
+
+            function showSlide(index, direction = 'next') {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                const newIndex = (index + slides.length) % slides.length;
+
+                // Update dots
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[newIndex]) {
+                    dots[newIndex].classList.add('active');
+                }
+
+                // Update text content dynamically
+                heroTitle.textContent = sliderContent[newIndex].title;
+                heroSubtitle.textContent = sliderContent[newIndex].subtitle;
+
+                // Slide animation
+                slides[currentSlide].classList.remove('active');
+
+                slides[newIndex].classList.remove('prev-slide', 'next-slide');
+                slides[newIndex].classList.add('active');
+
+                currentSlide = newIndex;
+
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 600);
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1, 'next');
+            }
+
+            function prevSlide() {
+                showSlide(currentSlide - 1, 'prev');
+            }
+
+            // Button Events
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    prevSlide();
+                    startAutoSlide();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    nextSlide();
+                    startAutoSlide();
+                });
+            }
+
+            // Dot Events
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    startAutoSlide();
+                });
+            });
+
+            // Auto Slide
+            function startAutoSlide() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            startAutoSlide();
+
+            // Pause on hover
+            const sliderContainer = document.querySelector('.slider-container');
+
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
+
+                sliderContainer.addEventListener('mouseleave', startAutoSlide);
+            }
+
+        });
+        </script>
+
+    <script src="{% static 'dist/js/shohojit.js' %}?v=1.0.2"></script>
 {% endblock %}

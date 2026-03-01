@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize components
     setupEventListeners();
     setupFAQ();
-    setupFormValidation();
+    // setupFormValidation();
     initScrollAnimations();
     
     // Hide loading screen

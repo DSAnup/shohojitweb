@@ -459,7 +459,7 @@ def list_galleryimages(request):
 @login_required
 @manager_only
 def list_messages(request):
-    messages_list = Messages.objects.all().select_related('service')
+    messages_list = Messages.objects.all()
     app_name = 'shohojit'
     context = {
         'messages_list': messages_list, 

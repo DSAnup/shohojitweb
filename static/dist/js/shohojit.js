@@ -92,31 +92,12 @@ const galleryImages = [
     { url: "images/events.webp" }
 ];
 
-const sliderContent = [
-    {
-        title: "Learn IT Skills Easily",
-        subtitle: "Start Your Digital Career with Sohoj IT"
-    },
-    {
-        title: "Become a Web Developer",
-        subtitle: "Learn Modern Web Technologies"
-    },
-    {
-        title: "Creative Graphic Design",
-        subtitle: "Turn Your Creativity into Career"
-    },
-    {
-        title: "Earn from Freelancing",
-        subtitle: "Learn Skills That Pay"
-    }
-];
-
 // === INITIALIZATION ===
 document.addEventListener('DOMContentLoaded', function() {
     // generateCourses();
     // generateServices();
     // generateGallery();
-    initSlider();
+    // initSlider();
     initScrollAnimations();
     setupEventListeners();
     setupForm();
@@ -222,101 +203,6 @@ function generateGallery() {
         
         container.appendChild(item);
     });
-}
-
-// === SLIDER FUNCTIONALITY ===
-function initSlider() {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.slider-dot');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const heroTitle = document.getElementById('hero-title');
-    const heroSubtitle = document.getElementById('hero-subtitle');
-    
-    if (slides.length === 0) return;
-    
-    let currentSlide = 0;
-    let isTransitioning = false;
-    let slideInterval;
-    
-    function showSlide(index, direction = 'next') {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        
-        const newIndex = (index + slides.length) % slides.length;
-        
-        // Update dots
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[newIndex].classList.add('active');
-        
-        // Update content
-        heroTitle.textContent = sliderContent[newIndex].title;
-        heroSubtitle.textContent = sliderContent[newIndex].subtitle;
-        
-        // Animate slides
-        slides[currentSlide].classList.remove('active');
-        
-        if (direction === 'next') {
-            slides[currentSlide].classList.add('prev-slide');
-            slides[newIndex].classList.remove('prev-slide', 'next-slide');
-            slides[newIndex].classList.add('active');
-        } else {
-            slides[currentSlide].classList.add('next-slide');
-            slides[newIndex].classList.remove('prev-slide', 'next-slide');
-            slides[newIndex].classList.add('active');
-        }
-        
-        currentSlide = newIndex;
-        
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 1000);
-    }
-    
-    function nextSlide() {
-        showSlide(currentSlide + 1, 'next');
-    }
-    
-    function prevSlide() {
-        showSlide(currentSlide - 1, 'prev');
-    }
-    
-    // Event listeners for controls
-    prevBtn?.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        prevSlide();
-        startAutoSlide();
-    });
-    
-    nextBtn?.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        nextSlide();
-        startAutoSlide();
-    });
-    
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            clearInterval(slideInterval);
-            showSlide(index, index > currentSlide ? 'next' : 'prev');
-            startAutoSlide();
-        });
-    });
-    
-    // Auto slide every 5 seconds
-    function startAutoSlide() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 5000);
-    }
-    
-    startAutoSlide();
-    
-    // Pause on hover
-    const sliderContainer = document.querySelector('.slider-container');
-    sliderContainer?.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-    
-    sliderContainer?.addEventListener('mouseleave', startAutoSlide);
 }
 
 // === DROPDOWN FUNCTIONALITY ===

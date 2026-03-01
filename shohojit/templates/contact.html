@@ -135,45 +135,33 @@
                         </div>
                     </div>
                     <div class="contact-form-box">
-                        <form id="contactForm">
+                        <form id="contactForm" action="{% url 'contact' %}" method="post">
+                            {% csrf_token %}
                             <div class="form-row">
                                 <div class="form-group">
                                     <label class="form-label" for="name">Full Name</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                                     <div class="error-message" id="name-error">Please enter your name</div>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="email">Email Address</label>
-                                    <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
                                     <div class="error-message" id="email-error">Please enter a valid email</div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label class="form-label" for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" class="form-control" placeholder="+880 1234 567890">
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+880 1234 567890">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="subject">Subject</label>
-                                    <input type="text" id="subject" class="form-control" placeholder="How can we help you?">
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="How can we help you?">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="service">Service Interested In</label>
-                                <select id="service" class="form-control">
-                                    <option value="">Select a service</option>
-                                    <option value="training">IT Training</option>
-                                    <option value="web-dev">Web Development</option>
-                                    <option value="graphic-design">Graphic Design</option>
-                                    <option value="digital-marketing">Digital Marketing</option>
-                                    <option value="freelancing">Freelancing</option>
-                                    <option value="corporate">Corporate Training</option>
-                                    <option value="consultancy">IT Consultancy</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
                                 <label class="form-label" for="message">Your Message</label>
-                                <textarea id="message" class="form-control" placeholder="Tell us about your requirements..." rows="6" required></textarea>
+                                <textarea id="message" name="message" class="form-control" placeholder="Tell us about your requirements..." rows="6" required></textarea>
                                 <div class="error-message" id="message-error">Please enter your message</div>
                             </div>
                             <button type="submit" class="btn btn-primary form-submit-btn">
@@ -266,5 +254,5 @@
         </div>
     </section>
 
-    <script src="{% static 'dist/js/contact.js' %}?v=1.0.0"></script>
+    <script src="{% static 'dist/js/contact.js' %}?v=1.0.1"></script>
 {% endblock %}
