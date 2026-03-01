@@ -112,7 +112,7 @@
                             <h3>{{ course.course_name }}</h3> 
                             <p>{{ course.subtitle }}</p> 
                             <div class="course-meta">
-                                <span><i class="far fa-clock"></i> {{ course.duration }}</span> <span><i class="fas fa-project-diagram"></i> {{ course.real_projects }}</span> 
+                                <span><i class="far fa-clock"></i> {{ course.duration }} months</span> <span><i class="fas fa-project-diagram"></i> {{ course.real_projects }} projects</span> 
                             </div>
                             
                             <a href="{% url 'course_detail' course.course_slug %}" class="btn btn-outline" style="margin-top: auto;">View Details</a>

@@ -108,45 +108,13 @@ const courseModules = [
 
 // === INITIALIZATION ===
 document.addEventListener('DOMContentLoaded', function() {
-    generateCurriculum();
+    // generateCurriculum();
     initScrollAnimations();
     setupEventListeners();
     // setupDropdowns();
     setupModuleAccordions();
 });
 
-// === GENERATE CURRICULUM ===
-function generateCurriculum() {
-    const container = document.querySelector('.curriculum-container');
-    if (!container) return;
-
-    container.innerHTML = '';
-    
-    courseModules.forEach((module, index) => {
-        const moduleElement = document.createElement('div');
-        moduleElement.className = 'module';
-        moduleElement.style.transitionDelay = `${index * 0.1}s`;
-        
-        moduleElement.innerHTML = `
-            <div class="module-header">
-                <h3>
-                    <div class="module-icon">
-                        <i class="${module.icon}"></i>
-                    </div>
-                    <span class="module-title-text">${module.title}</span>
-                </h3>
-                <div class="module-duration">${module.duration}</div>
-            </div>
-            <div class="module-content">
-                <ul class="topics-list">
-                    ${module.topics.map(topic => `<li><i class="fas fa-circle"></i> ${topic}</li>`).join('')}
-                </ul>
-            </div>
-        `;
-        
-        container.appendChild(moduleElement);
-    });
-}
 
 // === MODULE ACCORDIONS ===
 function setupModuleAccordions() {
@@ -172,85 +140,6 @@ function setupModuleAccordions() {
     });
 }
 
-// === DROPDOWN FUNCTIONALITY ===
-function setupDropdowns() {
-    const dropdownTriggers = document.querySelectorAll('.nav-link');
-    
-    dropdownTriggers.forEach(trigger => {
-        if (trigger.querySelector('.dropdown-icon')) {
-            const dropdown = trigger.parentElement.querySelector('.dropdown');
-            
-            // Mobile click handler - toggle dropdown when clicking the link
-            trigger.addEventListener('click', (e) => {
-                // Only handle dropdown toggle on mobile
-                if (window.innerWidth < 992) {
-                    // Check if click was on the text or the icon
-                    const clickedIcon = e.target.closest('.dropdown-icon');
-                    const clickedText = e.target.closest('span');
-                    
-                    // If clicking on the text (not icon), allow normal navigation
-                    if (clickedText && !clickedIcon) {
-                        return; // Allow default behavior
-                    }
-                    
-                    // If clicking on icon or empty space in the link, toggle dropdown
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isActive = dropdown.classList.contains('active');
-                    
-                    // Close all other dropdowns
-                    document.querySelectorAll('.dropdown').forEach(d => {
-                        if (d !== dropdown) {
-                            d.classList.remove('active');
-                            d.previousElementSibling?.querySelector('.dropdown-icon')?.classList.remove('rotated');
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    dropdown.classList.toggle('active');
-                    
-                    // Rotate icon
-                    const icon = trigger.querySelector('.dropdown-icon');
-                    if (isActive) {
-                        icon.classList.remove('rotated');
-                    } else {
-                        icon.classList.add('rotated');
-                    }
-                }
-            });
-            
-            // Desktop hover handler
-            trigger.parentElement.addEventListener('mouseenter', () => {
-                if (window.innerWidth >= 992) {
-                    dropdown.classList.add('active');
-                    trigger.querySelector('.dropdown-icon')?.classList.add('rotated');
-                }
-            });
-            
-            trigger.parentElement.addEventListener('mouseleave', () => {
-                if (window.innerWidth >= 992) {
-                    dropdown.classList.remove('active');
-                    trigger.querySelector('.dropdown-icon')?.classList.remove('rotated');
-                }
-            });
-        }
-    });
-    
-    // Close dropdowns when clicking outside (mobile only)
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth < 992) {
-            if (!e.target.closest('.nav-item')) {
-                document.querySelectorAll('.dropdown').forEach(dropdown => {
-                    dropdown.classList.remove('active');
-                });
-                document.querySelectorAll('.dropdown-icon').forEach(icon => {
-                    icon.classList.remove('rotated');
-                });
-            }
-        }
-    });
-}
 
 // === SCROLL ANIMATIONS ===
 function initScrollAnimations() {

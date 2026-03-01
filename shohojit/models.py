@@ -106,7 +106,7 @@ class Course(models.Model):
                                        options={'quality': 70}, blank=True, null=True)
     hero_image = ProcessedImageField(upload_to='course_hero_images/', 
                                        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'svg'])], 
-                                       processors=[ResizeToFill(1080, 600)], 
+                                       processors=[ResizeToFill(1920, 1280)], 
                                        options={'quality': 70}, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='created_by_course')
@@ -181,7 +181,7 @@ class Service(models.Model):
                                        options={'quality': 70}, blank=True, null=True)
     hero_image = ProcessedImageField(upload_to='service_hero_images/', 
                                        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'svg'])], 
-                                       processors=[ResizeToFill(1080, 600)], 
+                                       processors=[ResizeToFill(1920, 1280)], 
                                        options={'quality': 70}, blank=True, null=True)
     icon_class = models.CharField(max_length=100, blank=True, null=True)  # Font Awesome icon class
     is_active = models.BooleanField(default=True)
