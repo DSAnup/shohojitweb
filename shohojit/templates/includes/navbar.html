@@ -23,13 +23,9 @@
                     <i class="fas fa-chevron-down dropdown-icon"></i>
                 </a>
                 <div class="dropdown">
-                    <a href="{% url 'course_detail' 1 %}" class="dropdown-item">Web Development</a>
-                    <a href="{% url 'course_detail' 2 %}" class="dropdown-item">Graphic Design</a>
-                    <a href="{% url 'course_detail' 3 %}" class="dropdown-item">Digital Marketing</a>
-                    <a href="{% url 'course_detail' 4 %}" class="dropdown-item">Programming</a>
-                    <a href="{% url 'course_detail' 5 %}" class="dropdown-item">Freelancing</a>
-                    <a href="{% url 'course_detail' 6 %}" class="dropdown-item">Basic Computer</a>
-                    <a href="{% url 'course_detail' 7 %}" class="dropdown-item">Advance Office</a>
+                    {% for course in course_list %}
+                        <a href="{% url 'course_detail' course.course_slug %}" class="dropdown-item">{{ course.course_name }}</a>
+                    {% endfor %}
                 </div>
             </li>
             <!-- <li class="nav-item">

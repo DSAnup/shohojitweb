@@ -11,6 +11,7 @@ def index(request):
     testiominals = Testimonials.objects.all().order_by('-created_at')[:3]
     testimonial_images = TestimonialsImages.objects.all().order_by('-created_at')[:6]
     courses = Course.objects.filter(is_active=True).order_by('-created_at')[:6]
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
     galleries = GalleryImages.objects.order_by('?')[:6]
 
     context = {
@@ -22,7 +23,8 @@ def index(request):
         'testiominals': testiominals,
         'testimonial_images': testimonial_images,
         'courses': courses,
-        'galleries': galleries
+        'galleries': galleries,
+        'course_list': course_list
     }
     return render(request, 'index.html', context)
 
@@ -30,29 +32,41 @@ def about(request):
     about_us = AboutUs.objects.first()
     teams = TeamMembers.objects.all()[:8]
     our_journey = OurJourney.objects.all()
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
+    contact_us = ContactUs.objects.first()
 
     context = {
         'about_us': about_us,
         'teams': teams,
-        'our_journey': our_journey
+        'our_journey': our_journey,
+        'contact_us': contact_us,
+        'course_list': course_list
     }
     return render(request, 'about.html', context)
 
 def teams(request):
     team_category = TeamCategory.objects.all()
     teams = TeamMembers.objects.all().select_related('category')
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
+    contact_us = ContactUs.objects.first()
 
     context = {
         'team_category': team_category,
-        'teams': teams
+        'teams': teams,
+        'contact_us': contact_us,
+        'course_list': course_list
     }
     return render(request, 'teams.html', context)
 
 def courses(request):
     courses = Course.objects.filter(is_active=True).order_by('-created_at')
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
+    contact_us = ContactUs.objects.first()
 
     context = {
-        'courses': courses
+        'courses': courses,
+        'contact_us': contact_us,
+        'course_list': course_list
     }
     return render(request, 'courses.html', context)
 
@@ -60,11 +74,15 @@ def course_detail(request, course_slug):
     course_detail = Course.objects.get(course_slug=course_slug)
     course_highlight = course_detail.highlights.all()
     course_curriculum = course_detail.curriculums.all()
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
+    contact_us = ContactUs.objects.first()
 
     context = {
         'course_detail': course_detail,
         'course_highlight': course_highlight,
-        'course_curriculum': course_curriculum
+        'course_curriculum': course_curriculum,
+        'contact_us': contact_us,
+        'course_list': course_list
     }
     return render(request, 'course_detail.html', context)
 
@@ -79,6 +97,7 @@ def service_detail(request, service_id):
     return render(request, 'service_detail.html')
 
 def contact(request):
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
     contact_us = ContactUs.objects.first()
     faqs = FAQ.objects.all().order_by('-created_at')
 
@@ -111,6 +130,7 @@ def contact(request):
         return redirect('contact')
     context = {
         'contact_us': contact_us,
-        'faqs': faqs
+        'faqs': faqs,
+        'course_list': course_list
     }
     return render(request, 'contact.html', context)

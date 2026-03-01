@@ -17,26 +17,24 @@
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="{% url 'about' %}">About Us</a></li>
                     <li><a href="{% url 'courses' %}">Courses</a></li>
-                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <!-- <li><a href="{% url 'services' %}">Services</a></li> -->
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Courses</h3>
                 <ul>
-                    <li><a href="{% url 'course_detail' 1 %}">Web Development</a></li>
-                    <li><a href="{% url 'course_detail' 2 %}">Graphic Design</a></li>
-                    <li><a href="{% url 'course_detail' 3 %}">Digital Marketing</a></li>
-                    <li><a href="{% url 'course_detail' 4 %}">Programming</a></li>
-                    <li><a href="{% url 'course_detail' 5 %}">Freelancing</a></li>
+                    {% for course in course_list %}
+                        <li><a href="{% url 'course_detail' course.course_slug %}" >{{ course.course_name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Contact Info</h3>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 123 IT Tower, Dhaka</li>
-                    <li><i class="fas fa-phone-alt"></i> +880 1234 567890</li>
-                    <li><i class="fas fa-envelope"></i> info@sohojit.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> {{ contact_us.location }}</li>
+                    <li><i class="fas fa-phone-alt"></i> {{ contact_us.phone_number_one }}</li>
+                    <li><i class="fas fa-envelope"></i> {{ contact_us.email_one }}</li>
                 </ul>
             </div>
         </div>
