@@ -72,15 +72,11 @@ def courses(request):
 
 def course_detail(request, course_slug):
     course_detail = Course.objects.get(course_slug=course_slug)
-    course_highlight = course_detail.highlights.all()
-    course_curriculum = course_detail.curriculums.all()
     course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
     contact_us = ContactUs.objects.first()
 
     context = {
         'course_detail': course_detail,
-        'course_highlight': course_highlight,
-        'course_curriculum': course_curriculum,
         'contact_us': contact_us,
         'course_list': course_list
     }

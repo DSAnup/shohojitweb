@@ -29,9 +29,10 @@
             
             <div class="courses-container">
                 <!-- Full Stack Web Development -->
+                 {% for course in courses %}
                 <div class="course-card" data-category="web" data-id="1">
                     <div class="course-image">
-                        <img src="our courses/Full Stack Web Development.png" alt="Full Stack Web Development" loading="lazy">
+                        <img src="{{ course.course_image.url }}" alt="{{ course.course_name }}" loading="lazy">
                         <div class="course-overlay">
                             <div class="course-icon">
                                 <i class="fas fa-code"></i>
@@ -39,71 +40,21 @@
                         </div>
                     </div>
                     <div class="course-content">
-                        <span style="display: inline-block; background: rgba(187, 0, 0, 0.1); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; font-weight: 600;">Web Dev</span>
-                        <h3>Full Stack Web Development</h3>
-                        <p>Learn HTML, CSS, JavaScript, React, Node.js, MongoDB and become a full-stack developer. Build real-world projects and deploy them online.</p>
+                        <span style="display: inline-block; background: rgba(187, 0, 0, 0.1); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; font-weight: 600;">{{ course.course_name }}</span>
+                        <h3>{{ course.title}}</h3>
+                        <p>{{ course.subtitle }}</p>
                         <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 6 Months</span>
+                            <span><i class="far fa-clock"></i> {{ course.duration}} Months</span>
                             <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
                         </div>
                         <div style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="{% url 'course_detail' 1 %}" class="btn btn-primary view-details-btn" style="flex: 1;">View Details</a>
+                            <a href="{% url 'course_detail' course.course_slug %}" class="btn btn-primary view-details-btn" style="flex: 1;">View Details</a>
 
                             <a href="#contact" class="btn btn-outline" style="flex: 1;">Enroll Now</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Professional Graphic Design -->
-                <div class="course-card" data-category="design" data-id="2">
-                    <div class="course-image">
-                        <img src="our courses/Professional Graphic Design.jpg" alt="Professional Graphic Design" loading="lazy">
-                        <div class="course-overlay">
-                            <div class="course-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-content">
-                        <span style="display: inline-block; background: rgba(187, 0, 0, 0.1); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; font-weight: 600;">Design</span>
-                        <h3>Professional Graphic Design</h3>
-                        <p>Master Adobe Photoshop, Illustrator, InDesign for professional graphic design. Learn branding, UI design, and print media design.</p>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 4 Months</span>
-                            <span><i class="fas fa-signal"></i> Beginner to Intermediate</span>
-                        </div>
-                        <div style="display: flex; gap: 10px; margin-top: auto;">
-                            
-                            <a href="{% url 'course_detail' 1 %}" class="btn btn-primary view-details-btn" style="flex: 1;">View Details</a>
-                            <a href="#contact" class="btn btn-outline" style="flex: 1;">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Digital Marketing Mastery -->
-                <div class="course-card" data-category="marketing" data-id="3">
-                    <div class="course-image">
-                        <img src="our courses/Digital Marketing Mastery.jpg" alt="Digital Marketing Mastery" loading="lazy">
-                        <div class="course-overlay">
-                            <div class="course-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-content">
-                        <span style="display: inline-block; background: rgba(187, 0, 0, 0.1); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; font-weight: 600;">Marketing</span>
-                        <h3>Digital Marketing Mastery</h3>
-                        <p>Learn SEO, Social Media Marketing, Google Ads, content marketing strategies, and analytics to become a digital marketing expert.</p>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 3 Months</span>
-                            <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
-                        </div>
-                        <div style="display: flex; gap: 10px; margin-top: auto;">
-                            <a href="{% url 'course_detail' 1 %}" class="btn btn-primary view-details-btn" style="flex: 1;">View Details</a>
-                            <a href="#contact" class="btn btn-outline" style="flex: 1;">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
