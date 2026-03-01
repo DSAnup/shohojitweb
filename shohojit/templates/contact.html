@@ -40,7 +40,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Our Location</h3>
-                    <p>123 IT Tower, Digital Street, Dhaka 1207, Bangladesh</p>
+                    <p>{{ contact_us.location }}</p>
                     <a href="#map-section" class="contact-link">
                         View on Map <i class="fas fa-arrow-right"></i>
                     </a>
@@ -50,8 +50,8 @@
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3>Phone Number</h3>
-                    <p>+880 1234 567890<br>+880 9876 543210</p>
-                    <a href="tel:+8801234567890" class="contact-link">
+                    <p>{{ contact_us.phone_number_one }}<br>{{ contact_us.phone_number_two }}</p>
+                    <a href="tel:{{ contact_us.phone_number_one }}" class="contact-link">
                         Call Now <i class="fas fa-phone"></i>
                     </a>
                 </div>
@@ -60,8 +60,10 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email Address</h3>
-                    <p>info@sohojit.com<br>support@sohojit.com</p>
-                    <a href="mailto:info@sohojit.com" class="contact-link">
+                    <p>{{ contact_us.email_one }}
+                        <br>{{ contact_us.email_two|default:"" }}
+                    </p>
+                    <a href="mailto:{{ contact_us.email_one }}" class="contact-link">
                         Email Us <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -70,7 +72,7 @@
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3>Opening Hours</h3>
-                    <p>Saturday - Thursday: 9AM - 8PM<br>Friday: 3PM - 8PM</p>
+                    <p>{{ contact_us.opening_hours }}</p>
                     <a href="#contact-form" class="contact-link">
                         Book Appointment <i class="fas fa-calendar-check"></i>
                     </a>
@@ -86,10 +88,10 @@
             <div id="map-fallback" class="map-fallback" style="display: none;">
                 <div class="map-fallback-content">
                     <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
-                    <p>123 IT Tower, Digital Street, Dhaka 1207, Bangladesh</p>
-                    <p><i class="fas fa-phone"></i> +880 1234 567890</p>
-                    <p><i class="fas fa-envelope"></i> info@sohojit.com</p>
-                    <a href="https://maps.google.com/?q=123+IT+Tower+Digital+Street+Dhaka+1207" 
+                    <p>{{ contact_us.location }}</p>
+                    <p><i class="fas fa-phone"></i> {{ contact_us.phone_number_one }}</p>
+                    <p><i class="fas fa-envelope"></i> {{ contact_us.email_one }}</p>
+                    <a href="https://maps.google.com/?q={{ contact_us.location }}" 
                         target="_blank" 
                         class="btn btn-primary" 
                         style="margin-top: 20px;">
@@ -100,12 +102,12 @@
             <div class="map-overlay">
                 <div class="map-info-box">
                     <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
-                    <p>123 IT Tower, Digital Street<br>Dhaka 1207, Bangladesh</p>
+                    <p>{{ contact_us.location }}</p>
                     <div style="margin: 20px 0;">
-                        <p><i class="fas fa-phone"></i> +880 1234 567890</p>
-                        <p><i class="fas fa-envelope"></i> info@sohojit.com</p>
+                        <p><i class="fas fa-phone"></i> {{ contact_us.phone_number_one }}</p>
+                        <p><i class="fas fa-envelope"></i> {{ contact_us.email_one }}</p>
                     </div>
-                    <a href="https://maps.google.com/?q=123+IT+Tower+Digital+Street+Dhaka+1207" 
+                    <a href="https://maps.google.com/?q={{ contact_us.location }}" 
                         target="_blank" 
                         class="btn btn-primary" 
                         style="width: 100%;">
@@ -182,22 +184,19 @@
                 <p>Follow us on social media for updates, tips, and success stories</p>
             </div>
             <div class="social-icons">
-                <a href="#" class="social-icon facebook">
+                <a href="{{ contact_us.facebook_url|default:'#'}}" class="social-icon facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" class="social-icon twitter">
+                <a href="{{ contact_us.twitter_url|default:'#'}}" class="social-icon twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="social-icon linkedin">
+                <a href="{{ contact_us.linkedin_url|default:'#'}}" class="social-icon linkedin">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" class="social-icon instagram">
+                <a href="{{ contact_us.instagram_url|default:'#'}}" class="social-icon instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="social-icon whatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" class="social-icon youtube">
+                <a href="{{ contact_us.youtube_url|default:'#'}}" class="social-icon youtube">
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
@@ -205,6 +204,7 @@
         </div>
     </section>
 
+    {% if faqs %}
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
@@ -214,45 +214,20 @@
                 <p>Find answers to common questions about our services</p>
             </div>
             <div class="faq-container">
+                {% for faq in faqs %}
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What are your course admission requirements?</span>
+                        <span>{{ faq.question }}</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Most of our courses require basic computer knowledge. For advanced courses like Web Development, we recommend having basic understanding of HTML/CSS. No formal education background is required for most courses.</p>
+                        <p>{{ faq.answer }}</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you provide job placement assistance?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! We have a dedicated placement cell that helps our students with job placements, internships, and freelancing opportunities. We also conduct regular job fairs and have partnerships with IT companies.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What payment methods do you accept?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We accept cash, bank transfer, bKash, Nagad, Rocket, and credit/debit cards. We also offer installment plans for most courses to make them more accessible.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you offer online classes?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we offer both online and offline classes. You can choose the mode that suits you best. Our online classes are conducted through Zoom/Google Meet with live instructor support.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-
+    {% endif %}
     <script src="{% static 'dist/js/contact.js' %}?v=1.0.1"></script>
 {% endblock %}
