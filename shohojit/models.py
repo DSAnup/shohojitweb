@@ -405,7 +405,7 @@ class AboutUs(models.Model):
     empowerment = models.CharField(max_length=150, blank=True, null=True)
     image = ProcessedImageField(upload_to='about_us/', 
                                        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'svg'])], 
-                                       processors=[ResizeToFill(1080, 600)], 
+                                       processors=[ResizeToFill(1920, 1280)], 
                                        options={'quality': 70}, blank=True, null=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='created_by_about_us')
     updated_by = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='updated_by_about_us')

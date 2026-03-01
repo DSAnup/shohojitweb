@@ -30,7 +30,8 @@ def index(request):
 
 def about(request):
     about_us = AboutUs.objects.first()
-    teams = TeamMembers.objects.all()[:8]
+    homeabout = HomeAboutSection.objects.first()
+    teams = TeamMembers.objects.all().order_by('id')[:8]
     our_journey = OurJourney.objects.all()
     course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
     contact_us = ContactUs.objects.first()
@@ -40,7 +41,8 @@ def about(request):
         'teams': teams,
         'our_journey': our_journey,
         'contact_us': contact_us,
-        'course_list': course_list
+        'course_list': course_list,
+        'homeabout': homeabout
     }
     return render(request, 'about.html', context)
 
