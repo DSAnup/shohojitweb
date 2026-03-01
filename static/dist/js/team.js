@@ -97,68 +97,12 @@ const teamMembers = [
 
 // === INITIALIZATION ===
 document.addEventListener('DOMContentLoaded', function() {
-    generateTeamMembers();
+    // generateTeamMembers();
     initScrollAnimations();
     setupEventListeners();
     setupDropdowns();
-    setupTeamFilter();
+    // setupTeamFilter();
 });
-
-// === GENERATE TEAM MEMBERS ===
-function generateTeamMembers() {
-    const container = document.querySelector('.team-container');
-    if (!container) return;
-
-    container.innerHTML = '';
-    
-    teamMembers.forEach((member, index) => {
-        const memberElement = document.createElement('div');
-        memberElement.className = 'team-member';
-        memberElement.dataset.department = member.department;
-        memberElement.style.transitionDelay = `${index * 0.1}s`;
-        
-        memberElement.innerHTML = `
-            <div class="member-image">
-                <img src="${member.image}" alt="${member.name}" loading="lazy">
-                <div class="member-overlay">
-                    <h3>${member.name}</h3>
-                    <p class="member-position">${member.position}</p>
-                </div>
-            </div>
-            <div class="member-info">
-                <h3>${member.name}</h3>
-                <p class="member-position">${member.position}</p>
-                <span class="member-department">${getDepartmentName(member.department)}</span>
-                <p class="member-description">${member.description}</p>
-                <div class="member-social">
-                    <a href="${member.social.linkedin}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="${member.social.twitter}" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="${member.social.facebook}" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-        `;
-        
-        // Add error handling for image
-        const img = memberElement.querySelector('img');
-        img.onerror = function() {
-            this.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=bb0000&color=fff&size=400`;
-        };
-        
-        container.appendChild(memberElement);
-    });
-}
-
-// === GET DEPARTMENT NAME ===
-function getDepartmentName(department) {
-    const departments = {
-        'management': 'Management',
-        'training': 'Training',
-        'development': 'Development',
-        'design': 'Design',
-        'marketing': 'Marketing'
-    };
-    return departments[department] || department;
-}
 
 // === TEAM FILTER ===
 function setupTeamFilter() {

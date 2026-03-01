@@ -17,24 +17,77 @@
     <!-- Team Filter -->
     <section class="team-section">
         <div class="container">
+            
             <div class="section-title">
                 <div class="section-icon"><i class="fas fa-user-tie"></i></div>
                 <h2>Our Expert Team</h2>
                 <p>Meet the talented professionals who make Sohoj IT a leader in IT education and solutions</p>
             </div>
-            
+
+            <!-- Dynamic Category Filter -->
             <div class="team-filter">
                 <button class="filter-btn active" data-filter="all">All Team Members</button>
-                <button class="filter-btn" data-filter="management">Management</button>
-                <button class="filter-btn" data-filter="training">Training</button>
-                <button class="filter-btn" data-filter="development">Development</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-                <button class="filter-btn" data-filter="marketing">Marketing</button>
+
+                {% for category in team_category %}
+                    <button class="filter-btn"
+                            data-filter="{{ category.id }}">
+                        {{ category.name }}
+                    </button>
+                {% endfor %}
             </div>
 
-            <!-- Team Members -->
-            <div id="team-members" class="team-container">
-                <!-- Team members will be populated by JavaScript -->
+            <!-- Dynamic Team Members -->
+            <div class="team-container">
+
+                {% for member in teams %}
+                <div class="team-member"
+                    data-department="{{ member.category.id }}">
+
+                    <div class="member-image">
+                        <img src="{{ member.profile_image.url }}"
+                            alt="{{ member.full_name }}"
+                            loading="lazy">
+                        <div class="member-overlay">
+                            <h3>{{ member.full_name }}</h3>
+                            <p class="member-position">{{ member.position }}</p>
+                        </div>
+                    </div>
+
+                    <div class="member-info">
+                        <h3>{{ member.full_name }}</h3>
+                        <p class="member-position">{{ member.position }}</p>
+                        <span class="member-department">
+                            {{ member.category.name }}
+                        </span>
+
+                        <p class="member-description">
+                            {{ member.about_me }}
+                        </p>
+
+                        <div class="member-social">
+                            {% if member.linkedin %}
+                                <a href="{{ member.linkedin }}" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            {% endif %}
+
+                            {% if member.twitter %}
+                                <a href="{{ member.twitter }}" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            {% endif %}
+
+                            {% if member.facebook %}
+                                <a href="{{ member.facebook }}" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>
@@ -99,5 +152,32 @@
             setupDropdowns();
         });
     </script>
-    <script src="{% static 'dist/js/team.js' %}?v=1.0.0"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const teamMembers = document.querySelectorAll('.team-member');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+
+                    teamMembers.forEach(member => {
+                        if (filter === 'all' || member.dataset.department === filter) {
+                            member.style.display = 'flex';
+                        } else {
+                            member.style.display = 'none';
+                        }
+                    });
+
+                });
+            });
+
+        });
+    </script>
+    <script src="{% static 'dist/js/team.js' %}?v=1.0.1"></script>
 {% endblock %}
