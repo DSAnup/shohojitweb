@@ -1,8 +1,32 @@
-from django.contrib import messages
+from django_ratelimit.decorators import ratelimit
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
-from shohojit.models import FAQ, AboutUs, ContactUs, Course, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
+from shohojit.models import FAQ, AboutUs, ContactUs, Course, GalleryCategory, GalleryImages, HomeAboutFeature, HomeAboutSection, Messages, OurJourney, Slider, Stats, TeamCategory, TeamMembers, Testimonials, TestimonialsImages
 
+@ratelimit(key='ip', rate='5/m', block=True)
 def index(request):
+
+    if request.method == "POST":
+        full_name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        Messages.objects.create(
+            full_name=full_name,
+            email=email,
+            phone=phone,
+            subject=subject,
+            message=message
+        )
+    
+        return JsonResponse({
+            "status": "success",
+            "message": "Your message has been sent successfully!"
+        })
+
+    
     sliders = Slider.objects.filter(is_active=True)[:5]
     stats = Stats.objects.first()
     homeabout = HomeAboutSection.objects.first()
@@ -85,7 +109,18 @@ def course_detail(request, course_slug):
     return render(request, 'course_detail.html', context)
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    gallery_category = GalleryCategory.objects.all()
+    galleries = GalleryImages.objects.all().select_related('category')
+    course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
+    contact_us = ContactUs.objects.first()
+    
+    context = {
+        'gallery_category': gallery_category,
+        'galleries': galleries,
+        'contact_us': contact_us,
+        'course_list': course_list
+    }
+    return render(request, 'gallery.html', context)
 
 def services(request):
     return render(request, 'services.html')
@@ -94,6 +129,7 @@ def service_detail(request, service_id):
     print(service_id)
     return render(request, 'service_detail.html')
 
+@ratelimit(key='ip', rate='5/m', block=True)
 def contact(request):
     course_list = Course.objects.filter(is_active=True)[:6].values('course_name', 'course_slug')
     contact_us = ContactUs.objects.first()
@@ -101,31 +137,25 @@ def contact(request):
 
     if request.method == 'POST':
         # Get data from the form
-        full_name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        subject = request.POST.get('subject')
-        message = request.POST.get('message')
+        if request.method == "POST":
+            full_name = request.POST.get('full_name')
+            email = request.POST.get('email')
+            phone = request.POST.get('phone')
+            subject = request.POST.get('subject')
+            message = request.POST.get('message')
+
+            Messages.objects.create(
+                full_name=full_name,
+                email=email,
+                phone=phone,
+                subject=subject,
+                message=message
+            )
         
-        print(full_name, email, phone, subject, message)
-        # Simple validation
-        if full_name and email and message:
-            try:
-                Messages.objects.create(
-                    full_name=full_name,
-                    email=email,
-                    phone=phone or '',
-                    subject=subject or '',
-                    message=message
-                )
-                messages.success(request, 'Your message has been sent successfully!')
-            except Exception as e:
-                print(e)
-                messages.error(request, 'An error occurred. Please try again.')
-        else:
-            messages.error(request, 'Please fill in all required fields.')
-        
-        return redirect('contact')
+            return JsonResponse({
+                "status": "success",
+                "message": "Your message has been sent successfully!"
+            })
     context = {
         'contact_us': contact_us,
         'faqs': faqs,

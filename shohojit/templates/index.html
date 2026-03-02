@@ -5,7 +5,13 @@
 {% load static %}
 
     <link rel="stylesheet" href="{% static 'dist/css/shohojit.css' %}">
-
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="slider-container">
@@ -270,22 +276,25 @@
                     </div>
                 </div>
                 <div class="contact-form">
+                    <div id="form-message"></div>
                     <form id="contactForm">
+                         {% csrf_token %}
+                         <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            <input type="text" id="name" name="full_name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Write your subject" required>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Write your subject" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="text" id="phone" class="form-control" placeholder="0172...." required>
+                            <input type="text" id="phone" name="phone" class="form-control" placeholder="0172...." required>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder="How can we help you?" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -307,6 +316,34 @@
                 }{% if not forloop.last %},{% endif %}
             {% endfor %}
         ];
+    </script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let form = this;
+            let formData = new FormData(form);
+
+            fetch("", {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    document.getElementById("form-message").innerHTML =
+                        `<div class="alert alert-success">${data.message}</div>`;
+                    form.reset();
+                }
+            })
+            .catch(error => {
+                document.getElementById("form-message").innerHTML =
+                    `<div class="alert alert-danger">Something went wrong!</div>`;
+            });
+        });
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

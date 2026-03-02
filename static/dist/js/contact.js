@@ -163,8 +163,8 @@ window.addEventListener('load', function() {
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize components
     setupEventListeners();
-    setupFAQ();
-    // setupFormValidation();
+    // setupFAQ();
+    setupFormValidation();
     initScrollAnimations();
     
     // Hide loading screen
@@ -202,7 +202,7 @@ function setupFormValidation() {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
     
-    const nameInput = document.getElementById('name');
+    const nameInput = document.getElementById('full_name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
     
